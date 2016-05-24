@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html  dir="ltr">
+  
   <head>
     <meta  content="text/html; charset=utf-8"  http-equiv="content-type">
     <title>Victor Tran</title>
-    <link  type="stylesheet"  href="css.css">
+    <link type="stylesheet" href="css.css" />
     <meta  content="Victor Tran"  name="author">
     <meta  content="BlueGriffon wysiwyg editor"  name="generator">
   </head>
-  <body>Hello World! This is a test...
-    <div> </div>
+  <body>
+    <div>
+      
+    </div>
   </body>
 </html>
