@@ -3,6 +3,8 @@
 body {
     padding-top: 50px;
     font-family: Noto Sans;
+    padding-left: 100px;
+    padding-right: 20px;
 }
 
 div.navbar {
@@ -12,9 +14,11 @@ div.navbar {
     left: 0px;
     width: 100%;
     
-    background: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url("images/triangles.png") no-repeat center center fixed;
+    background-size: 100% auto;
     
-    color: black;
+    color: white;
     border-bottom: 1px solid black;
     justify-content: center;
     display: flex;
@@ -48,7 +52,7 @@ ul.navbarItems a {
     text-decoration: none;
     display: block;
     padding: 1em;
-    color: black;
+    color: white;
     
     -webkit-transition:.25s ease-out;
     -moz-transition:.25s ease-out;
@@ -57,7 +61,6 @@ ul.navbarItems a {
 
 ul.navbarItems a:hover {
     background-color: black;
-    color: white;
 }
 
 div.headerItem {
@@ -65,4 +68,28 @@ div.headerItem {
     align-self: flex-end;
     float: right;
     height: 100%;
+}
+
+.button {
+    display: inline-block;
+    background: rgb(0, 200, 255);
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    font-variant: small-caps;
+    
+    -webkit-transition:.25s ease-out;
+    -moz-transition:.25s ease-out;
+    transition:.25s ease-out;
+}
+
+.button:hover {
+    background: rgb(0, 220, 255);
+    color: white;
+}
+
+.button:active {
+    
+    background: rgb(0, 180, 255);
+    color: white;
 }

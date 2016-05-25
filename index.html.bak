@@ -15,10 +15,12 @@
             Tran</span> </div>
         <ul  class="navbarItems">
           <li> <a  href="https://github.com/vicr123"> GitHub </a> </li>
-          <li><a>theShell</a></li>
         </ul>
       </div>
     </div>
-    Welcome! This is a site in development. Please come back soon :)
+    Welcome! This is a site in development. Please come back soon :) <a  href="https://github.com/vicr123"
+       class="button">See my GitHub page &gt;&nbsp;
+      <meta  http-equiv="content-type"  content="text/html; charset=utf-8">
+    </a>
   </body>
 </html>
