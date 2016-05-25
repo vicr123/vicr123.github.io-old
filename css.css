@@ -89,7 +89,6 @@ div.headerItem {
 }
 
 .button:active {
-    
     background: rgb(0, 180, 255);
     color: white;
 }
