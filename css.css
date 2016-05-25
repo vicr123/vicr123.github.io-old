@@ -3,8 +3,7 @@
 body {
     padding-top: 50px;
     font-family: Noto Sans;
-    padding-left: 100px;
-    padding-right: 20px;
+    margin: 0px;
 }
 
 div.navbar {
@@ -73,10 +72,11 @@ div.headerItem {
 .button {
     display: inline-block;
     background: rgb(0, 200, 255);
-    color: white;
+    color: black;
     padding: 5px;
     text-decoration: none;
     font-variant: small-caps;
+    
     
     -webkit-transition:.25s ease-out;
     -moz-transition:.25s ease-out;
@@ -92,4 +92,9 @@ div.headerItem {
     
     background: rgb(0, 180, 255);
     color: white;
+}
+
+h1 {
+    padding: 0px;
+    margin: 0px;
 }
