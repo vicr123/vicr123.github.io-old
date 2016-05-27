@@ -18,10 +18,8 @@ div.blockTitle {
 
 div.blockTitle#theshell {
     background-color: green;
-    background: url("images/triangles.png") no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url("images/triangles.png") no-repeat center center;
     background-size: 100% auto;
-}
-
-div.blockTitle#theshell:hover {
-    
+    color: white;
 }
