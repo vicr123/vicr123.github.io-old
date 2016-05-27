@@ -6,9 +6,8 @@
     <link  rel="stylesheet"  href="css.css">
     <link  rel="stylesheet"  href="index.css">
     <meta  content="Victor Tran"  name="author">
-    <meta  name="viewport"  content="width=device-width">
+    <meta name="viewport" content="width=device-width">
     <meta  content="BlueGriffon wysiwyg editor"  name="generator">
-    <meta name="google-site-verification" content="MTeL3TNo0TFW_fitGkYeAPb30R4uyA0_6jtBWHYfe6w" />
   </head>
   <body>
     <div  class="navbar">
@@ -37,6 +36,5 @@
     <footer>Copyright © Victor Tran 2016. Text on this page is licensed under <a
          href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
         CC-BY-SA license, version 4.0 or later.</a></footer>
-    
   </body>
 </html>
