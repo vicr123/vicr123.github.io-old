@@ -40,6 +40,7 @@ div.navbarContent {
     display: flex;
     vertical-align: middle;
     width: 800px;
+    overflow-x: auto;
 }
 
 div.navbarImage {
@@ -82,6 +83,13 @@ ul.navbarItems a.selectedItem {
 
 ul.navbarItems a:hover {
     background-color: black;
+}
+
+
+@media (min-width: 600px) {
+    ul.navbarItems li.backToVictorTran {
+        display: none;
+    }
 }
 
 div.headerItem {
@@ -222,7 +230,7 @@ img.wide {
     height: auto;
 }
 
-div.blockSmall {
+div[class^="block"] {
     display: flex;
     flex-direction: column;
      justify-content: center; 
@@ -230,12 +238,19 @@ div.blockSmall {
     padding-right: 100px;
     
     background-color: black;
-    height: 100px;
     background-attachment: fixed;
     
     -webkit-transition:=1s ease-out;
     -moz-transition:=1s ease-out;
     transition:=1s ease-out;
+}
+
+div.blockSmall {
+    height: 100px;
+}
+
+div.blockMedium {
+    height: 200px;
 }
 
 div.blockSmall#download {
@@ -264,30 +279,42 @@ div.blockSmall#morestuff:active {
     color: white;
 }
 
-div.blockTitle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 100px;
-    padding-right: 100px;
-    
-    width: calc(100% - 200px);
-    background-color: black;
-    height: 500px;
-    background-attachment: fixed;
-    
-    -webkit-transition:=1s ease-out;
-    -moz-transition:=1s ease-out;
-    transition:=1s ease-out;
+div.blockMedium#dataMigrationBack {
+    background: linear-gradient(to top right, rgb(0, 0, 0), rgb(100, 100, 100));
+    background-size: 100% cover;
+    color: white;
+    padding: 0px;
+    /*-webkit-clip-path: polygon(0px 0px, calc(100% - 100px) 0%, 100% 50%, calc(100% - 100px) 100%, 0% 100%);*/
 }
 
+div.blockMedium#dataMigration {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url("images/transfertool.svg") no-repeat center center;
+    background-size: 100% cover;
+    color: white;
+    -webkit-clip-path: polygon(0px 0px, calc(90% - 100px) 0%, 90% 50%, calc(90% - 100px) 100%, 0% 100%);
+    clip-path: polygon(0px 0px, calc(100% - 100px) 0%, 100% 50%, calc(100% - 100px) 100%, 0% 100%);
+}
 
+div.blockTitle {
+    height: 500px;
+}
 
 div.blockTitle#theshell {
     background-color: green;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
                 url("images/triangles.png") no-repeat center center;
     background-size: 100% cover;
+    background-position: center top;
+    color: white;
+}
+
+
+div.blockTitle#theshellImage {
+    background-color: green;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url("images/theshell.png") no-repeat center center;
+    background-size: cover;
     color: white;
 }
 
@@ -299,6 +326,11 @@ div.blockLanding#theshell {
     color: white;
 }
 
+div.blockLanding#break {
+    background: linear-gradient(to top right, rgb(0, 100, 255), rgb(0, 200, 255));
+    background-size: 100% cover;
+    color: white;
+}
 
 div.blockLanding#whoami {
     background-color: green;
@@ -348,19 +380,7 @@ div.blockTitle#opensource {
 
 
 div.blockLanding {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 100px;
-    padding-right: 100px;
-    
-    background-color: black;
     height: 200px;
-    background-attachment: fixed;
-    
-    -webkit-transition:=1s ease-out;
-    -moz-transition:=1s ease-out;
-    transition:=1s ease-out;
 }
 
 @media (max-width: 600px) {
