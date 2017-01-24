@@ -325,7 +325,7 @@ div.blockTitle {
 div.blockTitle#theshell {
     background-color: green;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url("images/triangles.png") no-repeat center center/cover;
+                url("images/triangles.png") no-repeat center center;
     background-size: 100% cover;
     background-position: center top;
     color: white;
@@ -335,7 +335,7 @@ div.blockTitle#theshell {
 div.blockTitle#theshellImage {
     background-color: green;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url("images/theshell.png") no-repeat center center/cover;
+                url("images/theshell.png") no-repeat center center;
     background-size: cover;
     color: white;
 }
@@ -343,15 +343,7 @@ div.blockTitle#theshellImage {
 div.blockLanding#theshell {
     background-color: green;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url("images/triangles.png") no-repeat center center/cover;
-    background-size: 100% cover;
-    color: white;
-}
-
-div.blockLanding#contemporary {
-    background-color: green;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url("/contemporary/images/splash.svg") no-repeat center center/cover;
+                url("images/triangles.png") no-repeat center center;
     background-size: 100% cover;
     color: white;
 }
@@ -403,43 +395,11 @@ div.blockTitle#theos {
 div.blockTitle#opensource {
     background-color: green;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url("images/opendoor.png") no-repeat left center center/cover;
+                url("images/opendoor.png") no-repeat left center;
     background-size: cover;
     color: white;
 }
 
-
-div.blockTitle#contemporary-theme {
-    background-color: green;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url("/contemporary/images/widgets.svg") no-repeat center center/cover;
-    background-size: 100% cover;
-    color: white;
-    background-size: 100% cover;
-    color: white;
-}
-
-
-div.blockTitle#contemporary-icon {
-    background-color: green;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url("/contemporary/images/icons.svg") no-repeat center center/cover;
-    background-size: 100% cover;
-    color: white;
-    background-size: 100% cover;
-    color: white;
-}
-
-
-div.blockTitle#contemporary-type {
-    background-color: green;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url("/contemporary/images/typeface.svg") no-repeat center center/cover;
-    background-size: 100% cover;
-    color: white;
-    background-size: 100% cover;
-    color: white;
-}
 
 div.blockLanding {
     height: 200px;

@@ -1,54 +1,73 @@
 <!DOCTYPE html>
-<html  dir="ltr">
+<html dir="ltr">
   <head>
-    <meta  content="text/html; charset=utf-8"  http-equiv="content-type">
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
     <title>Victor Tran</title>
-    <link  rel="stylesheet"  href="css.css">
-    <link  rel="stylesheet"  href="index.css">
-    <meta  content="Victor Tran"  name="author">
-    <meta  name="viewport"  content="width=device-width">
-    <meta  content="BlueGriffon wysiwyg editor"  name="generator">
-    <meta  name="google-site-verification"  content="MTeL3TNo0TFW_fitGkYeAPb30R4uyA0_6jtBWHYfe6w">
-    <link  rel="icon"  href="/icon.png">
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="index.css">
+    <meta content="Victor Tran" name="author">
+    <meta name="viewport" content="width=device-width">
+    <meta content="BlueGriffon wysiwyg editor" name="generator">
+    <meta name="google-site-verification" content="MTeL3TNo0TFW_fitGkYeAPb30R4uyA0_6jtBWHYfe6w">
+    <link rel="icon" href="/icon.png">
   </head>
   <body>
-    <div  class="navbar">
-      <div  class="navbarContent">
-        <div  class="navbarImage"><img  alt="Victor Tran"  src="images/smile.png"
-             width="40"  height="40"> <span  class="navbarHeader">&nbsp;Victor
-            Tran</span> </div>
-        <ul  class="navbarItems">
-          <li> <a  href="https://github.com/vicr123"> GitHub </a> </li>
-          <li> <a  href="theshell/index.html"> theShell </a> </li>
+    <div class="navbar">
+      <div class="navbarContent">
+        <div class="navbarImage"><img alt="Victor Tran" src="images/smile.png" height="40"
+            width="40"> <span class="navbarHeader">&nbsp;Victor Tran</span> </div>
+        <ul class="navbarItems">
+          <li> <a href="https://github.com/vicr123"> GitHub </a> </li>
+          <li> <a href="theshell/index.html"> theShell </a> </li>
         </ul>
       </div>
     </div>
-    <div  class="blockLanding"  id="whoami">
-      <div  class="navbarPadding">&nbsp;</div>
+    <div class="blockLanding" id="whoami">
+      <div class="navbarPadding">&nbsp;</div>
       <h1>Hey there!</h1>
-      <p>I'm Victor Tran. I develop apps (primarily) for the Linux platform.</p>
+      I'm Victor Tran. I develop apps (primarily) for the Linux platform. </div>
+    <div class="blockLanding" id="break">
+      <h1>On a break!</h1>
+      Currently, I'm on a break. I should be back at the end of 2017.<br>
+      <br>
+      <div> <a href="/break.html" class="button">Read More &gt;</a></div>
     </div>
-    <div  class="blockTitle"  id="theshell">
+    <div class="blockTitle" id="theshell">
       <h1>theShell</h1>
       <h2>The desktop environment that gets out of your way</h2>
-      <div> <a  href="theshell/index.html"  class="button">Learn More &gt;</a><a
-           href="https://github.com/vicr123/theshell"  class="button">GitHub
-          &gt;</a> </div>
+      <div> <a href="theshell/index.html" class="button">Learn More &gt;</a><a
+          href="https://github.com/vicr123/theshell" class="button">GitHub &gt;</a>
+      </div>
     </div>
-    <div  class="blockTitle"  id="theos">
-      <h1>theOS</h1>
+    <div class="blockMedium" id="contemporary">
+      <h1>Contemporary</h1>
+      <h2>A visual style for all Victor Tran apps</h2>
+      <div> <a href="contemporary/index.html" class="button">Learn More &gt;</a></div>
+    </div>
+    <div class="blockTitle" id="theos">
+      <h1>theShell OS</h1>
       <h2>The Operating System that gets out of your way</h2>
-      <p>theOS is built on theShell, which gives it the user experience that you
-        would usually have with theShell.</p>
-      <h3>Coming Soon</h3>
+      theShell OS is built on theShell, which gives it the amazing user experience that you
+      would have with theShell.
+      <!--<div> <a href="theos/index.html" class="button">Learn More &gt;</a></div>-->
+      <h2>More information coming soon!</h2>
+    </div>
+    <div class="blockMedium" id="dataMigrationBack">
+      <div class="blockMedium" id="dataMigration">
+        <h1>theOS Data Transfer Tool</h1>
+        <p>The theOS Data Transfer Tool allows you to move your files easily
+          from Windows to Linux.</p>
+        <div> <a href="https://github.com/vicr123/theos-data-migration-linux" class="button">GitHub
+            &gt;</a> </div>
+      </div>
     </div>
     <!--
     <div  class="blockTitle"  id="themedia">      <h1>theMedia</h1>      <h2>The media player that is easy to use</h2>      <div> <a  href="#"  class="button">Learn More &gt;</a><a  href="https://github.com/vicr123/themedia"           class="button">GitHub &gt;</a> </div>    </div>-->
-    <div  class="blockSmall"  id="morestuff">
+    <div class="blockSmall" id="morestuff">
       <h1>More stuff coming soon! :)</h1>
     </div>
     <footer>Copyright © Victor Tran 2016. Text on this page is licensed under <a
-         href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+        href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
         CC-BY-SA license, version 4.0 or later.</a></footer>
   </body>
 </html>

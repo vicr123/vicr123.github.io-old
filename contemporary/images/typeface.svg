@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16"
+   height="9"
+   viewBox="0 0 4.2333332 2.3812501"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.0 r"
+   sodipodi:docname="typeface.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="45.254834"
+     inkscape:cx="9.1831973"
+     inkscape:cy="4.8325055"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     units="px"
+     inkscape:window-width="1680"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4485"
+       empspacing="4" />
+    <inkscape:grid
+       type="xygrid"
+       id="grid4487"
+       empspacing="0"
+       originy="0.13229167"
+       originx="0.13229167"
+       dotted="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-294.61873)">
+    <rect
+       style="opacity:1;fill:#ebebeb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.52916664;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4489"
+       width="4.2333331"
+       height="2.3812499"
+       x="0"
+       y="294.61874" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.24253094px;line-height:1.57342136px;font-family:contemporary;-inkscape-font-specification:'contemporary, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.06293686px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="-145.3287"
+       y="257.80139"
+       id="text5298"
+       transform="rotate(-30)"><tspan
+         sodipodi:role="line"
+         id="tspan5296"
+         x="-145.3287"
+         y="257.80139"
+         style="fill:#000000;fill-opacity:1;stroke-width:0.06293686px;">R</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.28097367px;line-height:1.62210155px;font-family:contemporary;-inkscape-font-specification:'contemporary, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.06488407px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="78.960472"
+       y="286.05563"
+       id="text5302"
+       transform="rotate(15)"
+       inkscape:transform-center-x="0.2968112"
+       inkscape:transform-center-y="-0.22778222"><tspan
+         sodipodi:role="line"
+         id="tspan5300"
+         x="78.960472"
+         y="286.05563"
+         style="fill:#000000;fill-opacity:1;stroke-width:0.06488407px;">t</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.22201312px;line-height:1.54743946px;font-family:contemporary;-inkscape-font-specification:'contemporary, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.06189758px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="-73.621552"
+       y="287.61542"
+       id="text5306"
+       transform="rotate(-15)"><tspan
+         sodipodi:role="line"
+         id="tspan5304"
+         x="-73.621552"
+         y="287.61542"
+         style="fill:#000000;fill-opacity:1;stroke-width:0.06189758px;">ứ</tspan></text>
+  </g>
+</svg>
