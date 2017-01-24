@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>Victor Tran</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="index.css">
+    <meta content="Victor Tran" name="author">
+    <meta name="viewport" content="width=device-width">
+    <meta content="BlueGriffon wysiwyg editor" name="generator">
+    <meta name="google-site-verification" content="MTeL3TNo0TFW_fitGkYeAPb30R4uyA0_6jtBWHYfe6w">
+    <link rel="icon" href="/icon.png">
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbarContent">
+        <div class="navbarImage"><img alt="Victor Tran" src="images/smile.png" width="40"
+            height="40"> <span class="navbarHeader">&nbsp;Victor Tran</span> </div>
+        <ul class="navbarItems">
+          <li> <a href="https://github.com/vicr123"> GitHub </a> </li>
+          <li> <a href="theshell/index.html"> theShell </a> </li>
+        </ul>
+      </div>
+    </div>
+    <div class="blockLanding" id="theshell">
+      <div class="navbarPadding">&nbsp;</div>
+      <h1>On a break!</h1>
+      Thanks for reading :) </div>
+    <a href="index.html" class="sectionHeader">
+      <div class="sectionHeader">&lt; Home</div>
+    </a>
+    <div class="pageContent">
+      <h1>Hey everyone.</h1>
+      <br>
+      <p>I'm taking a (pretty large) break from all of my projects (including
+        theShell.) No, I'm not dead, rather, I have some important things to do
+        in real life. I may come and work on some of my projects and add a
+        little bit of code during my break, but nothing too major is going to
+        happen. </p>
+      <p><br>
+      </p>
+      <p>Hopefully theShell 4.0 is stable enough for the next year or so, so
+        that there aren't too many bugs while I'm gone.</p>
+      <p><br>
+      </p>
+      <p>If something really important, like a breaking change in Qt where
+        theShell doesn't compile correctly, or a really critical security bug,
+        I'll try to address it as fast as I possibly can. No guarantees about
+        that, though. Do <a href="mailto:vicr12345@gmail.com">tell me</a> if
+        something like this happens so I can try to rectify it.</p>
+      <p><br>
+      </p>
+      <p>Alternatively, if you do find a bug and want to fix it, please do play
+        around with the code and send me a pull request so that I can integrate
+        the code into theShell (or any of my other projects.) Thanks :)</p>
+      <p><br>
+      </p>
+      <p>I expect to be back at the end of 2017, and then I should be able to
+        begin maintaining all my apps and adding features to them again.</p>
+      <p><br>
+      </p>
+      <p>In the mean time, don't expect any major app updates or new features to
+        come out.</p>
+      <p><br>
+      </p>
+      <p>Thanks everyone,</p>
+      <p>Victor :)</p>
+      <p style="text-align: right;">06 September 2016</p>
+    </div>
+    <footer>Copyright © Victor Tran 2016. Text on this page is licensed under <a
+        href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+        CC-BY-SA license, version 4.0 or later.</a></footer>
+  </body>
+</html>
