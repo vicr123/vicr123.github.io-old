@@ -1,0 +1,213 @@
+@font-face {
+  font-family: 'Contemporary';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Contemporary'), local('Contemporary-Regular'), url(/typeface/Contemporary-Refular.ttf) format('ttf');
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes moveInFromTop {
+    from {
+        top: -48px;
+    }
+    
+    to {
+        top: 0px;
+    }
+}
+
+#smoothState {
+    animation: fadeIn 0.25s linear;
+}
+
+#smoothState.transitionOut {
+    animation: fadeOut 0.25s linear;
+    opacity: 0;
+}
+
+body {
+    background-color: #282828;
+    color: white;
+    
+    margin-left: 0px;
+    margin-top: 48px;
+    margin-right: 0px;
+    
+    font-family: 'Contemporary', sans-serif;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+}
+
+div.mainHeader {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 47px;
+    
+    border-bottom: 1px solid white;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #282828;
+    color: white;
+    
+    animation: moveInFromTop 0.25s ease-out;
+}
+
+div.mainHeader * {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+div.mainHeader hr {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+div.mainHeader .smileIcon {
+    float: left;
+    height: 48px;
+}
+
+div.mainHeader .headerItem {
+    display: block;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    cursor: pointer;
+}
+
+div.mainHeader .headerItem:hover {
+    background-color: #3c3c3c;
+}
+
+div.mainHeader .headerItem:active {
+    background-color: #1b1b1b;
+}
+
+div.mainHeader .headerItem p {
+    margin: 0px;
+}
+
+div.mainHeader .headerItem .title {
+    font-weight: bold;
+}
+
+div.mainHeader .headerTitle {
+    font-size: 20pt;
+    padding-right: 100px;
+}
+
+div.headerMenu {
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    right: 0px;
+    height: 0px;
+    
+    overflow-y: hidden;
+    
+    padding-left: 0px;
+    padding-right: 0px;
+    
+    transition: 0.25s ease-out;
+    
+    display: flex;
+    flex-direction: column;
+    
+    border-bottom: 1px solid white;
+    
+    background-color: #282828;
+    color: white;
+}
+
+div.headerMenu.open {
+    height: calc(100vh - 100%);
+    overflow-y: auto;
+}
+
+div.headerMenu .headerItem img.appIcon {
+    float: left;
+    width: 38px;
+}
+
+a.headerItem {
+    text-decoration: none;
+    color: white;
+}
+
+body.lightTheme {
+    background-color: #ebebeb;
+    color: black;
+}
+
+div.content {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid white;
+}
+
+div.content * {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+div.carousel > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+div.carousel * * {
+    
+}
+
+hr {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    border-left: none;
+    border-right: none;
+}
+
+@media (max-width: 450px) {
+    div.mainHeader {
+        justify-content: space-between;
+    }
+    
+    div.mainHeader .headerTitle {
+        padding-right: initial;
+    }
+    
+    div.mainHeader .smileIcon {
+        display: none;
+    }
+
+}

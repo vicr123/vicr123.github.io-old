@@ -1,0 +1,42 @@
+---
+project: Victor Tran
+projectIcon: /images/smile.png
+---
+
+<html>
+    <head>
+        <title>Victor Tran</title>
+        {% include heading.html %}
+    </head>
+    <body>
+        <div id="smoothstate">
+            <style>
+                div.theshell {
+                    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                                url("images/triangles.png") no-repeat center center/cover;
+                    height: 600px;
+                }
+                
+                div.thebeat {
+                    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                                url("images/thebeat.png") no-repeat center center/cover;
+                    height: 600px;
+                }
+            </style>
+            {% include header.html %}
+            
+            <div class="carousel">
+                <div class="theshell">
+                    <div><h1>theShell 6.1</h1><p>Desktop Environment</p></div>
+                    <p>Slogan</p>
+                </div>
+                <div class="thebeat">
+                    <div><h1>theBeat</h1><p>Audio Player</p></div>
+                    <p>Beats your speakers out of the room</p>
+                </div>
+            </div>
+        </div>
+        {% include footer.html %}
+        {% include footing.html %}
+    </body>
+</html>

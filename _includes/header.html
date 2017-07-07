@@ -1,0 +1,36 @@
+<div class="mainHeader">
+    <img class="smileIcon" src="{{ page.projectIcon }}"> 
+    <div class="headerTitle">{{ page.project }}
+    </div>
+    <div class="headerItem" onclick="toggleMenu('#projectsMenu')">
+        <p class="title">Projects</p>
+    </div>
+    <div class="headerMenu" id="projectsMenu">
+        <a class="headerItem" onclick="toggleMenu('#projectsMenu')" href="/index.html">
+            <img class="appIcon" src="/images/smile.png">
+            <p class="title">Victor Tran</p>
+            <p>Hello!</p>
+        </a>
+        <hr />
+        <a class="headerItem" onclick="toggleMenu('#projectsMenu')" href="https://vicr123.github.io/theshell/">
+            <img class="appIcon" src="/images/theshell.png">
+            <p class="title">theShell</p>
+            <p>Desktop Environment</p>
+        </a>
+        <a class="headerItem" onclick="$('#projectsMenu').toggleClass('open');" href="/contemporary">
+            <img class="appIcon" src="/images/unknownApp.png">
+            <p class="title">Contemporary</p>
+            <p>Design Language</p>
+        </a>
+        <a class="headerItem" onclick="$('#projectsMenu').toggleClass('open');">
+            <img class="appIcon" src="/images/unknownApp.png">
+            <p class="title">theBeat</p>
+            <p>Audio Player</p>
+        </a>
+        <a class="headerItem" onclick="$('#projectsMenu').toggleClass('open');">
+            <img class="appIcon" src="/images/unknownApp.png">
+            <p class="title">theSlate</p>
+            <p>Text Editor</p>
+        </a>
+    </div>
+</div>
