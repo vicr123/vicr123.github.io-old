@@ -37,6 +37,7 @@
 
 #smoothState {
     animation: fadeIn 0.25s linear;
+    background-color: #282828;
 }
 
 #smoothState.transitionOut {
@@ -55,6 +56,20 @@ body {
     font-family: Contemporary, sans-serif;
 }
 
+body .smoothstateLoader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    
+    z-index: -1;
+}
+
 h1, h2, h3 {
     font-weight: normal;
 }
@@ -69,13 +84,15 @@ div.mainHeader {
     border-bottom: 1px solid white;
     
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     
     background-color: #282828;
     color: white;
     
     animation: moveInFromTop 0.25s ease-out;
+    
+    z-index: 10000;
 }
 
 div.mainHeader * {
@@ -119,6 +136,11 @@ div.mainHeader .headerItem .title {
 div.mainHeader .headerTitle {
     font-size: 20pt;
     padding-right: 100px;
+}
+
+div.headerProject {
+    display: flex;
+    align-items: center;
 }
 
 div.headerMenu {
@@ -170,6 +192,7 @@ div.content {
     padding-top: 16px;
     padding-bottom: 16px;
     border-bottom: 1px solid white;
+    padding-left: 100px;
 }
 
 div.content * {
@@ -185,6 +208,16 @@ hr {
     border-right: none;
 }
 
+footer {
+    border-top: 1px solid white;
+}
+
+@media (max-width: 600px) {
+    div.content {
+        padding-left: 10px;
+    }
+}
+
 @media (max-width: 450px) {
     div.mainHeader {
         justify-content: space-between;
@@ -198,4 +231,7 @@ hr {
         display: none;
     }
 
+    div.headerRightPadding {
+        display: none;
+    }
 }

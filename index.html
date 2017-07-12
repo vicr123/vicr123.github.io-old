@@ -9,11 +9,33 @@ projectIcon: /images/smile.png
         {% include heading.html %}
     </head>
     <body>
+        {% include loader.html %}
         <div id="smoothstate">
             <style>
+                @keyframes slideInLeft {
+                    from {
+                        width: 0%;
+                    }
+                    
+                    to {
+                        width: 100%;
+                    }
+                }
+                
+                @keyframes slideOutLeft {
+                    from {
+                        width: 100%;
+                    }
+                    
+                    to {
+                        width: 0%;
+                    }
+                }
+
                 .carousel {
                     display: flex;
                     align-items: center;
+                    overflow-x: hidden;
                 }
 
                 div.carousel > * {
@@ -26,14 +48,18 @@ projectIcon: /images/smile.png
                     padding-top: 50px;
                     padding-bottom: 50px;
                 }
-
-                div.carousel * * {
-                    
+                
+                div.carouselTimer {
+                    height: 2px;
+                    /* background-color: rgb(0, 200, 0); */
+                    background: linear-gradient(90deg, rgb(0, 200, 0), 
+                                rgb(0, 200, 0) 33%, rgb(255, 200, 0) 33%,
+                                rgb(255, 200, 0) 66%, rgb(200, 200, 255) 66%) fixed;
                 }
                 
                 .carousel>div.carouselElement {
                     flex-grow: 1;
-                    display: none;
+                    display: flex;
                 }
                 
                 .carouselBack {
@@ -66,22 +92,42 @@ projectIcon: /images/smile.png
                     background-color: #1b1b1b;
                 }
                 
+                .carouselElement {
+                    height: 600px;
+                    overflow-x: hidden;
+                    
+                    width: 0%;
+                    animation: slideOutLeft 0.5s cubic-bezier(0.5, 0.5, 0.5, 1);
+                }
+                
+                .carouselElement.active {
+                    width: 100%;
+                    animation: slideInLeft 0.5s cubic-bezier(0.5, 0.5, 0.5, 1);
+                }
+                
+                @media (max-height: 750px) {
+                    .carouselElement {
+                        height: 400px;
+                    }
+                    
+                    .carouselBack, .carouselForward {
+                        top: 200px;
+                    }
+                }
+                
                 div.theshell {
                     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
                                 url("images/triangles.png") no-repeat center center/cover;
-                    height: 600px;
                 }
                 
                 div.thebeat {
                     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
                                 url("images/thebeat.png") no-repeat center center/cover;
-                    height: 600px;
                 }
                 
                 div.theslate {
                     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
                                 url("images/theslate.svg") no-repeat center center/cover;
-                    height: 600px;
                 }
             </style>
             {% include header.html %}
@@ -89,7 +135,7 @@ projectIcon: /images/smile.png
             <div class="carouselBack" onclick="decrementCarousel();"></div>
             <div class="carouselForward" onclick="incrementCarousel();"></div>
             <div class="carousel">
-                <div class="theshell carouselElement">
+                <div class="theshell carouselElement active">
                     <div><h1>theShell 6.1</h1><p>Desktop Environment</p></div>
                     <p>The Desktop Environment that gets out of your way</p>
                 </div>
@@ -102,48 +148,83 @@ projectIcon: /images/smile.png
                     <p>More than just a slate</p>
                 </div>
             </div>
+            <div class="carouselTimer" id="carouselTimer"></div>
+            <div class="content">
+                <h1>Hey, I'm Victor!</h1>
+                <p>I create apps for the Linux platform, most of which are based on the Qt toolkit.</p>
+            </div>
             
             <script>
                 //Set up carousel
+                var timeout;
+                var carouselTimer = 0;
                 var carouselElements = [];
                 var currentCarousel = 0;
                 $('.carousel').children('.carouselElement').each(function() {
                     carouselElements.push($(this));
                     $(this).on('swipeLeft', incrementCarousel);
                     $(this).on('swipeRight', decrementCarousel);
+                    
+                    if (/Mobi/.test(navigator.userAgent)) {
+                        $(this).css("animation", "none");
+                    }
                 });
                 
-                carouselElements[0].css("display", "flex");
+                
+                function incrementTimer() {
+                    carouselTimer++;
+                    if (carouselTimer % 500 == 0) {
+                        incrementCarousel();
+                    }
+                    $("#carouselTimer").css("width", parseFloat(carouselTimer / 15) + "%");
+                    clearTimeout(timeout);
+                    timeout = setTimeout(incrementTimer, 10);
+                }
                 
                 function incrementCarousel() {
-                    carouselElements[currentCarousel].css("display", "none");
+                    carouselElements[currentCarousel].removeClass("active");
                     currentCarousel++;
                     if (currentCarousel >= carouselElements.length) {
                         currentCarousel = 0;
                     }
-                    carouselElements[currentCarousel].css("display", "flex");
-                    clearTimeout(timeout);
-                    timeout = setTimeout(incrementCarousel, 5000);
+                    carouselElements[currentCarousel].addClass("active");
+                    
+                    carouselTimer = currentCarousel * 500;
+                    
+                    if (/Mobi/.test(navigator.userAgent)) {
+                        clearTimeout(timeout);
+                        timeout = setTimeout(incrementCarousel, 5000);
+                    }
                 }
                 
                 function decrementCarousel() {
-                    carouselElements[currentCarousel].css("display", "none");
+                    carouselElements[currentCarousel].removeClass("active");
                     currentCarousel--;
                     if (currentCarousel < 0) {
                         currentCarousel = carouselElements.length - 1;
                     }
-                    carouselElements[currentCarousel].css("display", "flex");
-                    clearTimeout(timeout);
-                    timeout = setTimeout(incrementCarousel, 5000);
+                    carouselElements[currentCarousel].addClass("active");
+                    carouselTimer = currentCarousel * 500;
+                    
+                    if (/Mobi/.test(navigator.userAgent)) {
+                        clearTimeout(timeout);
+                        timeout = setTimeout(incrementCarousel, 5000);
+                    }
                 }
                 
-                var timeout = setTimeout(incrementCarousel, 5000);
+                //Check for mobile
+                if (/Mobi/.test(navigator.userAgent)) {
+                    $(".carouselTimer").hide();
+                    timeout = setTimeout(incrementCarousel, 5000);
+                } else {
+                    timeout = setTimeout(incrementTimer, 100);
+                }
                 
                 $('.carousel').on('swipeLeft', incrementCarousel);
                 $('.carousel').on('swipeRight', decrementCarousel);
             </script>
+            {% include footer.html %}
         </div>
-        {% include footer.html %}
         {% include footing.html %}
     </body>
 </html>

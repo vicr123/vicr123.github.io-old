@@ -1,13 +1,13 @@
 $(function() {
     var smoothstate = $('#smoothstate').smoothState({
         onStart: {
-            duration: 250,
+            duration: 500,
             render: function($container) {
                 $container.addClass('transitionOut');
             }
         },
         onReady: {
-            duration: 0,
+            duration: 250,
             render: function($container, $newContent) {
                 $container.removeClass('transitionOut');
                 
@@ -18,7 +18,14 @@ $(function() {
                 $container.html($newContent);
             }
         },
-        prefetch: true
+        onProgress: {
+            duration: 1000,
+            render: function($container) {
+                
+            }
+        },
+        prefetch: true,
+        loadingClass: 'smoothstateLoading'
     });
 });
 
