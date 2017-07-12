@@ -11,6 +11,61 @@ projectIcon: /images/smile.png
     <body>
         <div id="smoothstate">
             <style>
+                .carousel {
+                    display: flex;
+                    align-items: center;
+                }
+
+                div.carousel > * {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    text-align: center;
+                    
+                    padding-top: 50px;
+                    padding-bottom: 50px;
+                }
+
+                div.carousel * * {
+                    
+                }
+                
+                .carousel>div.carouselElement {
+                    flex-grow: 1;
+                    display: none;
+                }
+                
+                .carouselBack {
+                    background-image: url("images/go-previous.svg");
+                    left: 0px;
+                }
+                
+                .carouselForward {
+                    background-image: url("images/go-next.svg");
+                    right: 0px;
+                }
+                
+                .carouselBack, .carouselForward {
+                    position: absolute;
+                    
+                    height: 100px;
+                    width: 40px;
+                    padding: 0px;
+                    top: 350px;
+                    
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+                
+                .carouselBack:hover, .carouselForward:hover {
+                    background-color: #3c3c3c;
+                }
+                
+                .carouselBack:active, .carouselForward:active {
+                    background-color: #1b1b1b;
+                }
+                
                 div.theshell {
                     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
                                 url("images/triangles.png") no-repeat center center/cover;
@@ -22,19 +77,71 @@ projectIcon: /images/smile.png
                                 url("images/thebeat.png") no-repeat center center/cover;
                     height: 600px;
                 }
+                
+                div.theslate {
+                    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                                url("images/theslate.svg") no-repeat center center/cover;
+                    height: 600px;
+                }
             </style>
             {% include header.html %}
             
+            <div class="carouselBack" onclick="decrementCarousel();"></div>
+            <div class="carouselForward" onclick="incrementCarousel();"></div>
             <div class="carousel">
-                <div class="theshell">
+                <div class="theshell carouselElement">
                     <div><h1>theShell 6.1</h1><p>Desktop Environment</p></div>
-                    <p>Slogan</p>
+                    <p>The Desktop Environment that gets out of your way</p>
                 </div>
-                <div class="thebeat">
+                <div class="thebeat carouselElement">
                     <div><h1>theBeat</h1><p>Audio Player</p></div>
-                    <p>Beats your speakers out of the room</p>
+                    <p>Keeps your computer beating</p>
+                </div>
+                <div class="theslate carouselElement">
+                    <div><h1>theSlate</h1><p>Text Editor</p></div>
+                    <p>More than just a slate</p>
                 </div>
             </div>
+            
+            <script>
+                //Set up carousel
+                var carouselElements = [];
+                var currentCarousel = 0;
+                $('.carousel').children('.carouselElement').each(function() {
+                    carouselElements.push($(this));
+                    $(this).on('swipeLeft', incrementCarousel);
+                    $(this).on('swipeRight', decrementCarousel);
+                });
+                
+                carouselElements[0].css("display", "flex");
+                
+                function incrementCarousel() {
+                    carouselElements[currentCarousel].css("display", "none");
+                    currentCarousel++;
+                    if (currentCarousel >= carouselElements.length) {
+                        currentCarousel = 0;
+                    }
+                    carouselElements[currentCarousel].css("display", "flex");
+                    clearTimeout(timeout);
+                    timeout = setTimeout(incrementCarousel, 5000);
+                }
+                
+                function decrementCarousel() {
+                    carouselElements[currentCarousel].css("display", "none");
+                    currentCarousel--;
+                    if (currentCarousel < 0) {
+                        currentCarousel = carouselElements.length - 1;
+                    }
+                    carouselElements[currentCarousel].css("display", "flex");
+                    clearTimeout(timeout);
+                    timeout = setTimeout(incrementCarousel, 5000);
+                }
+                
+                var timeout = setTimeout(incrementCarousel, 5000);
+                
+                $('.carousel').on('swipeLeft', incrementCarousel);
+                $('.carousel').on('swipeRight', decrementCarousel);
+            </script>
         </div>
         {% include footer.html %}
         {% include footing.html %}
