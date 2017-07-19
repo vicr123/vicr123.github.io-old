@@ -28,6 +28,21 @@
         div.footerText {
             padding-left: 100px;
             padding-right: 100px;
+            
+            display: flex;
+            flex-wrap: wrap;
+            
+            font-size: 8pt;
+        }
+        
+        div.footerText p {
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-bottom: 0px;
+        }
+        
+        div.footerText p:not(:first-child) {
+            border-left: 1px solid white;
         }
         
         @media (max-width: 500px) {
@@ -66,7 +81,8 @@
         </div>
     </div>
     <div class="footerText">
-        <p>Copyright (c) Victor Tran 2017. Text on this page is licensed under the terms of the <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
-        CC-BY-SA license, version 4.0 or later.</a>
+        <p>Copyright (c) Victor Tran 2017.</p>
+        <p>Landing button design by astro.</p>
+        <p>Text available under <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA, v4.0 or later.</a></p>
     </div>
 </footer>

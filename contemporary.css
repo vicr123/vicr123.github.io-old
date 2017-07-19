@@ -235,6 +235,19 @@ a.button:active {
     background-color: rgb(0, 0, 100);
 }
 
+div.landing a.button, div.helpHeader a.button {
+    color: #DDDDDD;
+    background-color: rgba(200, 200, 200, 0.2);
+}
+
+div.landing a.button:hover, div.helpHeader a.button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+div.landing a.button:active, div.helpHeader a.button:active {
+    background-color: rgba(150, 150, 150, 0.4);
+}
+
 @media (max-width: 600px) {
     div.content {
         padding-left: 10px;

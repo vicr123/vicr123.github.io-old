@@ -134,16 +134,18 @@ projectIcon: /images/theshell.png
                     <div class="tsBranch" onclick="openStable()">
                         <img src="/images/theshell.png" width="128"/>
                         <p>theShell Stable</p>
+                        <p>Recommended for most users</p>
                     </div>
                     <div class="tsBranch" onclick="openBP()">
                         <img src="/images/theshellb.svg" width="128"/>
                         <p>theShell Blueprint</p>
+                        <p>Recommended for the early testers</p>
                     </div>
                 </div>
             </div>
             <div class="featurePanel" id="stablePanel">
                 <h2><img src="/images/go-previous.svg" onclick="closePanels()" style="padding-right: 6px;"/>Let's get theShell Stable!</h2>
-                <p>There are packages available for some distributions.</p>
+                <p>theShell Stable is the branch of theShell where everything has been tested and should be stable enough for daily use.</p>
                 <h3>Arch Linux</h3>
                 <p>Install the <a href="https://aur.archlinux.org/packages/theshell"><code>theshell</code></a> package from the Arch User Repository.<br />
                 Use of an AUR helper is recommended as there are a lot of dependencies to install.</p>
@@ -194,7 +196,7 @@ projectIcon: /images/theshell.png
             </div>
             <div class="featurePanel" id="bpPanel">
                 <h2><img src="/images/go-previous.svg" onclick="closePanels()" style="padding-right: 6px;"/>Let's get theShell Blueprint!</h2>
-                <p>There are packages available for some distributions.</p>
+                <p>theShell Blueprint is the branch of theShell where breaking changes may happen at any time. However, you get to test the newest features of theShell. <b>It's recommended that you do not use theShell Blueprint as your daily driver.</b></p>
                 <h3>Arch Linux</h3>
                 <p>Install the <a href="https://aur.archlinux.org/packages/theshell-blueprint"><code>theshell-blueprint</code></a> package from the Arch User Repository.<br />
                 Use of an AUR helper is recommended as there are a lot of dependencies to install.<br />
@@ -261,6 +263,8 @@ projectIcon: /images/theshell.png
                     $('html, body').animate({
                         scrollTop: $("#landingPanel").offset().top - 48
                     }, 500);
+                    
+                    history.pushState("stable", "Download theShell Stable", "#stable");
                 }
                 
                 function openBP() {
