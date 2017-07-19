@@ -1,0 +1,75 @@
+---
+project: theBeat
+projectIcon: /images/thebeatIcon.svg
+---
+
+<html>
+    <head>
+        <title>theBeat</title>
+        {% include heading.html %}
+    </head>
+    <body>
+        {% include loader.html %}
+        <div id="smoothstate">
+            <style>
+                div.landing {
+                    padding-top: 100px;
+                    padding-bottom: 100px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/thebeat.png) no-repeat center center/cover;
+                    border-bottom: 1px solid white;
+                }
+                
+                div.buffer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    background-color: #c800c8;
+                }
+                
+                p:last-child {
+                    margin-bottom: 0px;
+                }
+                
+                div.featurePanel {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    border-bottom: 1px solid white;
+                }
+                
+                @media (max-width: 500px) {
+                    div.landing {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                    
+                    div.featurePanel {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                }
+            </style>
+            {% include header.html %}
+            
+            <div class="landing">
+                <h1>theBeat</h1>
+                <h2>Keeps your computer beating.</h2>
+                <p>And we're still beating along. Come back soon for a stable release!</p>
+                <div class="buttonBox">
+                    <a href="http://www.github.com/vicr123/thebeat" class="button">See the code</a>
+                </div>
+            </div>
+            
+            {% include footer.html %}
+        </div>
+        {% include footing.html %}
+    </body>
+</html>
