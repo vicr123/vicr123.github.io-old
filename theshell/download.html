@@ -1,0 +1,298 @@
+---
+project: theShell
+projectIcon: /images/theshell.png
+---
+
+<html>
+    <head>
+        <title>theShell</title>
+        {% include heading.html %}
+    </head>
+    <body>
+        {% include loader.html %}
+        <div id="smoothstate">
+            <style>
+                div.landing {
+                    padding-top: 100px;
+                    padding-bottom: 100px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/triangles.png) no-repeat center center/cover;
+                    border-bottom: 1px solid white;
+                }
+                
+                div.buffer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    background-color: #c800c8;
+                }
+                
+                p:last-child {
+                    margin-bottom: 0px;
+                }
+                
+                div.featurePanel {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    border-bottom: 1px solid white;
+                    transition: height 0.5s ease-out, padding-top 0.5s ease-out, padding-bottom 0.5s ease-out;
+                    overflow-y: hidden;
+                }
+                
+                #landingPanel {
+                    height: 300px;
+                }
+                
+                #stablePanel {
+                    height: 0px;
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                    
+                    border-bottom: none;
+                }
+                
+                #bpPanel {
+                    height: 0px;
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                    
+                    border-bottom: none;
+                }
+                
+                div.tsBranches {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+                
+                div.tsBranch {
+                    padding: 9px;
+                    flex-grow: 1;
+                    
+                    text-align: center;
+                    cursor: pointer;
+                }
+                
+                div.tsBranch:hover {
+                    background-color: #3c3c3c;
+                }
+                
+                div.tsBranch:active {
+                    background-color: #1b1b1b;
+                }
+                
+                code.dollar, code.hash {
+                    display: block;
+                }
+                
+                code.dollar:before {
+                    content: "$ ";
+                }
+                
+                code.hash:before {
+                    content: "# ";
+                }
+                
+                @media (max-width: 500px) {
+                    div.landing {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                    
+                    div.featurePanel {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                }
+            </style>
+            {% include header.html %}
+            
+            <div class="landing">
+                <h1>theShell</h1>
+                <h2>Down at its core, it's up for anything.</h2>
+                <p>And it's easy to download too.</p>
+            </div>
+            <div class="featurePanel">
+                <h2>But first,</h2>
+                <p>Here are some things you might need to know.</p>
+                <ul>
+                    <li>theShell 6.2 is the latest stable version of theShell</li>
+                    <li>theShell has only been tested on Arch Linux. Your mileage may vary on other distributions.</li>
+                </ul>
+            </div>
+            <div class="featurePanel" id="landingPanel">
+                <h2>Let's do it!</h2>
+                <p>Which branch of theShell do you want to use?</p>
+                <div class="tsBranches">
+                    <div class="tsBranch" onclick="openStable()">
+                        <img src="/images/theshell.png" width="128"/>
+                        <p>theShell Stable</p>
+                    </div>
+                    <div class="tsBranch" onclick="openBP()">
+                        <img src="/images/theshellb.svg" width="128"/>
+                        <p>theShell Blueprint</p>
+                    </div>
+                </div>
+            </div>
+            <div class="featurePanel" id="stablePanel">
+                <h2><img src="/images/go-previous.svg" onclick="closePanels()" style="padding-right: 6px;"/>Let's get theShell Stable!</h2>
+                <p>There are packages available for some distributions.</p>
+                <h3>Arch Linux</h3>
+                <p>Install the <a href="https://aur.archlinux.org/packages/theshell"><code>theshell</code></a> package from the Arch User Repository.<br />
+                Use of an AUR helper is recommended as there are a lot of dependencies to install.</p>
+                <h3>Build from source</h3>
+                <p>If theShell is not packaged for your distribution, you can build theShell from source yourself.</p>
+                <ol>
+                    <li>Install dependencies of theShell.</li>
+                    <li>
+                        Download the sources of theShell.
+                        <code class="dollar">
+                            git clone https://github.com/vicr123/theshell
+                        </code>
+                        <code class="dollar">
+                            cd theshell
+                        </code>
+                    </li>
+                    <li>
+                        Generate D-Bus files for theShell
+                        <code class="dollar">
+                            qdbuscpp2xml -M -s notificationdbus.h -o org.freedesktop.Notifications.xml
+                        </code>
+                        <code class="dollar">
+                            qdbuscpp2xml -a upowerdbus.h -o org.thesuite.power.xml
+                        </code>
+                    </li>
+                    <li>
+                        Build theShell
+                        <code class="dollar">
+                            qmake
+                        </code>
+                        <code class="dollar">
+                            make
+                        </code>
+                    </li>
+                    <li>
+                        Copy files to directories
+                        <code class="hash">
+                            cp theshell /usr/bin 
+                        </code>
+                        <code class="hash">
+                            cp init_theshell /usr/bin 
+                        </code>
+                        <code class="hash">
+                            cp theshell.desktop /usr/share/xsessions
+                        </code>
+                    </li>
+                </ol>
+            </div>
+            <div class="featurePanel" id="bpPanel">
+                <h2><img src="/images/go-previous.svg" onclick="closePanels()" style="padding-right: 6px;"/>Let's get theShell Blueprint!</h2>
+                <p>There are packages available for some distributions.</p>
+                <h3>Arch Linux</h3>
+                <p>Install the <a href="https://aur.archlinux.org/packages/theshell-blueprint"><code>theshell-blueprint</code></a> package from the Arch User Repository.<br />
+                Use of an AUR helper is recommended as there are a lot of dependencies to install.<br />
+                theShell Blueprint can be installed alongside theShell Stable when installed through the AUR.</p>
+                <h3>Build from source</h3>
+                <p>If theShell is not packaged for your distribution, you can build theShell from source yourself.</p>
+                <ol>
+                    <li>Install dependencies of theShell.</li>
+                    <li>
+                        Download the sources of theShell Blueprint.
+                        <code class="dollar">
+                            git clone https://github.com/vicr123/theshell#branch=blueprint
+                        </code>
+                        <code class="dollar">
+                            cd theshell
+                        </code>
+                    </li>
+                    <li>
+                        Generate D-Bus files for theShell
+                        <code class="dollar">
+                            qdbuscpp2xml -M -s notificationdbus.h -o org.freedesktop.Notifications.xml
+                        </code>
+                        <code class="dollar">
+                            qdbuscpp2xml -a upowerdbus.h -o org.thesuite.power.xml
+                        </code>
+                    </li>
+                    <li>
+                        Build theShell
+                        <code class="dollar">
+                            qmake
+                        </code>
+                        <code class="dollar">
+                            make
+                        </code>
+                    </li>
+                    <li>
+                        Copy files to directories
+                        <code class="hash">
+                            cp theshell /usr/bin/
+                        </code>
+                        <code class="hash">
+                            cp init_theshell /usr/bin/
+                        </code>
+                        <code class="hash">
+                            cp theshell.desktop /usr/share/xsessions/
+                        </code>
+                    </li>
+                </ol>
+                <p><b>IMPORTANT:</b> theShell Blueprint cannot be installed next to theShell Stable using this method.</p>
+            </div>
+            
+            {% include footer.html %}
+            <script>
+                function openStable() {
+                    $("#landingPanel").css("height", "0px");
+                    $("#landingPanel").css("padding-top", "0px");
+                    $("#landingPanel").css("padding-bottom", "0px");
+                    $("#stablePanel").css("height", "calc(100vh - 88px)");
+                    $("#stablePanel").css("padding-top", "20px");
+                    $("#stablePanel").css("padding-bottom", "20px");
+                    $('html, body').css("overflow-y", "hidden");
+                    $('#stablePanel').css("overflow-y", "auto");
+                    
+                    $('html, body').animate({
+                        scrollTop: $("#landingPanel").offset().top - 48
+                    }, 500);
+                }
+                
+                function openBP() {
+                    $("#landingPanel").css("height", "0px");
+                    $("#landingPanel").css("padding-top", "0px");
+                    $("#landingPanel").css("padding-bottom", "0px");
+                    $("#bpPanel").css("height", "calc(100vh - 88px)");
+                    $("#bpPanel").css("padding-top", "20px");
+                    $("#bpPanel").css("padding-bottom", "20px");
+                    $('html, body').css("overflow-y", "hidden");
+                    $('#bpPanel').css("overflow-y", "auto");
+                    
+                    $('html, body').animate({
+                        scrollTop: $("#landingPanel").offset().top - 48
+                    }, 500);
+                }
+                
+                function closePanels() {
+                    $("#stablePanel").css("height", "0px");
+                    $("#stablePanel").css("padding-top", "0px");
+                    $("#stablePanel").css("padding-bottom", "0px");
+                    $("#bpPanel").css("height", "0px");
+                    $("#bpPanel").css("padding-top", "0px");
+                    $("#bpPanel").css("padding-bottom", "0px");
+                    $("#landingPanel").css("height", "300px");
+                    $("#landingPanel").css("padding-top", "20px");
+                    $("#landingPanel").css("padding-bottom", "20px");
+                    
+                    $('html, body').css("overflow-y", "auto");
+                }
+            </script>
+        </div>
+        {% include footing.html %}
+    </body>
+</html>

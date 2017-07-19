@@ -1,0 +1,147 @@
+---
+project: theShell
+projectIcon: /images/theshell.png
+---
+
+<html>
+    <head>
+        <title>theShell</title>
+        {% include heading.html %}
+    </head>
+    <body>
+        {% include loader.html %}
+        <div id="smoothstate">
+            <style>
+                div.landing {
+                    padding-top: 100px;
+                    padding-bottom: 100px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/triangles.png) no-repeat center center/cover;
+                    border-bottom: 1px solid white;
+                }
+                
+                div.buffer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    background-color: #c800c8;
+                }
+                
+                p:last-child {
+                    margin-bottom: 0px;
+                }
+                
+                div.featurePanel {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    border-bottom: 1px solid white;
+                }
+                
+                div.video {
+                    position: fixed;
+                    left: 0px;
+                    top: 48px;
+                    right: 0px;
+                    height: 0px;
+                    transition: height 0.2s ease-out;
+                    
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    overflow-y: hidden;
+                    
+                    background-color: rgba(0, 0, 0, 0.75);
+                }
+                
+                @media (max-width: 500px) {
+                    div.landing {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                    
+                    div.featurePanel {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                }
+            </style>
+            {% include header.html %}
+            
+            <div class="landing">
+                <h1>theShell</h1>
+                <h2>Down at its core, it's up for anything.</h2>
+                <p>And theShell 6.2 is up for grabs now! <a href="download.html" class="button">Go get it!</a></p>
+                <div class="buttonBox">
+                    <a href="./help/" class="button">Help Center</a>
+                    <a href="http://www.github.com/vicr123/theshell" class="button">See the code</a>
+                    <a href="#" class="button" onclick="startVideo()">Watch the video</a>
+                </div>
+            </div>
+            <div class="video" id="video" onclick="stopVideo()">
+                <div id="promoVideo">
+                    
+                </div>
+            </div>
+            <div class="featurePanel">
+                <h2>For the busy</h2>
+                <p>When you're not actively using theShell, the bar shifts into the background so you won't be distracted by it. And if you really need to work distraction free, theShell 7.0 comes with the all new Quiet Mode, which allows you to control, on-the-fly, the notifications and sounds that your computer will emit.</p>
+            </div>
+            <div class="featurePanel">
+                <h2>The gateway to your computer</h2>
+                <p>theShell comes with the powerful Gateway, which is a central place to act with your computer. And like everything else, it doesn't appear unless you're focusing on it.</p>
+            </div>
+            <div class="featurePanel">
+                <h2>A contemporary look</h2>
+                <p>theShell uses the in-house Contemporary theme by default, which gives theShell a contemporary and modern look, and all your apps will look pleasant and will integrate with features of theShell.</p>
+            </div>
+            
+            {% include footer.html %}
+            <script>
+                //Load the iframe Player API
+                var tag = document.createElement('script');
+
+                tag.src = "https://www.youtube.com/iframe_api";
+                var firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                
+                var player;
+                function onYouTubeIframeAPIReady() {
+                    player = new YT.Player('promoVideo', {
+                    height: '390',
+                    width: '640',
+                    videoId: 'oHtIe7MS9ig',
+                    events: {
+                        'onStateChange': onPlayerStateChange
+                    }
+                    });
+                }
+                
+                function onPlayerStateChange(event) {
+                    if (event.data == YT.PlayerState.STOPPED) {
+                        stopVideo();
+                    }
+                }
+
+                function startVideo() {
+                    $("#video").css("height", "calc(100vh - 48px)");
+                    player.playVideo();
+                }
+                
+                function stopVideo() {
+                    player.stopVideo();
+                    $("#video").css("height", "0px");
+                }
+            </script>
+        </div>
+        {% include footing.html %}
+    </body>
+</html>

@@ -31,3 +31,14 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+
+# Help files
+
+defaults:
+  -
+    scope:
+      path: "theshell/help"
+      exclude: "theshell/help/index.html"
+    values:
+      layout: "helpPage"
+      helpIndex: "/theshell/help/"

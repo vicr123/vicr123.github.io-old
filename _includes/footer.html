@@ -1,3 +1,72 @@
 <footer>
+    <style>
+        div.footerGroups {
+            padding-left: 100px;
+            padding-right: 100px;
+            
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-content: flex-start;
+        }
+        
+        div.footerGroup {
+            padding-left: 10px;
+            padding-right: 10px;
+            width: 200px;
+        }
+        
+        p.footerGroupTitle {
+            font-size: 15pt;
+        }
+        
+        a.footerGroupLink {
+            display: block;
+        }
+        
+        div.footerText {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+        
+        @media (max-width: 500px) {
+            div.footerGroups {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            
+            div.footerText {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+    </style>
     
+    <div class="footerGroups">
+        <div class="footerGroup">
+            <p class="footerGroupTitle">Projects</p>
+            <a class="footerGroupLink" href="/theshell/">theShell</a>
+            <a class="footerGroupLink" href="/contemporary/">Contemporary</a>
+        </div>
+        <div class="footerGroup">
+            <p class="footerGroupTitle">Git Repositories</p>
+            <a class="footerGroupLink" href="https://github.com/vicr123/theshell">theShell</a>
+            <a class="footerGroupLink" href="https://github.com/vicr123/thebeat">theBeat</a>
+            <a class="footerGroupLink" href="https://github.com/vicr123/theslate">theSlate</a>
+            <a class="footerGroupLink" href="https://github.com/vicr123/thephoto">thePhoto</a>
+            <a class="footerGroupLink" href="https://github.com/vicr123/contemporary-theme">Contemporary Widgets</a>
+            <a class="footerGroupLink" href="https://github.com/vicr123/contemporary-icons">Contemporary Icons</a>
+            <a class="footerGroupLink" href="https://github.com/vicr123/contemporary-cursors">Contemporary Cursors</a>
+            <a class="footerGroupLink" href="https://github.com/vicr123/">More...</a>
+        </div>
+        <div class="footerGroup">
+            <p class="footerGroupTitle">Help</p>
+            <a class="footerGroupLink" href="/theshell/help/">theShell</a>
+        </div>
+    </div>
+    <div class="footerText">
+        <p>Copyright (c) Victor Tran 2017. Text on this page is licensed under the terms of the <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+        CC-BY-SA license, version 4.0 or later.</a>
+    </div>
 </footer>

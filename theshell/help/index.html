@@ -1,0 +1,114 @@
+---
+project: theShell
+projectIcon: /images/theshell.png
+layout: none
+---
+
+<html>
+    <head>
+        <title>theShell Help</title>
+        {% include heading.html %}
+    </head>
+    <body>
+        {% include loader.html %}
+        <div id="smoothstate">
+            <style>
+                div.landing {
+                    padding-top: 100px;
+                    padding-bottom: 100px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/triangles.png) no-repeat center center/cover;
+                    border-bottom: 1px solid white;
+                }
+                
+                div.buffer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    background-color: #c800c8;
+                }
+                
+                p:last-child {
+                    margin-bottom: 0px;
+                }
+                
+                div.helpSection {
+                    padding-top: 20px;
+                    padding-bottom: 0px;
+                    padding-left: 0px;
+                    padding-right: 0px;
+                    
+                    border-bottom: 1px solid white;
+                }
+                
+                div.helpSection h2 {
+                    padding-left: 100px;
+                    padding-right: 100px;
+                }
+                
+                a.helpIndex {
+                    display: block;
+                    
+                    width: calc(100% - 200px);
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    color: white;
+                    text-decoration: none;
+                    
+                    background-color: #282828;
+                }
+                
+                a.helpIndex:before {
+                    content: url(/images/go-next.svg);
+                    float: left;
+                    padding-right: 4px;
+                }
+                
+                a.helpIndex:hover {
+                    background-color: #3c3c3c;
+                }
+                
+                a.helpIndex:active {
+                    background-color: #1b1b1b;
+                }
+                
+                @media (max-width: 500px) {
+                    div.landing {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                }
+            </style>
+            {% include header.html %}
+            
+            <div class="landing">
+                <h1>theShell Help</h1>
+                <h2>Down at its core, it's up for anything.</h2>
+                <p>And if you need a jumpstart, it's right here to help you.</p>
+                <a href="/theshell/" class="button">theShell Home</a>
+            </div>
+            <div class="helpSection">
+                <h2>Places to Start</h2>
+                <a href="gateway" class="helpIndex">Gateway</a>
+                <a href="bar" class="helpIndex">Bar</a>
+                <a href="statuscenter" class="helpIndex">Status Center</a>
+            </div>
+            <div class="helpSection">
+                <h2>theShell OS</h2>
+                <a href="os/createUSB" class="helpIndex">Creating a Live USB</a>
+                <a href="os/checkUpdates" class="helpIndex">Checking for updates</a>
+            </div>
+            
+            {% include footer.html %}
+        </div>
+        {% include footing.html %}
+    </body>
+</html>

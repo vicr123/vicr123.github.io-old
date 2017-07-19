@@ -1,0 +1,113 @@
+---
+---
+
+<html>
+    <head>
+        <title>{{ page.title }} - {{ page.project }} Help</title>
+        {% include heading.html %}
+    </head>
+    <body>
+        {% include loader.html %}
+        <div id="smoothstate">
+            <style media="all">
+                div.printDiv {
+                    display: none;
+                }
+                
+                div.helpHeader {
+                    background-color: rgb(0, 100, 0);
+                    
+                    padding-left: calc(50vw - 380px);
+                    padding-top: 30px;
+                    padding-bottom: 60px;
+                }
+                
+                div.helpContent {
+                    display: block;
+                    background-color: #282828;
+                    border: 1px solid white;
+                    padding: 9px;
+                    
+                    position: relative;
+                    top: -30px;
+                    width: 800px;
+                    left: calc(50vw - 420px);
+                }
+                
+                @media (max-width: 830px) {
+                    div.helpHeader {
+                        padding-left: 35px;
+                    }
+                    
+                    div.helpContent {
+                        position: static;
+                        top: 0px;
+                        width: initial;
+                        border: none;
+                        
+                        border-top: 1px solid white;
+                    }
+                }
+                
+                h1 {
+                    font-size: 20pt;
+                    font-weight: normal;
+                }
+                
+                h2 {
+                    font-size: 15pt;
+                    font-weight: normal;
+                }
+                
+                img:only-child {
+                    width: 100%;
+                    border: 1px solid white;
+                }
+
+                a {
+                    color: rgb(0, 200, 255);
+                }
+            </style>
+            <style media="print">
+                div.displayDiv {
+                    display: none;
+                }
+                
+                #smoothstate {
+                    background-color: white;
+                }
+                
+                body {
+                    margin-top: 0px;
+                }
+                
+                div.printDiv {
+                    display: initial;
+                    background-color: white;
+                    color: black;
+                }
+            </style>
+            <div class="displayDiv">
+                {% include header.html %}
+                <div class="helpHeader">
+                    <div class="navbarPadding">&nbsp;</div>
+                    <h1>{{ page.title }}</h1>
+                    <div>
+                        <a href="{{ page.helpIndex }}" class="button">{{ page.project }} Help Home</a>
+                    </div>
+                </div>
+                <div class="helpContent">
+                    {{ content }}
+                </div>
+                {% include footer.html %}
+            </div>
+            <div class="printDiv">
+                <h1>{{ page.project }} Help:</h1>
+                <h2>{{ page.title }}</h2>
+                <hr />
+                {{ content }}
+            </div>
+        </div>
+        {% include footing.html %}
+    </body>
+</html>
