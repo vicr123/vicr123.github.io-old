@@ -41,6 +41,9 @@
     
     --bg-hover: #3c3c3c;
     --bg-active: #1b1b1b;
+    
+    --button-color: rgb(0, 0, 200);
+    --button-fg-color: white;
 }
 
 html.light {
@@ -241,8 +244,8 @@ a {
 
 a.button {
     display: inline-block;
-    background-color: rgb(0, 0, 200);
-    color: var(--fg-color);
+    background-color: var(--button-color);
+    color: var(--button-fg-color);
     padding: 6px;
     text-decoration: none;
 }
