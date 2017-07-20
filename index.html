@@ -130,6 +130,26 @@ projectIcon: /images/smile.png
                     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
                                 url("images/theslate.svg") no-repeat center center/cover;
                 }
+                
+                div.carouselElement .carouselLower {
+                    position: relative;
+                    transition: top 0.5s;
+                    top: 40px;
+                }
+                
+                div.carouselElement .carouselButtons {
+                    position: relative;
+                    transition: opacity 0.5s;
+                    opacity: 0;
+                }
+                
+                div.carousel.paused div.carouselElement .carouselLower {
+                    top: 0px;
+                }
+                
+                div.carousel.paused div.carouselElement .carouselButtons {
+                    opacity: 1;
+                }
             </style>
             {% include header.html %}
             
@@ -138,15 +158,33 @@ projectIcon: /images/smile.png
             <div class="carousel">
                 <div class="theshell carouselElement active">
                     <div><h1>theShell 6.1</h1><p>Desktop Environment</p></div>
-                    <p>Down at its core, it's up for anything.</p>
+                    <div class="carouselLower">
+                        <p>Down at its core, it's up for anything.</p>
+                        <div class="carouselButtons">
+                            <a href="./theshell/" class="button">Learn More</a>
+                            <a href="http://www.github.com/vicr123/theshell" class="button">See the code</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="thebeat carouselElement">
                     <div><h1>theBeat</h1><p>Audio Player</p></div>
-                    <p>Keeps your computer beating</p>
+                    <div class="carouselLower">
+                        <p>Keeps your computer beating.</p>
+                        <div class="carouselButtons">
+                            <a href="./thebeat/" class="button">Learn More</a>
+                            <a href="http://www.github.com/vicr123/thebeat" class="button">See the code</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="theslate carouselElement">
                     <div><h1>theSlate</h1><p>Text Editor</p></div>
-                    <p>More than just a slate</p>
+                    <div class="carouselLower">
+                        <p>More than just a slate.</p>
+                        <div class="carouselButtons">
+                            <a href="./theslate/" class="button">Learn More</a>
+                            <a href="http://www.github.com/vicr123/theslate" class="button">See the code</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="carouselTimer" id="carouselTimer"></div>
@@ -216,6 +254,7 @@ projectIcon: /images/smile.png
                 //Check for mobile
                 if (/Mobi/.test(navigator.userAgent)) {
                     $(".carouselTimer").hide();
+                    $('.carousel').addClass("paused");
                     timeout = setTimeout(incrementCarousel, 5000);
                 } else {
                     timeout = setTimeout(incrementTimer, 100);
@@ -223,6 +262,18 @@ projectIcon: /images/smile.png
                 
                 $('.carousel').on('swipeLeft', incrementCarousel);
                 $('.carousel').on('swipeRight', decrementCarousel);
+                
+                $('.carousel').hover(function() {
+                    if (!/Mobi/.test(navigator.userAgent)) {
+                        clearTimeout(timeout);
+                        $('.carousel').addClass("paused");
+                    }
+                }, function() {
+                    if (!/Mobi/.test(navigator.userAgent)) {
+                        timeout = setTimeout(incrementTimer, 100);
+                        $('.carousel').removeClass("paused");
+                    }
+                });
             </script>
             {% include footer.html %}
         </div>
