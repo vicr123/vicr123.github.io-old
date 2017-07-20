@@ -60,3 +60,18 @@ if (document.cookie.includes("theme")) {
         toggleTheme();
     }
 }
+
+var scrollTop = 0;
+$(window).scroll(function() { 
+    var delta = $(window).scrollTop() - scrollTop;
+    var top = $("#mainHeader").position().top - delta;
+    
+    if (top < -48) {
+        top = -48;
+    } else if (top > 0) {
+        top = 0;
+    }
+    
+    $("#mainHeader").css("top", top + "px");
+    scrollTop = $(window).scrollTop();
+})

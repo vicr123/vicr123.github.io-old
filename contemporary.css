@@ -44,6 +44,9 @@
     
     --button-color: rgb(0, 0, 200);
     --button-fg-color: white;
+    
+    --link-color: rgb(0, 200, 255);
+    --link-active-color: rgb(255, 100, 100);
 }
 
 html.light {
@@ -52,6 +55,9 @@ html.light {
     
     --bg-hover: white;
     --bg-active: #9d9d9d;
+    
+    --link-color: rgb(0, 100, 255);
+    --link-active-color: red;
 }
 
 * {
@@ -239,7 +245,11 @@ footer {
 
 a {
     text-decoration: none;
-    color: rgb(0, 200, 255);
+    color: var(--link-color);
+}
+
+a:active {
+    color: var(--link-active-color);
 }
 
 a.button {
@@ -275,6 +285,15 @@ div.landing a.button:active, div.helpHeader a.button:active {
     background-color: rgba(150, 150, 150, 0.4);
 }
 
+img#projectsImageButton {
+    display: none;
+    content: url(/images/application-menu-dark.svg);
+}
+
+html.light img#projectsImageButton {
+    content: url(/images/application-menu.svg);
+}
+
 @media (max-width: 600px) {
     div.content {
         padding-left: 10px;
@@ -296,5 +315,13 @@ div.landing a.button:active, div.helpHeader a.button:active {
 
     div.headerRightPadding {
         display: none;
+    }
+    
+    p#projectsButton {
+        display: none;
+    }
+    
+    img#projectsImageButton {
+        display: block;
     }
 }
