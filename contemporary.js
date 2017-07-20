@@ -41,3 +41,22 @@ function toggleMenu(menu) {
         });
     }
 }
+
+var isLight = false;
+function toggleTheme() {
+    if (isLight) {
+        $("html").removeClass("light");
+        isLight = false;
+        document.cookie = "theme=dark; path='/'";
+    } else {
+        $("html").addClass("light");
+        isLight = true;
+        document.cookie = "theme=light; path='/'";
+    }
+}
+
+if (document.cookie.includes("theme")) {
+    if (document.cookie.includes("theme=light")) {
+        toggleTheme();
+    }
+}

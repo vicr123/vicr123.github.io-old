@@ -20,17 +20,7 @@ layout: none
                     padding-right: 100px;
                     
                     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/triangles.png) no-repeat center center/cover;
-                    border-bottom: 1px solid white;
-                }
-                
-                div.buffer {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    
-                    padding-top: 10px;
-                    padding-bottom: 10px;
-                    background-color: #c800c8;
+                    border-bottom: 1px solid var(--fg-color);
                 }
                 
                 p:last-child {
@@ -43,7 +33,7 @@ layout: none
                     padding-left: 0px;
                     padding-right: 0px;
                     
-                    border-bottom: 1px solid white;
+                    border-bottom: 1px solid var(--fg-color);
                 }
                 
                 div.helpSection h2 {
@@ -60,10 +50,10 @@ layout: none
                     padding-left: 100px;
                     padding-right: 100px;
                     
-                    color: white;
+                    color: var(--fg-color);
                     text-decoration: none;
                     
-                    background-color: #282828;
+                    background-color: var(--bg-color);
                 }
                 
                 a.helpIndex:before {
@@ -73,11 +63,11 @@ layout: none
                 }
                 
                 a.helpIndex:hover {
-                    background-color: #3c3c3c;
+                    background-color: var(--bg-hover);
                 }
                 
                 a.helpIndex:active {
-                    background-color: #1b1b1b;
+                    background-color: var(--bg-active);
                 }
                 
                 @media (max-width: 500px) {

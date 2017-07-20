@@ -35,9 +35,29 @@
     }
 }
 
+:root {
+    --bg-color: #282828;
+    --fg-color: white;
+    
+    --bg-hover: #3c3c3c;
+    --bg-active: #1b1b1b;
+}
+
+html.light {
+    --bg-color: #ebebeb;
+    --fg-color: black;
+    
+    --bg-hover: white;
+    --bg-active: #9d9d9d;
+}
+
+* {
+    transition: 0.25s background-color, 0.25s color;
+}
+
 #smoothState {
     animation: fadeIn 0.25s linear;
-    background-color: #282828;
+    background-color: var(--bg-color);
 }
 
 #smoothState.transitionOut {
@@ -46,8 +66,8 @@
 }
 
 body {
-    background-color: #282828;
-    color: white;
+    background-color: var(--bg-color);
+    color: var(--fg-color);
     
     margin-left: 0px;
     margin-top: 48px;
@@ -83,14 +103,14 @@ div.mainHeader {
     right: 0px;
     height: 47px;
     
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--fg-color);
     
     display: flex;
     justify-content: space-between;
     align-items: center;
     
-    background-color: #282828;
-    color: white;
+    background-color: var(--bg-color);
+    color: var(--fg-color);
     
     animation: moveInFromTop 0.25s ease-out;
     
@@ -114,17 +134,17 @@ div.mainHeader .smileIcon {
 
 div.mainHeader .headerItem {
     display: block;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 14px;
+    padding-bottom: 15px;
     cursor: pointer;
 }
 
 div.mainHeader .headerItem:hover {
-    background-color: #3c3c3c;
+    background-color: var(--bg-hover);
 }
 
 div.mainHeader .headerItem:active {
-    background-color: #1b1b1b;
+    background-color: var(--bg-active);
 }
 
 div.mainHeader .headerItem p {
@@ -162,10 +182,10 @@ div.headerMenu {
     display: flex;
     flex-direction: column;
     
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--fg-color);
     
-    background-color: #282828;
-    color: white;
+    background-color: var(--bg-color);
+    color: var(--fg-color);
     
     z-index: 10000;
 }
@@ -182,7 +202,7 @@ div.headerMenu .headerItem img.appIcon {
 
 a.headerItem {
     text-decoration: none;
-    color: white;
+    color: var(--fg-color);
 }
 
 body.lightTheme {
@@ -193,7 +213,7 @@ body.lightTheme {
 div.content {
     padding-top: 16px;
     padding-bottom: 16px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--fg-color);
     padding-left: 100px;
 }
 
@@ -211,7 +231,7 @@ hr {
 }
 
 footer {
-    border-top: 1px solid white;
+    border-top: 1px solid var(--fg-color);
 }
 
 a {
@@ -222,7 +242,7 @@ a {
 a.button {
     display: inline-block;
     background-color: rgb(0, 0, 200);
-    color: white;
+    color: var(--fg-color);
     padding: 6px;
     text-decoration: none;
 }
@@ -233,6 +253,10 @@ a.button:hover {
 
 a.button:active {
     background-color: rgb(0, 0, 100);
+}
+
+div.landing {
+    color: white;
 }
 
 div.landing a.button, div.helpHeader a.button {
