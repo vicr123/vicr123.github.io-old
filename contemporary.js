@@ -47,11 +47,11 @@ function toggleTheme() {
     if (isLight) {
         $("html").removeClass("light");
         isLight = false;
-        document.cookie = "theme=dark; path='/'";
+        document.cookie = "theme=dark; path=/";
     } else {
         $("html").addClass("light");
         isLight = true;
-        document.cookie = "theme=light; path='/'";
+        document.cookie = "theme=light; path=/";
     }
 }
 
