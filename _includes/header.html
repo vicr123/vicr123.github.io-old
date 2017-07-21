@@ -7,8 +7,28 @@
         <img class="smileIcon" src="{{ page.projectIcon }}"> 
         <div class="headerTitle">{{ page.project }}</div>
     </div>
-    <div class="headerItem" onclick="toggleTheme()">
-        <img src="/images/theme.svg"></p>
+    <div style="display: flex">
+        <div class="headerItem" onclick="toggleTheme()">
+            <img src="/images/theme.svg"></p>
+        </div>
+        {% if page.layout == 'helpPage' %}
+            <div class="headerItem" onclick="toggleMenu('#searchMenu'); prepareSearch()">
+                <div></div>
+                <img class="title" id="searchImageButton" />
+            </div>
+            <div class="headerMenu" id="searchMenu">
+                <div class="searchContainer">
+                    <img class="title" id="searchImageButton" />
+                    <input type="text" class="searchBox" id="siteSearch" oninput="performSearch($('#siteSearch').val());" placeholder="Search {{ page.project }} Help"/>
+                </div>
+                <div class="searchResults" id="searchResults">
+                    
+                </div>
+            </div>
+            <script>
+                var searchFile = "{{ page.searchFile }}";
+            </script>
+        {% endif %}
     </div>
     <div class="headerMenu" id="projectsMenu">
         <a class="headerItem" onclick="toggleMenu('#projectsMenu')" href="/index.html">

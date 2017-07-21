@@ -1,3 +1,6 @@
+---
+---
+
 $(function() {
     var smoothstate = $('#smoothstate').smoothState({
         onStart: {
@@ -75,3 +78,68 @@ $(window).scroll(function() {
     $("#mainHeader").css("top", top + "px");
     scrollTop = $(window).scrollTop();
 })
+
+var searchData = null;
+function prepareSearch() {
+    if (searchData == null) {
+        $.ajax({
+            url: searchFile,
+            dataType: "json",
+            success: function(data) {
+                searchData = data;
+            },
+            error: function(xhr,status,error) {
+                searchData = "Error";
+            }
+        });
+    }
+    $("#siteSearch").focus();
+}
+
+function performSearch(query) {
+    var resultsContainer = $("#searchResults");
+    resultsContainer.empty();
+    
+    if (query != "") {
+        if (searchData == "Error") {
+            
+        } else {
+            for (var i = 0; i < searchData.length - 1; i++) {
+                var pageData = searchData[i];
+                
+                var addToQuery = false;
+                if (pageData.title.toLowerCase().includes(query.toLowerCase())) {
+                    addToQuery = true;
+                }
+                
+                if (pageData.contents.toLowerCase().includes(query.toLowerCase())) {
+                    addToQuery = true;
+                }
+                
+                if (addToQuery) {
+                    //Determine excerpt
+                    var excerpt;
+                    
+                    if (pageData.contents.includes(query)) {
+                        var index = pageData.contents.indexOf(query);
+                        if (index < 50) {
+                            excerpt = pageData.contents.substr(0, 100);
+                        } else if (index > pageData.contents.length - 50) {
+                            excerpt = pageData.contents.substr(pageData.contents.length - 100);
+                        } else {
+                            excerpt = pageData.contents.substr(index - 50, 100);
+                        }
+                    } else {
+                        excerpt = pageData.contents.substr(0, 100);
+                    }
+                    
+                    var htmlElement = '<a class="searchItem" onclick="toggleMenu(\'#projectsMenu\')" href="' + pageData.url + '">' +
+                                            '<p class="title">' + pageData.title + '</p>' +
+                                            '<div class="excerpt">' + excerpt + '</div>' +
+                                        '</a>'
+                    resultsContainer.append(htmlElement);
+                }
+            }
+        }
+    }
+}

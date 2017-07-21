@@ -52,10 +52,15 @@ projectIcon: /images/smile.png
                 
                 div.carouselTimer {
                     height: 2px;
-                    /* background-color: rgb(0, 200, 0); */
                     background: linear-gradient(90deg, rgb(0, 200, 0), 
                                 rgb(0, 200, 0) 33%, rgb(255, 200, 0) 33%,
                                 rgb(255, 200, 0) 66%, rgb(200, 200, 255) 66%) fixed;
+                }
+                
+                html.light div.carouselTimer {
+                    background: linear-gradient(90deg, rgb(0, 100, 0), 
+                                rgb(0, 100, 0) 33%, rgb(255, 100, 0) 33%,
+                                rgb(255, 100, 0) 66%, rgb(100, 100, 255) 66%) fixed;
                 }
                 
                 .carousel>div.carouselElement {

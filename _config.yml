@@ -37,8 +37,34 @@ exclude:
 defaults:
   -
     scope:
+      path: ""
+    values:
+      icon: "/icon.png"
+  -
+    scope:
+      path: "/theshell/"
+    values:
+      icon: "/images/theshell.png"
+  -
+    scope:
+      path: "/contemporary/"
+    values:
+      icon: "/images/contemporaryIcon.png"
+  -
+    scope:
+      path: "/theslate/"
+    values:
+      icon: "/images/theslateIcon.png"
+  -
+    scope:
+      path: "/thebeat/"
+    values:
+      icon: "/images/thebeatIcon.png"
+  -
+    scope:
       path: "theshell/help"
       exclude: "theshell/help/index.html"
     values:
       layout: "helpPage"
       helpIndex: "/theshell/help/"
+      searchFile: "/theshell/help/search.json"

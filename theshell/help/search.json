@@ -1,0 +1,17 @@
+---
+layout: none
+---
+
+[
+    {% for page in site.pages %}
+        {% if page.layout == 'helpPage' %}
+            {
+                "title": "{{ page.title }}",
+                "contents": {{ page.content | jsonify }},
+                "url": "{{ site.baseurl }}{{ page.url }}"
+            }
+        {% unless forloop.last %},{% endunless %}
+        {% endif %}
+    {% endfor %}
+    {}
+]
