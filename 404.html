@@ -1,0 +1,70 @@
+---
+---
+
+<html>
+    <head>
+        <title>Are you lost?</title>
+        {% include heading.html %}
+    </head>
+    <body>
+        {% include loader.html %}
+        <div id="smoothstate">
+            <style>
+                div.errouter {
+                    display: flex;
+                    height: 100%;
+                    
+                    justify-content: center;
+                    align-items: stretch;
+                    flex-direction: column;
+                }
+                
+                div.errinner {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                }
+                
+                div.links a {
+                    display: block;
+                }
+                
+                hr {
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+                
+                @media (max-width: 500px) {
+                    div.errinner {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                }
+            </style>
+            <div class="errouter">
+                <div class="errinner">
+                    <h1>You seem to be lost...</h1>
+                    <p>And help is right here!</p>
+                    <ul>
+                        <li>Did you make a typo up there?</li>
+                        <li>Did the page you wanted to see exist before?</li>
+                        <li>Did I make a mistake? <a href="https://github.com/vicr123/vicr123.github.io/issues">Probably. Thanks for telling me.</a></li>
+                    </ul>
+                    <hr />
+                    <h2>And if all else fails...</h2>
+                    <p>Here are some links you might like to try to get you back on track:</p>
+                    <div class="links">
+                        <a href="/">Home Page</a>
+                        <a href="/theshell/">theShell Home Page</a>
+                        <a href="/contemporary/">Contemporary Home Page</a>
+                        <a href="/theshell/help/">theShell Help</a>
+                    </div>
+                    <hr />
+                    <p>Still lost? No? Good. What are you still doing here?</p>
+                </div>
+            </div>
+        </div>
+        {% include footing.html %}
+    </body>
+</html>

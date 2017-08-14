@@ -31,6 +31,7 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - vicr123.github.io.tslprj
 
 # Help files
 
