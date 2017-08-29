@@ -51,6 +51,8 @@ projectIcon: /images/smile.png
                 }
                 
                 div.carouselTimer {
+                    position: relative;
+                    top: -2px;
                     height: 2px;
                     background: linear-gradient(90deg, rgb(0, 200, 0), 
                                 rgb(0, 200, 0) 33%, rgb(255, 200, 0) 33%,
@@ -161,6 +163,9 @@ projectIcon: /images/smile.png
                     padding-bottom: 50px;
                     padding-left: 100px;
                     padding-right: 100px;
+                    
+                    color: white;
+                    border-bottom: 1px solid var(--fg-color);
                 }
                 
                 @media (max-width: 500px) {
@@ -173,7 +178,7 @@ projectIcon: /images/smile.png
             {% include header.html %}
             
             <div class="thebeat releaseAdvertisment">
-                <h1>theBeat 1.0</h1>
+                <h1>theBeat 1.0 - Official Release</h1>
                 <p>Released and beating!</p>
                 <a href="./thebeat/" class="button">Learn More</a>
             </div>
@@ -191,7 +196,6 @@ projectIcon: /images/smile.png
                         </div>
                     </div>
                 </div>
-                <!--
                 <div class="thebeat carouselElement">
                     <div><h1>theBeat</h1><p>Audio Player</p></div>
                     <div class="carouselLower">
@@ -202,7 +206,6 @@ projectIcon: /images/smile.png
                         </div>
                     </div>
                 </div>
-                -->
                 <div class="theslate carouselElement">
                     <div><h1>theSlate</h1><p>Text Editor</p></div>
                     <div class="carouselLower">
