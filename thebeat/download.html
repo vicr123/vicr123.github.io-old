@@ -1,0 +1,192 @@
+---
+project: theBeat
+projectIcon: /images/thebeatIcon.svg
+---
+
+<html>
+    <head>
+        <title>theBeat</title>
+        {% include heading.html %}
+    </head>
+    <body>
+        {% include loader.html %}
+        <div id="smoothstate">
+            <style>
+                div.landing {
+                    padding-top: 100px;
+                    padding-bottom: 100px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/thebeat.png) no-repeat center center/cover;
+                    border-bottom: 1px solid var(--fg-color);
+                }
+                
+                div.buffer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    background-color: #c800c8;
+                }
+                
+                p:last-child {
+                    margin-bottom: 0px;
+                }
+                
+                div.featurePanel {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    border-bottom: 1px solid var(--fg-color);
+                    transition: height 0.5s ease-out, padding-top 0.5s ease-out, padding-bottom 0.5s ease-out;
+                    overflow-y: hidden;
+                }
+                
+                div.tsBranches {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+                
+                code.dollar, code.hash {
+                    display: block;
+                }
+                
+                code.dollar:before {
+                    content: "$ ";
+                }
+                
+                code.hash:before {
+                    content: "# ";
+                }
+                
+                @media (max-width: 500px) {
+                    div.landing {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                    
+                    div.featurePanel {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                }
+            </style>
+            {% include header.html %}
+            
+            <div class="landing">
+                <h1>theBeat</h1>
+                <h2>Keeps your computer beating.</h2>
+                <p>And to start beating, it's easier than ever.</p>
+            </div>
+            <div class="featurePanel">
+                <h2>But first,</h2>
+                <p>Here are some things you might need to know.</p>
+                <ul>
+                    <li>theBeat requires the Phonon framework and the gstreamer backend.</li>
+                    <li>theBeat has only been tested on Arch Linux. Your mileage may vary on other distributions.</li>
+                </ul>
+            </div>
+            <div class="featurePanel" id="stablePanel">
+                <h2>Let's do it!</h2>
+                <p>Here's how you install theBeat</p>
+                <h3>Arch Linux</h3>
+                <p>Install the <a href="https://aur.archlinux.org/packages/thebeat"><code>thebeat</code></a> package from the Arch User Repository.</p>
+                <h3>Build from source</h3>
+                <p>If theBeat is not packaged for your distribution, you can build theShell from source yourself.</p>
+                <ol>
+                    <li>Install dependencies of theBeat.</li>
+                    <li>
+                        Download the sources of theBeat.
+                        <code class="dollar">
+                            git clone https://github.com/vicr123/thebeat
+                        </code>
+                        <code class="dollar">
+                            cd thebeat
+                        </code>
+                    </li>
+                    <!--<li>
+                        Generate D-Bus files for theShell
+                        <code class="dollar">
+                            qdbuscpp2xml -M -s notificationdbus.h -o org.freedesktop.Notifications.xml
+                        </code>
+                        <code class="dollar">
+                            qdbuscpp2xml -a upowerdbus.h -o org.thesuite.power.xml
+                        </code>
+                    </li>-->
+                    <li>
+                        Build theBeat
+                        <code class="dollar">
+                            qmake
+                        </code>
+                        <code class="dollar">
+                            make
+                        </code>
+                    </li>
+                    <li>
+                        Install theBeat
+                        <code class="hash">
+                            make install
+                        </code>
+                        <p><b>IMPORTANT:</b> If you're trying to install theBeat into a directory that is not / use the INSTALL_ROOT argument.</p>
+                        
+                    </li>
+                </ol>
+            </div>
+            
+            {% include footer.html %}
+            <script>
+                function openStable() {
+                    $("#landingPanel").css("height", "0px");
+                    $("#landingPanel").css("padding-top", "0px");
+                    $("#landingPanel").css("padding-bottom", "0px");
+                    $("#stablePanel").css("height", "calc(100vh - 40px)");
+                    $("#stablePanel").css("padding-top", "20px");
+                    $("#stablePanel").css("padding-bottom", "20px");
+                    $('html, body').css("overflow-y", "hidden");
+                    $('#stablePanel').css("overflow-y", "auto");
+                    
+                    $('html, body').animate({
+                        scrollTop: $("#landingPanel").offset().top
+                    }, 500);
+                    
+                    history.pushState("stable", "Download theShell Stable", "#stable");
+                }
+                
+                function openBP() {
+                    $("#landingPanel").css("height", "0px");
+                    $("#landingPanel").css("padding-top", "0px");
+                    $("#landingPanel").css("padding-bottom", "0px");
+                    $("#bpPanel").css("height", "calc(100vh - 40px)");
+                    $("#bpPanel").css("padding-top", "20px");
+                    $("#bpPanel").css("padding-bottom", "20px");
+                    $('html, body').css("overflow-y", "hidden");
+                    $('#bpPanel').css("overflow-y", "auto");
+                    
+                    $('html, body').animate({
+                        scrollTop: $("#landingPanel").offset().top
+                    }, 500);
+                }
+                
+                function closePanels() {
+                    $("#stablePanel").css("height", "0px");
+                    $("#stablePanel").css("padding-top", "0px");
+                    $("#stablePanel").css("padding-bottom", "0px");
+                    $("#bpPanel").css("height", "0px");
+                    $("#bpPanel").css("padding-top", "0px");
+                    $("#bpPanel").css("padding-bottom", "0px");
+                    $("#landingPanel").css("height", "330px");
+                    $("#landingPanel").css("padding-top", "20px");
+                    $("#landingPanel").css("padding-bottom", "20px");
+                    
+                    $('html, body').css("overflow-y", "auto");
+                }
+            </script>
+        </div>
+        {% include footing.html %}
+    </body>
+</html>

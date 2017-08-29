@@ -84,7 +84,7 @@ projectIcon: /images/smile.png
                     height: 100px;
                     width: 40px;
                     padding: 0px;
-                    top: 350px;
+                    top: 550px;
                     
                     background-position: center;
                     background-repeat: no-repeat;
@@ -117,7 +117,7 @@ projectIcon: /images/smile.png
                     }
                     
                     .carouselBack, .carouselForward {
-                        top: 200px;
+                        top: 400px;
                     }
                 }
                 
@@ -155,8 +155,28 @@ projectIcon: /images/smile.png
                 div.carousel.paused div.carouselElement .carouselButtons {
                     opacity: 1;
                 }
+                
+                div.releaseAdvertisment {
+                    padding-top: 50px;
+                    padding-bottom: 50px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                }
+                
+                @media (max-width: 500px) {
+                    div.releaseAdvertisment {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                }
             </style>
             {% include header.html %}
+            
+            <div class="thebeat releaseAdvertisment">
+                <h1>theBeat 1.0</h1>
+                <p>Released and beating!</p>
+                <a href="./thebeat/" class="button">Learn More</a>
+            </div>
             
             <div class="carouselBack" onclick="decrementCarousel();"></div>
             <div class="carouselForward" onclick="incrementCarousel();"></div>
@@ -171,6 +191,7 @@ projectIcon: /images/smile.png
                         </div>
                     </div>
                 </div>
+                <!--
                 <div class="thebeat carouselElement">
                     <div><h1>theBeat</h1><p>Audio Player</p></div>
                     <div class="carouselLower">
@@ -181,6 +202,7 @@ projectIcon: /images/smile.png
                         </div>
                     </div>
                 </div>
+                -->
                 <div class="theslate carouselElement">
                     <div><h1>theSlate</h1><p>Text Editor</p></div>
                     <div class="carouselLower">
