@@ -1,0 +1,116 @@
+---
+project: theShell
+projectIcon: /images/theshell.png
+---
+
+<html>
+    <head>
+        <title>theShell</title>
+        {% include heading.html %}
+    </head>
+    <body>
+        {% include loader.html %}
+        <div id="smoothstate">
+            <style>
+                @keyframes grayscaleIn {
+                    0% {
+                        filter: grayscale(100%);
+                    }
+                    
+                    50% {
+                        
+                    }
+                    
+                    100% {
+                        filter: grayscale(0%);
+                    }
+                }
+                
+                div.landing {
+                    padding-top: 100px;
+                    padding-bottom: 100px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(/images/ribbon.svg) no-repeat center center/cover;
+                    border-bottom: 1px solid var(--fg-color);
+                    animation: 5s grayscaleIn;
+                    /*filter: grayscale(50%);*/
+                }
+                
+                div.buffer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    background-color: #c800c8;
+                }
+                
+                p:last-child {
+                    margin-bottom: 0px;
+                }
+                
+                div.featurePanel {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    border-bottom: 1px solid var(--fg-color);
+                }
+                
+                img.laptopImage {
+                    height: 300px;
+                    float: right;
+                }
+                
+                @media (max-width: 900px) {
+                    img.laptopImage {
+                        height: 200px;
+                    }
+                }
+                
+                @media (max-width: 528px) {
+                    img.laptopImage {
+                        height: initial;
+                        float: none;
+                        width: 100%;
+                    }
+                }
+                
+                @media (max-width: 500px) {
+                    div.landing {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                    
+                    div.featurePanel {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                }
+            </style>
+            {% include header.html %}
+            
+            <div class="landing">
+                <img class="laptopImage" src="/images/laptop.png" />
+                <h1>theShell OS</h1>
+                <h2>Down at its core, it has theShell's "up-for-anything" attitude.</h2>
+                <p>And the preliminary release is here! <a href="https://sourceforge.net/projects/theos/files/theshellos-2017.10.03-x86_64.iso/download" class="button">Grab the ISO!</a></p>
+            </div>
+            <div class="featurePanel">
+                <h2>For the simple</h2>
+                <p>theShell OS is based on Arch Linux. This allows you to install any software from the Arch Linux repositories, as well as any software from the Arch User Repository, to give you a large software selection.</p>
+            </div>
+            <div class="featurePanel">
+                <h2>For the desktop</h2>
+                <p>theShell OS comes with theShell as the default desktop environment. And since theShell OS is created by the same person that made theShell, the desktop is integrated with all the default applications of the OS, giving you the best theShell experience.</p>
+            </div>
+            
+            {% include footer.html %}
+        </div>
+        {% include footing.html %}
+    </body>
+</html>
