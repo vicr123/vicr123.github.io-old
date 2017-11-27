@@ -35,6 +35,12 @@
     }
 }
 
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 :root {
     --bg-color: #282828;
     --fg-color: white;
@@ -58,6 +64,10 @@ html.light {
     
     --link-color: rgb(0, 100, 255);
     --link-active-color: red;
+}
+
+html.light .tint {
+    filter: brightness(0%);
 }
 
 * {
@@ -89,13 +99,11 @@ body .smoothstateLoader {
     display: flex;
     align-items: center;
     justify-content: center;
-    
     position: fixed;
     top: 0px;
     left: 0px;
     right: 0px;
     bottom: 0px;
-    
     z-index: -1;
 }
 
@@ -330,6 +338,15 @@ input.searchBox {
     border-bottom: 1px solid var(--fg-color);
     outline: none;
     flex-grow: 1;
+}
+
+div.loader {
+    background-image: url("/images/loader.svg");
+    width: 48px;
+    height: 48px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: spin 1s linear infinite;
 }
 
 @media (max-width: 600px) {
