@@ -1,8 +1,6 @@
 ---
 title: Settings
-tsVersion: 6.1
-project: theShell
-projectIcon: /images/theshell.png
+tsVersion: 7.1
 ---
 
 Configure system settings in theShell.
@@ -12,18 +10,19 @@ Configure system settings in theShell.
 theShell Settings are sorted into multiple panes.
 
 - [Startup](#startup)
-- [Bar](#bar)
-- [Gateway](#gateway)
+- [Gateway and Bar](#gateway-and-bar)
+- [Networks](#networks)
 - [Display](#display)
 - [Theme](#theme)
-- [Notifications](#notifications)
+- [Sounds and Notifications](#sounds-and-notifications)
 - [Input](#input)
+- [Power](#power)
 - [Lock Screen](#lock-screen)
-- [theWave](#theWave)
 - [Users](#users)
 - [Date and Time](#date-and-time)
 - [Language](#language)
-- [Danger](#danger)
+- [Accessibility](#accessibility)
+- [Advanced](#advanced)
 - [About](#about)
 
 ## Startup
@@ -34,9 +33,9 @@ Configure how theShell starts up.
 
   Configure the executables that you wish to start theShell with. Each executable should be seperated by a comma.
 
-## Bar
+## Gateway and Bar
 
-Configure the [Bar]
+Configure the [Gateway] and the [Bar]
 
 - Show text on window buttons [switch]
 
@@ -47,11 +46,12 @@ Configure the [Bar]
 - Use Status Bar [switch]
 
   Changes if the [Status Bar] will be used.
+- Automatically show bar [switch]
 
-## Gateway
+  Changes if the bar will automatically extend when you hover over the Status Bar. This is only enabled if the Status Bar is enabled.
+- Show Bar on bottom of screen [switch]
 
-Configure the [Gateway]
-
+  Changes if the bar will be shown on the bottom of the screen.
 - End Session Confirmation [radio]
 
   Changes what happens when you press the End Session button on the Gateway.
@@ -60,6 +60,10 @@ Configure the [Gateway]
   
   - Within Gateway
   - Full Screen
+  
+## Networks
+
+Configure your internet connection. For more information, see [Connect to the Internet]
 
 ## Display
 
@@ -117,21 +121,21 @@ Configure the way your device looks.
 
   Changes the font used throughout the system.
 
-## Notifications
+## Sounds and Notifications
 
-Configure notifications
+Configure sounds and notifications
 
 ## Input
 
 Configure input devices
 
+## Power
+
+Configure your device to save power
+
 ## Lock Screen
 
 Configure the Lock Screen
-
-## theWave
-
-Configure theWave
 
 ## Users
 
@@ -147,9 +151,13 @@ Change the language used throughout your device.
 
 <span class="warning">For changes to fully take effect, you'll need to log out and log back into your device after changing this setting.</span>
 
-## Danger
+## Accessibility
 
+Change settings to make your device easier to use
 
+## Advanced
+
+Configure advanced settings
 
 ## About
 

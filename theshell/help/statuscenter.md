@@ -1,8 +1,6 @@
 ---
 title: Status Center
-tsVersion: 6.1
-project: theShell
-projectIcon: /images/theshell.png
+tsVersion: 7.1
 ---
 
 The Status Center allows you to see what your device is doing and allows you to configure it.
@@ -17,7 +15,7 @@ Along the top of the Status Center, there are quick toggles where you can quickl
 
 - Flight Mode
 
-  Use this to turn [Flight Mode] on or off. (coming soon)
+  Use this to turn [Flight Mode] on or off.
 - Wi-Fi
 
   Use this to turn the Wireless radio on or off.
@@ -32,12 +30,11 @@ Along the top of the Status Center, there are quick toggles where you can quickl
 
 Different panels on the Status Center give you different information.
 
-- [Clock](#clock)
-- [System Status](#system-status)
-- [Network](#network)
-- [Notifications](#notifications)
-- [KDE Connect](#kde-connect)
-- [Printers](#printers)
+- [Clock](#clock) - SUPER+F1
+- [System Status](#system-status) - SUPER+F2
+- [Network](#network) - SUPER+F3
+- [Notifications](#notifications) - SUPER+F4
+- [KDE Connect](#kde-connect) - SUPER+F5
 - [System Settings](#system-setings)
 
 ## Clock
@@ -48,10 +45,11 @@ Different panels on the Status Center give you different information.
 2. Calendar
 3. Timer
 4. Stopwatch
+5. Reminders
 
 This pane gives you information on the current time, and allows you to perform time related things.
 
-For more information on the timer and stopwatch, visit the [Timer] and the [Stopwatch] page.
+For more information on the timer, stopwatch and reminders, visit the [Timer], [Stopwatch] and [Reminders] pages respectively.
 
 To set the time and date, visit the [Settings] pane.
 
@@ -74,10 +72,6 @@ This pane shows you any notifications you may have missed.
 ## KDE Connect
 
 This pane allows you to control KDE Connect devices. For more information about KDE Connect, visit the [KDE Connect website].
-
-## Printers
-
-This pane allows you to view the status of printers connected to this PC.
 
 ## System Settings
 For information about this pane, visit [Settings]

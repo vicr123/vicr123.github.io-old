@@ -1,15 +1,13 @@
 ---
 title: Gateway
-tsVersion: 6.1
-project: theShell
-projectIcon: /images/theshell.png
+tsVersion: 7.1
 ---
 
-The Gateway is the portal to your PC. To open it, click on the theShell icon on the bar, or hit the SUPER key. <br /> ![Gateway Open Button](images/gatewayOpenButton.png)
+The Gateway is the portal to your PC. To open it, click on the theShell icon on the [bar], or hit the SUPER key. <br /> ![Gateway Open Button](images/gatewayOpenButton.png)
 
 # Elements
 
-<img src="images/gateway.png" width="400" alt="Gateway" style="float: right"/><br />
+<img src="images/gateway.png" width="400" alt="Gateway" style="float: right; border: 1px solid var(--fg-color); margin-left: 9px;"/><br />
 1. Apps
 2. Box
 3. Docked apps

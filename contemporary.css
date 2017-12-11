@@ -349,6 +349,16 @@ div.loader {
     animation: spin 1s linear infinite;
 }
 
+li {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+li p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 @media (max-width: 600px) {
     div.content {
         padding-left: 10px;

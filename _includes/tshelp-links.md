@@ -7,4 +7,9 @@
 [Power Stretch]: powerstretch
 [Timer]: timer
 [Stopwatch]: stopwatch
+[Reminders]: reminders
 [Settings]: settings
+[System Settings]: settings
+[Connect to the Internet]: internet
+[Flight Mode]: internet#flight-mode
+[Quiet Mode]: quietmode

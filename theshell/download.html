@@ -47,24 +47,16 @@ projectIcon: /images/theshell.png
                     overflow-y: hidden;
                 }
                 
-                #landingPanel {
-                    height: 330px;
-                }
-                
                 #stablePanel {
                     height: 0px;
                     padding-top: 0px;
                     padding-bottom: 0px;
-                    
-                    border-bottom: none;
                 }
                 
                 #bpPanel {
                     height: 0px;
                     padding-top: 0px;
                     padding-bottom: 0px;
-                    
-                    border-bottom: none;
                 }
                 
                 div.tsBranches {
@@ -127,7 +119,7 @@ projectIcon: /images/theshell.png
                 <h2>But first,</h2>
                 <p>Here are some things you might need to know.</p>
                 <ul>
-                    <li>theShell 7.0 is the latest stable version of theShell</li>
+                    <li>theShell 7.1 is the latest stable version of theShell</li>
                     <li>theShell has only been tested on Arch Linux. Your mileage may vary on other distributions.</li>
                 </ul>
             </div>
@@ -146,10 +138,10 @@ projectIcon: /images/theshell.png
                         <p>Recommended for the early testers</p>
                     </div>
                 </div>
-                <p>Using Arch? Why not install both!</p>
+                <p>You can install both next to each other!</p>
             </div>
             <div class="featurePanel" id="stablePanel">
-                <h2><img src="/images/go-previous.svg" onclick="closePanels()" style="padding-right: 6px;"/>Let's get theShell Stable!</h2>
+                <h2>Let's get theShell Stable!</h2>
                 <p>theShell Stable is the branch of theShell where everything has been tested and should be stable enough for daily use.</p>
                 <h3>Arch Linux</h3>
                 <p>Install the <a href="https://aur.archlinux.org/packages/theshell"><code>theshell</code></a> package from the Arch User Repository.<br />
@@ -168,47 +160,28 @@ projectIcon: /images/theshell.png
                         </code>
                     </li>
                     <li>
-                        Generate D-Bus files for theShell
-                        <code class="dollar">
-                            qdbuscpp2xml -M -s notificationdbus.h -o org.freedesktop.Notifications.xml
-                        </code>
-                        <code class="dollar">
-                            qdbuscpp2xml -a upowerdbus.h -o org.thesuite.power.xml
-                        </code>
-                        <code class="dollar">
-                            qdbuscpp2xml -a -o org.thesuite.theshell.xml dbussignals.h
-                        </code>
-                    </li>
-                    <li>
                         Build theShell
                         <code class="dollar">
-                            qmake
+                            qmake theShell.pro
                         </code>
                         <code class="dollar">
                             make
                         </code>
                     </li>
                     <li>
-                        Copy files to directories
+                        Install theShell
                         <code class="hash">
-                            cp theshell /usr/bin 
-                        </code>
-                        <code class="hash">
-                            cp init_theshell /usr/bin 
-                        </code>
-                        <code class="hash">
-                            cp theshell.desktop /usr/share/xsessions
+                            make install 
                         </code>
                     </li>
                 </ol>
             </div>
             <div class="featurePanel" id="bpPanel">
-                <h2><img src="/images/go-previous.svg" onclick="closePanels()" style="padding-right: 6px;"/>Let's get theShell Blueprint!</h2>
+                <h2>Let's get theShell Blueprint!</h2>
                 <p>theShell Blueprint is the branch of theShell where breaking changes may happen at any time. However, you get to test the newest features of theShell. <b>It's recommended that you do not use theShell Blueprint as your daily driver.</b></p>
                 <h3>Arch Linux</h3>
                 <p>Install the <a href="https://aur.archlinux.org/packages/theshell-blueprint"><code>theshell-blueprint</code></a> package from the Arch User Repository.<br />
-                Use of an AUR helper is recommended as there are a lot of dependencies to install.<br />
-                theShell Blueprint can be installed alongside theShell Stable when installed through the AUR.</p>
+                Use of an AUR helper is recommended as there are a lot of dependencies to install.</p>
                 <h3>Build from source</h3>
                 <p>If theShell is not packaged for your distribution, you can build theShell from source yourself.</p>
                 <ol>
@@ -223,40 +196,21 @@ projectIcon: /images/theshell.png
                         </code>
                     </li>
                     <li>
-                        Generate D-Bus files for theShell
+                        Build theShell in Blueprint mode
                         <code class="dollar">
-                            qdbuscpp2xml -M -s notificationdbus.h -o org.freedesktop.Notifications.xml
-                        </code>
-                        <code class="dollar">
-                            qdbuscpp2xml -a upowerdbus.h -o org.thesuite.power.xml
-                        </code>
-                        <code class="dollar">
-                            qdbuscpp2xml -a -o org.thesuite.theshell.xml dbussignals.h
-                        </code>
-                    </li>
-                    <li>
-                        Build theShell
-                        <code class="dollar">
-                            qmake
+                            qmake "CONFIG+=blueprint" theShell.pro
                         </code>
                         <code class="dollar">
                             make
                         </code>
                     </li>
                     <li>
-                        Copy files to directories
+                        Install theShell Blueprint
                         <code class="hash">
-                            cp theshell /usr/bin/
-                        </code>
-                        <code class="hash">
-                            cp init_theshell /usr/bin/
-                        </code>
-                        <code class="hash">
-                            cp theshell.desktop /usr/share/xsessions/
+                            make install
                         </code>
                     </li>
                 </ol>
-                <p><b>IMPORTANT:</b> theShell Blueprint cannot be installed next to theShell Stable using this method.</p>
             </div>
             <div class="featurePanel tsos">
                 <h2>theShell OS</h2>
@@ -272,35 +226,39 @@ projectIcon: /images/theshell.png
             {% include footer.html %}
             <script>
                 function openStable() {
-                    $("#landingPanel").css("height", "0px");
-                    $("#landingPanel").css("padding-top", "0px");
-                    $("#landingPanel").css("padding-bottom", "0px");
-                    $("#stablePanel").css("height", "calc(100vh - 40px)");
+                    //$("#stablePanel").css("height", "calc(100vh - 40px)");
+                    closePanels();
+                    
+                    let currentHeight = $("#stablePanel").height();
+                    $("#stablePanel").css("height", "auto");
+                    let autoHeight = $('#stablePanel').height();
+                    $("#stablePanel").height(currentHeight).animate({
+                        height: autoHeight
+                    }, 500, "swing", function() {
+                        $("#stablePanel").css("height", "auto");
+                    });
+                    
                     $("#stablePanel").css("padding-top", "20px");
                     $("#stablePanel").css("padding-bottom", "20px");
-                    $('html, body').css("overflow-y", "hidden");
                     $('#stablePanel').css("overflow-y", "auto");
-                    
-                    $('html, body').animate({
-                        scrollTop: $("#landingPanel").offset().top
-                    }, 500);
-                    
-                    history.pushState("stable", "Download theShell Stable", "#stable");
                 }
                 
                 function openBP() {
-                    $("#landingPanel").css("height", "0px");
-                    $("#landingPanel").css("padding-top", "0px");
-                    $("#landingPanel").css("padding-bottom", "0px");
-                    $("#bpPanel").css("height", "calc(100vh - 40px)");
+                    //$("#bpPanel").css("height", "calc(100vh - 40px)");
+                    closePanels();
+                    
+                    let currentHeight = $("#bpPanel").height();
+                    $("#bpPanel").css("height", "auto");
+                    let autoHeight = $('#bpPanel').height();
+                    $("#bpPanel").height(currentHeight).animate({
+                        height: autoHeight
+                    }, 500, "swing", function() {
+                        $("#bpPanel").css("height", "auto");
+                    });
+                    
                     $("#bpPanel").css("padding-top", "20px");
                     $("#bpPanel").css("padding-bottom", "20px");
-                    $('html, body').css("overflow-y", "hidden");
                     $('#bpPanel').css("overflow-y", "auto");
-                    
-                    $('html, body').animate({
-                        scrollTop: $("#landingPanel").offset().top
-                    }, 500);
                 }
                 
                 function closePanels() {
@@ -310,11 +268,6 @@ projectIcon: /images/theshell.png
                     $("#bpPanel").css("height", "0px");
                     $("#bpPanel").css("padding-top", "0px");
                     $("#bpPanel").css("padding-bottom", "0px");
-                    $("#landingPanel").css("height", "330px");
-                    $("#landingPanel").css("padding-top", "20px");
-                    $("#landingPanel").css("padding-bottom", "20px");
-                    
-                    $('html, body').css("overflow-y", "auto");
                 }
             </script>
         </div>

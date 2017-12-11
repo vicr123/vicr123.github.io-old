@@ -1,7 +1,6 @@
 ---
 title: Bar
-tsVersion: 6.1
-project: theShell
+tsVersion: 7.1
 projectIcon: /images/theshell.png
 ---
 
@@ -17,6 +16,7 @@ The status of your PC is shown at the top of the bar. Visible items include
 - Controls for brightness and volume
 - Networking information
 - Notifications
+- Location
 - System Tray icons
 
 Clicking on any one of these icons will take you to the [Status Center].

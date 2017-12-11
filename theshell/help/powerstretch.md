@@ -1,8 +1,6 @@
 ---
 title: Power Stretch
-tsVersion: 6.1
-project: theShell
-projectIcon: /images/theshell.png
+tsVersion: 7.1
 ---
 
 Power Stretch tries to save power so your device lasts longer. This is useful when your device is running out of power, and you aren't near a power source.
