@@ -26,13 +26,17 @@ github_username:  vicr123
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 exclude:
   - Gemfile
   - Gemfile.lock
   - vicr123.github.io.tslprj
 
+paginate: 10
+paginate_path: "/posts/page:num/"
+permalink: /posts/:year/:month/:day/:title.html
+  
 # Help files
-
 defaults:
   -
     scope:
@@ -70,3 +74,12 @@ defaults:
       project: "theShell"
       projectIcon: "/images/theshell.png"
       helpHeader: "rgb(0, 100, 0)"
+  -
+    scope:
+      path: "/_posts/"
+    values:
+      layout: "post"
+      project: "Victor Tran"
+      projectIcon: "/images/smile.png"
+      postHeader: "rgb(0, 100, 255)"
+      author: "Victor Tran"

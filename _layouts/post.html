@@ -1,0 +1,129 @@
+---
+---
+
+<html>
+    <head>
+        <title>{{ page.title }} - Victor's Posts</title>
+        {% include heading.html %}
+    </head>
+    <body>
+        {% include loader.html %}
+        <div id="smoothstate">
+            <style media="all">
+                div.printDiv {
+                    display: none;
+                }
+                
+                div.postHeader {
+                    background-color: {{ page.postHeader }};
+                    color: white;
+                    
+                    padding-left: calc(50vw - 380px);
+                    padding-top: 30px;
+                    padding-bottom: 60px;
+                }
+                
+                div.postContent {
+                    display: block;
+                    background-color: var(--bg-color);
+                    border: 1px solid var(--fg-color);
+                    padding: 9px;
+                    
+                    position: relative;
+                    top: -30px;
+                    width: 800px;
+                    left: calc(50vw - 420px);
+                }
+                
+                @media (max-width: 830px) {
+                    div.postHeader {
+                        padding-left: 35px;
+                    }
+                    
+                    div.postContent {
+                        position: static;
+                        top: 0px;
+                        width: initial;
+                        border: none;
+                        
+                        border-top: 1px solid var(--fg-color);
+                    }
+                }
+                
+                h1 {
+                    font-size: 20pt;
+                    font-weight: normal;
+                }
+                
+                h2 {
+                    font-size: 15pt;
+                    font-weight: normal;
+                }
+                
+                img:only-child {
+                    width: 100%;
+                    border: 1px solid var(--fg-color);
+                }
+
+                a {
+                    color: rgb(0, 200, 255);
+                }
+                
+                div.category {
+                    border: 1px solid var(--bg-color);
+                    color: var(--bg-color);
+                    background-color: var(--fg-color);
+                    padding: 6px;
+                    display: inline-block;
+                }
+            </style>
+            <style media="print">
+                div.displayDiv {
+                    display: none;
+                }
+                
+                #smoothstate {
+                    background-color: white;
+                }
+                
+                body {
+                    margin-top: 0px;
+                }
+                
+                div.printDiv {
+                    display: initial;
+                    background-color: white;
+                    color: black;
+                }
+            </style>
+            <div class="displayDiv">
+                {% include header.html %}
+                <div class="postHeader">
+                    <div class="navbarPadding">&nbsp;</div>
+                    <h1>{{ page.title }}</h1>
+                    <p>{{ page.date | date: "%a. %d %b. %Y" }} &bullet; {{ page.author }}</p>
+                    <div>
+                        <a href="/posts" class="button">All Posts</a>
+                    </div>
+                    
+                </div>
+                <div class="postContent">
+                    {{ content }}
+                    
+                
+                    {% for category in page.categories %}
+                        <div class="category">{{ category }}</div>
+                    {% endfor %}
+                </div>
+                
+                {% include footer.html %}
+            </div>
+            <div class="printDiv">
+                <h1>{{ page.title }}</h1>
+                <hr />
+                {{ content }}
+            </div>
+        </div>
+        {% include footing.html %}
+    </body>
+</html>

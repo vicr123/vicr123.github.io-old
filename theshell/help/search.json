@@ -7,7 +7,7 @@ layout: none
         {% if page.layout == 'helpPage' %}
             {
                 "title": "{{ page.title }}",
-                "contents": {{ page.content | jsonify }},
+                "contents": {{ page.content | jsonify | strip_html }},
                 "url": "{{ site.baseurl }}{{ page.url }}"
             }
         {% unless forloop.last %},{% endunless %}

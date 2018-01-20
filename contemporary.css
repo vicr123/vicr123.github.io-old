@@ -237,6 +237,7 @@ div.content {
     padding-bottom: 16px;
     border-bottom: 1px solid var(--fg-color);
     padding-left: 100px;
+    padding-right: 100px;
 }
 
 div.content * {
@@ -362,6 +363,7 @@ li p {
 @media (max-width: 600px) {
     div.content {
         padding-left: 10px;
+        padding-right: 10px;
     }
 }
 

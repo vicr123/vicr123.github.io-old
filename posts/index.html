@@ -1,0 +1,134 @@
+---
+project: Victor Tran
+projectIcon: /images/smile.png
+layout: none
+---
+
+<html>
+    <head>
+        <title>Victor's Posts</title>
+        {% include heading.html %}
+    </head>
+    <body>
+        {% include loader.html %}
+        <div id="smoothstate">
+            <style>
+                div.landing {
+                    padding-top: 100px;
+                    padding-bottom: 100px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    background: url(/images/slice.svg) no-repeat center center/cover, linear-gradient(to right top, rgb(0, 100, 255), rgb(0, 100, 255));
+                    border-bottom: 1px solid var(--fg-color);
+                }
+                
+                p:last-child {
+                    margin-bottom: 0px;
+                }
+                
+                div.postSection {
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                    padding-left: 0px;
+                    padding-right: 0px;
+                    
+                    border-bottom: 1px solid var(--fg-color);
+                }
+                
+                div.postSection h2 {
+                    padding-left: 100px;
+                    padding-right: 100px;
+                }
+                
+                div.post {
+                    display: inline-block;
+                    
+                    width: calc(100% - 200px);
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    color: var(--fg-color);
+                    text-decoration: none;
+                    
+                    background-color: var(--bg-color);
+                }
+                
+                div.post:before {
+                    content: url(/images/go-next.svg);
+                    float: left;
+                    padding-right: 4px;
+                    padding-top: 2px;
+                }
+                
+                div.post:hover {
+                    background-color: var(--bg-hover);
+                }
+                
+                div.post:active {
+                    background-color: var(--bg-active);
+                }
+                
+                div.paginator {
+                    padding-top: 10px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    padding-bottom: 10px;
+                    
+                    display: flex;
+                    justify-content: space-between;
+                }
+                
+                @media (max-width: 500px) {
+                    div.landing {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                    
+                    div.post {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        width: initial;
+                    }
+                }
+            </style>
+            {% include header.html %}
+            
+            <div class="landing">
+                <h1>Posts</h1>
+                <p>Thoughts and news</p>
+            </div>
+            <div class="postSection">                
+                {% for post in paginator.posts %}
+                    <a href="{{ post.url }}" class="postContainer">
+                        <div class="post">
+                            <div>
+                                <h3>{{ post.title }}</h3>
+                                {{ post.excerpt }}
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+                
+                {% if paginator.next_page_path != nil or paginator.previous_page_path != nil %}
+                    <div class="paginator">
+                        {% if paginator.next_page_path != nil %}
+                            <a href="{{ paginator.next_page_path }}">&lt; Older posts</a>
+                        {% else %}
+                            <span>&nbsp;</span>
+                        {% endif %}
+                        
+                        {% if paginator.previous_page_path != nil %}
+                            <a href="{{ paginator.previous_page_path }}">Newer posts &gt;</a>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            </div>
+            
+            {% include footer.html %}
+        </div>
+        {% include footing.html %}
+    </body>
+</html>
