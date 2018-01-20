@@ -76,7 +76,8 @@ defaults:
       helpHeader: "rgb(0, 100, 0)"
   -
     scope:
-      path: "/_posts/"
+      path: ""
+      type: "posts"
     values:
       layout: "post"
       project: "Victor Tran"
