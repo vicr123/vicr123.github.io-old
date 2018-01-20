@@ -84,3 +84,4 @@ defaults:
       projectIcon: "/images/smile.png"
       postHeader: "rgb(0, 100, 255)"
       author: "Victor Tran"
+      icon: "/icon.png"
