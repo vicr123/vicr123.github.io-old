@@ -13,5 +13,5 @@ I've made a couple of changes to theShell Blueprint that I'd like to share.<!-- 
 
 Feel free to leave a comment on the video telling me what you think about these changes.
 
-Thanks,
+Thanks,<br />
 Victor :)
