@@ -36,7 +36,9 @@ paginate: 10
 paginate_path: "/posts/page:num/"
 permalink: /posts/:year/:month/:day/:title.html
   
-# Help files
+collections:
+  - ts_backgrounds
+
 defaults:
   -
     scope:
@@ -48,6 +50,11 @@ defaults:
       path: "/theshell/"
     values:
       icon: "/images/theshell.png"
+  -
+    scope:
+      path: "/theshell/backgrounds"
+    values:
+      type: ts_backgrounds
   -
     scope:
       path: "/contemporary/"
