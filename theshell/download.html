@@ -43,20 +43,46 @@ projectIcon: /images/theshell.png
                     padding-right: 100px;
                     
                     border-bottom: 1px solid var(--fg-color);
-                    transition: height 0.5s ease-out, padding-top 0.5s ease-out, padding-bottom 0.5s ease-out;
+                    transition: height 0.5s ease-out, padding-top 0.5s ease-out, padding-bottom 0.5s ease-out, left 0.25s ease-out;
                     overflow-y: hidden;
+                }
+                
+                div.outerFeaturePanel {
+                    transition: height 0.5s ease-out, padding-top 0.5s ease-out, padding-bottom 0.5s ease-out, left 0.25s ease-out;
+                    overflow-y: auto;
+                }
+                
+                div.innerFeaturePanel {
+                    padding-left: 100px;
+                    padding-right: 100px;
                 }
                 
                 #stablePanel {
                     height: 0px;
                     padding-top: 0px;
                     padding-bottom: 0px;
+                    
+                    position: fixed;
+                    height: 100vh;
+                    width: 100vw;
+                    left: 100vw;
+                    top: 0px;
+                    background: var(--bg-color);
+                    z-index: 9999;
                 }
                 
                 #bpPanel {
                     height: 0px;
                     padding-top: 0px;
                     padding-bottom: 0px;
+                    
+                    position: fixed;
+                    height: 100vh;
+                    width: 100vw;
+                    left: 100vw;
+                    top: 0px;
+                    background: var(--bg-color);
+                    z-index: 9999;
                 }
                 
                 div.tsBranches {
@@ -96,6 +122,39 @@ projectIcon: /images/theshell.png
                     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/ribbon.svg) no-repeat center center/cover;
                 }
                 
+                div.backButton {
+                    background: url(/images/go-previous.svg) no-repeat center;
+                    width: 42px;
+                    height: 42px;
+                    margin-right: 9px;
+                }
+                
+                div.backButton:hover {
+                    background-color: var(--bg-hover);
+                }
+                
+                div.backButton:active {
+                    background-color: var(--bg-active);
+                }
+                
+                div.pageHeading {
+                    margin: 0px;
+                    
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    border-bottom: 1px solid var(--fg-color);
+                    display: flex;
+                }
+                
+                div.pageHeading h2 {
+                    margin: 0px;
+                    margin-bottom: 9px;
+                    margin-top: 9px;
+                    display: inline;
+                }
+                
+                
                 @media (max-width: 500px) {
                     div.landing {
                         padding-left: 10px;
@@ -105,6 +164,16 @@ projectIcon: /images/theshell.png
                     div.featurePanel {
                         padding-left: 10px;
                         padding-right: 10px;
+                    }
+                    
+                    div.innerFeaturePanel {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                    
+                    div.pageHeading {
+                        padding-left: 0px;
+                        padding-right: 0px;
                     }
                 }
             </style>
@@ -140,77 +209,87 @@ projectIcon: /images/theshell.png
                 </div>
                 <p>You can install both next to each other!</p>
             </div>
-            <div class="featurePanel" id="stablePanel">
-                <h2>Let's get theShell Stable!</h2>
-                <p>theShell Stable is the branch of theShell where everything has been tested and should be stable enough for daily use.</p>
-                <h3>Arch Linux</h3>
-                <p>Install the <a href="https://aur.archlinux.org/packages/theshell"><code>theshell</code></a> package from the Arch User Repository.<br />
-                Use of an AUR helper is recommended as there are a lot of dependencies to install.</p>
-                <h3>Build from source</h3>
-                <p>If theShell is not packaged for your distribution, you can build theShell from source yourself.</p>
-                <ol>
-                    <li>Install dependencies of theShell.</li>
-                    <li>
-                        Download the sources of theShell.
-                        <code class="dollar">
-                            git clone https://github.com/vicr123/theshell
-                        </code>
-                        <code class="dollar">
-                            cd theshell
-                        </code>
-                    </li>
-                    <li>
-                        Build theShell
-                        <code class="dollar">
-                            qmake theShell.pro
-                        </code>
-                        <code class="dollar">
-                            make
-                        </code>
-                    </li>
-                    <li>
-                        Install theShell
-                        <code class="hash">
-                            make install 
-                        </code>
-                    </li>
-                </ol>
+            <div class="outerFeaturePanel" id="stablePanel">
+                <div class="pageHeading">
+                    <div onclick="closePanels()" class="backButton"></div>
+                    <h2>Get theShell Stable</h2>
+                </div>
+                <div class="innerFeaturePanel">
+                    <p>theShell Stable is the branch of theShell where everything has been tested and should be stable enough for daily use.</p>
+                    <h3>Arch Linux</h3>
+                    <p>Install the <a href="https://aur.archlinux.org/packages/theshell"><code>theshell</code></a> package from the Arch User Repository.<br />
+                    Use of an AUR helper is recommended as there are a lot of dependencies to install.</p>
+                    <h3>Build from source</h3>
+                    <p>If theShell is not packaged for your distribution, you can build theShell from source yourself.</p>
+                    <ol>
+                        <li>Install dependencies of theShell.</li>
+                        <li>
+                            Download the sources of theShell.
+                            <code class="dollar">
+                                git clone https://github.com/vicr123/theshell
+                            </code>
+                            <code class="dollar">
+                                cd theshell
+                            </code>
+                        </li>
+                        <li>
+                            Build theShell
+                            <code class="dollar">
+                                qmake theShell.pro
+                            </code>
+                            <code class="dollar">
+                                make
+                            </code>
+                        </li>
+                        <li>
+                            Install theShell
+                            <code class="hash">
+                                make install 
+                            </code>
+                        </li>
+                    </ol>
+                </div>
             </div>
-            <div class="featurePanel" id="bpPanel">
-                <h2>Let's get theShell Blueprint!</h2>
-                <p>theShell Blueprint is the branch of theShell where breaking changes may happen at any time. However, you get to test the newest features of theShell. <b>It's recommended that you do not use theShell Blueprint as your daily driver.</b></p>
-                <h3>Arch Linux</h3>
-                <p>Install the <a href="https://aur.archlinux.org/packages/theshell-blueprint"><code>theshell-blueprint</code></a> package from the Arch User Repository.<br />
-                Use of an AUR helper is recommended as there are a lot of dependencies to install.</p>
-                <h3>Build from source</h3>
-                <p>If theShell is not packaged for your distribution, you can build theShell from source yourself.</p>
-                <ol>
-                    <li>Install dependencies of theShell.</li>
-                    <li>
-                        Download the sources of theShell Blueprint.
-                        <code class="dollar">
-                            git clone https://github.com/vicr123/theshell#branch=blueprint
-                        </code>
-                        <code class="dollar">
-                            cd theshell
-                        </code>
-                    </li>
-                    <li>
-                        Build theShell in Blueprint mode
-                        <code class="dollar">
-                            qmake "CONFIG+=blueprint" theShell.pro
-                        </code>
-                        <code class="dollar">
-                            make
-                        </code>
-                    </li>
-                    <li>
-                        Install theShell Blueprint
-                        <code class="hash">
-                            make install
-                        </code>
-                    </li>
-                </ol>
+            <div class="outerFeaturePanel" id="bpPanel">
+                <div class="pageHeading">
+                    <div onclick="closePanels()" class="backButton"></div>
+                    <h2>Get theShell Blueprint</h2>
+                </div>
+                <div class="innerFeaturePanel">
+                    <p>theShell Blueprint is the branch of theShell where breaking changes may happen at any time. However, you get to test the newest features of theShell. <b>It's recommended that you do not use theShell Blueprint as your daily driver.</b></p>
+                    <h3>Arch Linux</h3>
+                    <p>Install the <a href="https://aur.archlinux.org/packages/theshell-blueprint"><code>theshell-blueprint</code></a> package from the Arch User Repository.<br />
+                    Use of an AUR helper is recommended as there are a lot of dependencies to install.</p>
+                    <h3>Build from source</h3>
+                    <p>If theShell is not packaged for your distribution, you can build theShell from source yourself.</p>
+                    <ol>
+                        <li>Install dependencies of theShell.</li>
+                        <li>
+                            Download the sources of theShell Blueprint.
+                            <code class="dollar">
+                                git clone https://github.com/vicr123/theshell#branch=blueprint
+                            </code>
+                            <code class="dollar">
+                                cd theshell
+                            </code>
+                        </li>
+                        <li>
+                            Build theShell in Blueprint mode
+                            <code class="dollar">
+                                qmake "CONFIG+=blueprint" theShell.pro
+                            </code>
+                            <code class="dollar">
+                                make
+                            </code>
+                        </li>
+                        <li>
+                            Install theShell Blueprint
+                            <code class="hash">
+                                make install
+                            </code>
+                        </li>
+                    </ol>
+                </div>
             </div>
             <div class="featurePanel tsos">
                 <h2>theShell OS</h2>
@@ -227,7 +306,7 @@ projectIcon: /images/theshell.png
             <script>
                 function openStable() {
                     //$("#stablePanel").css("height", "calc(100vh - 40px)");
-                    closePanels();
+                    /*closePanels();
                     
                     let currentHeight = $("#stablePanel").height();
                     $("#stablePanel").css("height", "auto");
@@ -240,14 +319,18 @@ projectIcon: /images/theshell.png
                     
                     $("#stablePanel").css("padding-top", "20px");
                     $("#stablePanel").css("padding-bottom", "20px");
-                    $('#stablePanel').css("overflow-y", "auto");
+                    $('#stablePanel').css("overflow-y", "auto");*/
+                    
+                    $("#stablePanel").css("left", "0px");
+                    $("#mainHeader").animate({top: -48});
+                    $("body").css("overflow-y", "hidden");
                 }
                 
                 function openBP() {
                     //$("#bpPanel").css("height", "calc(100vh - 40px)");
                     closePanels();
                     
-                    let currentHeight = $("#bpPanel").height();
+                    /*let currentHeight = $("#bpPanel").height();
                     $("#bpPanel").css("height", "auto");
                     let autoHeight = $('#bpPanel').height();
                     $("#bpPanel").height(currentHeight).animate({
@@ -258,16 +341,23 @@ projectIcon: /images/theshell.png
                     
                     $("#bpPanel").css("padding-top", "20px");
                     $("#bpPanel").css("padding-bottom", "20px");
-                    $('#bpPanel').css("overflow-y", "auto");
+                    $('#bpPanel').css("overflow-y", "auto");*/
+                    $("#bpPanel").css("left", "0px");
+                    $("#mainHeader").animate({top: -48});
+                    $("body").css("overflow-y", "hidden");
                 }
                 
                 function closePanels() {
-                    $("#stablePanel").css("height", "0px");
+                    /*$("#stablePanel").css("height", "0px");
                     $("#stablePanel").css("padding-top", "0px");
                     $("#stablePanel").css("padding-bottom", "0px");
                     $("#bpPanel").css("height", "0px");
                     $("#bpPanel").css("padding-top", "0px");
-                    $("#bpPanel").css("padding-bottom", "0px");
+                    $("#bpPanel").css("padding-bottom", "0px");*/
+                    $("#bpPanel").css("left", "100vw");
+                    $("#stablePanel").css("left", "100vw");
+                    $("#mainHeader").animate({top: 0});
+                    $("body").css("overflow-y", "scroll");
                 }
             </script>
         </div>
