@@ -216,10 +216,41 @@ projectIcon: /images/theshell.png
                 </div>
                 <div class="innerFeaturePanel">
                     <p>theShell Stable is the branch of theShell where everything has been tested and should be stable enough for daily use.</p>
-                    <h3>Arch Linux</h3>
-                    <p>Install the <a href="https://aur.archlinux.org/packages/theshell"><code>theshell</code></a> package from the Arch User Repository.<br />
+                    
+                    <ul>
+                        <li><a href="#stable-arch">Arch Linux</a></li>
+                        <li><a href="#stable-build">Build from source</a></li>
+                    </ul>
+                    
+                    <h3 id="stable-arch">Arch Linux</h3>
+                    <p>Binary packages can be retrieved from the theSuite repository. This also has the advantage of easier updating with <code>pacman</code>.</p>
+                    <ol>
+                        <li>
+                            Add the theSuite repository to your system.<br />
+                            Edit <code>/etc/pacman.conf</code> and add the following at the bottom:<br />
+                            <code>
+                                [theapps]<br />
+                                SigLevel = Optional TrustAll<br />
+                                Server = https://vicr123.github.io/repo/arch/$arch/<br />
+                            </code>
+                        </li>
+                        <li>
+                            Force an update of the system and all repositores
+                            <code class="hash">
+                                pacman -Syyu
+                            </code>
+                        </li>
+                        <li>
+                            Install theShell
+                            <code class="hash">
+                                pacman -S theshell
+                            </code>
+                        </li>
+                    </ol>
+                    <p>If you'd like to use the AUR instead, install the <a href="https://aur.archlinux.org/packages/theshell"><code>theshell</code></a> package from the Arch User Repository.<br />
                     Use of an AUR helper is recommended as there are a lot of dependencies to install.</p>
-                    <h3>Build from source</h3>
+                    
+                    <h3 id="stable-build">Build from source</h3>
                     <p>If theShell is not packaged for your distribution, you can build theShell from source yourself.</p>
                     <ol>
                         <li>Install dependencies of theShell.</li>
