@@ -85,6 +85,20 @@ projectIcon: /images/theshell.png
                     z-index: 9999;
                 }
                 
+                #depsPanel {
+                    height: 0px;
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                    
+                    position: fixed;
+                    height: 100vh;
+                    width: 100vw;
+                    left: 100vw;
+                    top: 0px;
+                    background: var(--bg-color);
+                    z-index: 9999;
+                }
+                
                 div.tsBranches {
                     display: flex;
                     flex-wrap: wrap;
@@ -253,7 +267,10 @@ projectIcon: /images/theshell.png
                     <h3 id="stable-build">Build from source</h3>
                     <p>If theShell is not packaged for your distribution, you can build theShell from source yourself.</p>
                     <ol>
-                        <li>Install dependencies of theShell.</li>
+                        <li>
+                            Install dependencies of theShell.<br />
+                            <a class="button" onclick="showDepsPanel()" href="#">Dependency Information</a>
+                        </li>
                         <li>
                             Download the sources of theShell.
                             <code class="dollar">
@@ -294,7 +311,10 @@ projectIcon: /images/theshell.png
                     <h3>Build from source</h3>
                     <p>If theShell is not packaged for your distribution, you can build theShell from source yourself.</p>
                     <ol>
-                        <li>Install dependencies of theShell.</li>
+                        <li>
+                            Install dependencies of theShell.<br />
+                            <a class="button" onclick="showDepsPanel()" href="#">Dependency Information</a>
+                        </li>
                         <li>
                             Download the sources of theShell Blueprint.
                             <code class="dollar">
@@ -322,6 +342,38 @@ projectIcon: /images/theshell.png
                     </ol>
                 </div>
             </div>
+            <div class="outerFeaturePanel" id="depsPanel">
+                <div class="pageHeading">
+                    <div onclick="closeDepsPanel()" class="backButton"></div>
+                    <h2>Dependency Information</h2>
+                </div>
+                <div class="innerFeaturePanel">
+                    <p>theShell relies on some dependencies to work properly. Here is a list of dependencies you'll need to install to build and run theShell.</p>
+                    <p>As package names can vary between distributions, package names are not provided here. You'll need to do some research to find the correct package for your distribution.</p>
+                    <ul>
+                        <li>
+                            Qt 5, including
+                            <ul>
+                                <li>Networking module</li>
+                                <li>Charts module</li>
+                                <li>Location module</li>
+                            </ul>
+                        </li>
+                        <li>An EWMH Compatible Window Manager (by default KWin is installed)</li>
+                        <li>wmctrl</li>
+                        <li>xbacklight</li>
+                        <li>kscreen</li>
+                        <li>NetworkManager</li>
+                        <li>pulseaudio</li>
+                        <li>systemd</li>
+                        <li>Xlib</li>
+                        <li>xcb</li>
+                        <li><a href="https://github.com/vicr123/the-libs" target="_blank">the-libs</a></li>
+                        <li><a href="https://github.com/vicr123/tsscreenlock" target="_blank">tsscreenlock</a></li>
+                        <li><a href="https://github.com/vicr123/ts-qtplatform" target="_blank">ts-qtplatform</a></li>
+                    </ul>
+                </div>
+            </div>
             <div class="featurePanel tsos">
                 <h2>theShell OS</h2>
                 <p>For the perfect experience with theShell</p>
@@ -336,59 +388,41 @@ projectIcon: /images/theshell.png
             {% include footer.html %}
             <script>
                 function openStable() {
-                    //$("#stablePanel").css("height", "calc(100vh - 40px)");
-                    /*closePanels();
-                    
-                    let currentHeight = $("#stablePanel").height();
-                    $("#stablePanel").css("height", "auto");
-                    let autoHeight = $('#stablePanel').height();
-                    $("#stablePanel").height(currentHeight).animate({
-                        height: autoHeight
-                    }, 500, "swing", function() {
-                        $("#stablePanel").css("height", "auto");
-                    });
-                    
-                    $("#stablePanel").css("padding-top", "20px");
-                    $("#stablePanel").css("padding-bottom", "20px");
-                    $('#stablePanel').css("overflow-y", "auto");*/
-                    
                     $("#stablePanel").css("left", "0px");
-                    $("#mainHeader").animate({top: -48});
+                    $("#mainHeader").animate({top: -48}, {
+                        complete: function() {
+                            $("#mainHeader").css("visibility", "hidden");
+                        }
+                    });
                     $("html").css("overflow-y", "hidden");
+                    scrollTop = $(window).scrollTop();
                 }
                 
                 function openBP() {
-                    //$("#bpPanel").css("height", "calc(100vh - 40px)");
-                    closePanels();
-                    
-                    /*let currentHeight = $("#bpPanel").height();
-                    $("#bpPanel").css("height", "auto");
-                    let autoHeight = $('#bpPanel').height();
-                    $("#bpPanel").height(currentHeight).animate({
-                        height: autoHeight
-                    }, 500, "swing", function() {
-                        $("#bpPanel").css("height", "auto");
-                    });
-                    
-                    $("#bpPanel").css("padding-top", "20px");
-                    $("#bpPanel").css("padding-bottom", "20px");
-                    $('#bpPanel').css("overflow-y", "auto");*/
                     $("#bpPanel").css("left", "0px");
-                    $("#mainHeader").animate({top: -48});
+                    $("#mainHeader").animate({top: -48}, {
+                        complete: function() {
+                            $("#mainHeader").css("visibility", "hidden");
+                        }
+                    });
                     $("html").css("overflow-y", "hidden");
+                    scrollTop = $(window).scrollTop();
                 }
                 
                 function closePanels() {
-                    /*$("#stablePanel").css("height", "0px");
-                    $("#stablePanel").css("padding-top", "0px");
-                    $("#stablePanel").css("padding-bottom", "0px");
-                    $("#bpPanel").css("height", "0px");
-                    $("#bpPanel").css("padding-top", "0px");
-                    $("#bpPanel").css("padding-bottom", "0px");*/
+                    $("#mainHeader").css("visibility", "visible");
                     $("#bpPanel").css("left", "100vw");
                     $("#stablePanel").css("left", "100vw");
                     $("#mainHeader").animate({top: 0});
                     $("html").css("overflow-y", "auto");
+                }
+                
+                function showDepsPanel() {
+                    $("#depsPanel").css("left", "0px");
+                }
+                
+                function closeDepsPanel() {
+                    $("#depsPanel").css("left", "100vw");
                 }
             </script>
         </div>
