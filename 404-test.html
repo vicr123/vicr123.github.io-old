@@ -1,0 +1,88 @@
+---
+---
+
+<html>
+    <head>
+        <title>Are you lost?</title>
+        {% include heading.html %}
+    </head>
+    <body>
+        {% include loader.html %}
+        <div id="smoothstate">
+            <style>
+                div.errouter {
+                    position: fixed;
+                    display: flex;
+                    height: 100%;
+                    width: 100%;
+                    top: 0px;
+                    left: 0px;
+                    
+                    justify-content: center;
+                    align-items: stretch;
+                    flex-direction: column;
+                    overflow-y: auto;
+                    overflow-x: hidden;
+                    
+                    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/404.jpg") no-repeat center center/cover;
+                    color: white; /* background is darkened so force the text colour to always be white */
+                }
+                
+                div.errinner {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    padding-left: 18vw;
+                    padding-right: 100px;
+                }
+                
+                div.links a {
+                    display: block;
+                }
+                
+                hr {
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+                
+                div.credits {
+                    display: flex;
+                    align-items: center;
+                    
+                    position: fixed;
+                    right: 30px;
+                    bottom: 30px;
+                    font-size: 10pt;
+                }
+                
+                @media (max-width: 500px) {
+                    div.errinner {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                }
+            </style>
+            <div class="errouter">
+                <div class="errinner">
+                    <img src="/images/404-ferry.png" style="padding-bottom: 30px; width: 100%; max-width: 544px;"></img>
+                    <h1>Ferry not taking you to the right place?</h1>
+                    <ul>
+                        <li>Maybe you typed in your destination incorrectly</li>
+                        <li>Maybe your destination was a mythical place in some islands that didn't actually exist</li>
+                        <li>or maybe the Victor Navigation System is just broken. <a class="button" href="https://github.com/vicr123/vicr123.github.io/issues">Fix the Victor Navigation System &gt;</a>
+                    </ul>
+                    <h1>Maybe you'd like to perform a U-turn</h1>
+                    <p>and see if one of these routes can get you to where you actually wanted to be</p>
+                    <a class="button" href="/">Go to vicr123.com &gt;</a><br />
+                    <a class="button" href="/theshell">Go to theShell &gt;</a><br />
+                    <a class="button" href="/contemporary">Go to Contemporary &gt;</a><br />
+                    <a class="button" href="/theshell/help">Get help with theShell &gt;</a>
+                </div>
+            </div>
+            <div class="credits">
+                <span style="font-size: 20pt;">Lake&nbsp;</span>
+                <span style="font-size: 10pt;">by Squid Grill</span>
+            </div>
+        </div>
+        {% include footing.html %}
+    </body>
+</html>
