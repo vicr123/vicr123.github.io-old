@@ -1,3 +1,56 @@
+Package: contemporary-cursors
+Version: 1.0
+Maintainer: Victor Tran <vicr12345@gmail.com>
+Architecture: amd64
+Priority: optional
+Section: main
+Filename: pool/main/c/contemporary-cursors/contemporary-cursors_1.0_amd64.deb
+Size: 11444
+SHA256: 75e15ec24517122170cadbff9863e9950522486bde1a69f06a6fd99c9b677975
+SHA1: b3316a6adf0aec81dd75d0ffecac7a24d1c8ec34
+MD5sum: 3fb8197ae6b8776d3af72be328f02291
+Description: Contemporary Cursors
+
+Package: contemporary-icons
+Version: 1.6
+Maintainer: Victor Tran <vicr12345@gmail.com>
+Architecture: amd64
+Priority: optional
+Section: main
+Filename: pool/main/c/contemporary-icons/contemporary-icons_1.6_amd64.deb
+Size: 94204
+SHA256: 1288fe698ad639b85c57c82fca013e1b6073e9b86beed716a7ff2e9c9f40c851
+SHA1: 41904d3c7a7d0933b3256a7417b8bd4aaacba444
+MD5sum: 050c79869d55c4ea69c9c1b93a3d8605
+Description: Contemporary Icon theme
+
+Package: contemporary-ttf
+Version: 2.0
+Maintainer: Victor Tran <vicr12345@gmail.com>
+Architecture: amd64
+Priority: optional
+Section: main
+Filename: pool/main/c/contemporary-ttf/contemporary-ttf_2.0_amd64.deb
+Size: 58576
+SHA256: cec4d219e0e4031ebbc86166190eaa48786e99d9a238876f516b28f4a86d2c04
+SHA1: 2c79995b0e801f3f4b59ea4e23888ba2687cd5e0
+MD5sum: 1f119db51b257c36da5091458e428c4f
+Description: Contemporary Typeface
+
+Package: contemporary-widgets
+Version: 1.6
+Maintainer: Victor Tran <vicr12345@gmail.com>
+Architecture: amd64
+Priority: optional
+Section: main
+Filename: pool/main/c/contemporary-widgets/contemporary-widgets_1.6_amd64.deb
+Size: 36276
+SHA256: ad90c580775cb82f12cd3b4a35f30fc40d307a5eda63879593d3c0bf24f4f0bf
+SHA1: 68ab8d1b05c3a8fea1883e8732b7232e54cc3c50
+MD5sum: e325d1fa363877e7c8447e50f9fe7879
+Description: Contemporary Widget Style for Qt
+Depends: libqt5gui5,the-libs
+
 Package: the-libs
 Version: 1.5
 Maintainer: Victor Tran <vicr12345@gmail.com>
@@ -25,4 +78,62 @@ SHA1: 1117dcc630435e7f34aea34135c1e10abc4a93d9
 MD5sum: 4aa4140bfd228f438efae8a671fb0d83
 Description: Audio Player
 Depends: the-libs,phonon4qt5,libtag1v5
+
+Package: theshell
+Version: 7.1.1
+Maintainer: Victor Tran <vicr12345@gmail.com>
+Architecture: amd64
+Priority: optional
+Section: main
+Filename: pool/main/t/theshell/theshell_7.1.1_amd64.deb
+Size: 2863360
+SHA256: a971216ef0d66ffa95d130f6016d6f1dd7da1b2f17b24b15c9690173e2cfbcbf
+SHA1: a28859bb70a4e96029bdb91fe5af9943069244d5
+MD5sum: 8e7c8b0f350f9d02840512297da14242
+Description: Desktop Environment
+Depends: the-libs,libqt5positioning5,libqt5charts5,wmctrl,redshift,kscreen,network-manager,tsscreenlock,ts-qtplatform,libxcb-keysyms1
+Recommends: contemporary-widgets,ts-polkitagent,ts-bt,kwin-x11,contemporary-ttf
+
+Package: ts-qtplatform
+Version: 1.7
+Maintainer: Victor Tran <vicr12345@gmail.com>
+Architecture: amd64
+Priority: optional
+Section: main
+Filename: pool/main/t/ts-qtplatform/ts-qtplatform_1.7_amd64.deb
+Size: 415212
+SHA256: 918399713ffc8082d65c6f1b660d54b413de9b06d7e99d45a1e0cb47c7793627
+SHA1: 7d047f69d4c3f446d6dc50457f571f1b1b0a80cc
+MD5sum: 07b67fb444d9c86ae48cf24a2c127b40
+Description: Platform Abstraction for theShell
+Depends: the-libs,libqt5multimedia5,libqt5svg5,libxcursor1
+Recommends: contemporary-widgets,contemporary-cursors,contemporary-icons
+
+Package: ts-startsession
+Version: 1.0
+Maintainer: Victor Tran <vicr12345@gmail.com>
+Architecture: amd64
+Priority: optional
+Section: main
+Filename: pool/main/t/ts-startsession/ts-startsession_1.0_amd64.deb
+Size: 5580
+SHA256: 5360d02f55da7b72aec34771447528e3f7ebea70557ca704eb2cd2920c2daaa1
+SHA1: 8e79112149bebe33d6be09057bfa1d2396707741
+MD5sum: 92f8f937ee8e4431534c27878398d3fb
+Description: theShell Session Starter
+Depends: the-libs
+
+Package: tsscreenlock
+Version: 2.2
+Maintainer: Victor Tran <vicr12345@gmail.com>
+Architecture: amd64
+Priority: optional
+Section: main
+Filename: pool/main/t/tsscreenlock/tsscreenlock_2.2_amd64.deb
+Size: 286692
+SHA256: 92f64f9f0d1d3537fd344b5cfb0bfae2100a0d0d72287a7b9123bc36ec7d0300
+SHA1: 7626a29d0f4a3b623c1e456e7e2dab41bd888732
+MD5sum: 27ce45bdce814aa1c9f6aed4c8806748
+Description: theShell Screen Locker
+Depends: the-libs
 
