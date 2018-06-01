@@ -31,6 +31,9 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vicr123.github.io.tslprj
+  - repo/apt/ubuntu/db/
+  - repo/apt/ubuntu/conf/
+  - repo/apt/ubuntu/incoming/
 
 paginate: 10
 paginate_path: "/posts/page:num/"
