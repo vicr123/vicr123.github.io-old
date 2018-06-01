@@ -144,10 +144,10 @@ Architecture: amd64
 Priority: optional
 Section: main
 Filename: pool/main/t/tsscreenlock/tsscreenlock_2.2_amd64.deb
-Size: 286692
-SHA256: 92f64f9f0d1d3537fd344b5cfb0bfae2100a0d0d72287a7b9123bc36ec7d0300
-SHA1: 7626a29d0f4a3b623c1e456e7e2dab41bd888732
-MD5sum: 27ce45bdce814aa1c9f6aed4c8806748
+Size: 286516
+SHA256: 1000fb31a66757be9b5e715a99def669baa798b8df61eb92ebd55ff4d7e1bbc2
+SHA1: a8eac33c2e5b76dcdee373455dd5402462f129fb
+MD5sum: 3db2839e12d8b20e6e97b2b97788fb17
 Description: theShell Screen Locker
 Depends: the-libs
 

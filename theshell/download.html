@@ -55,6 +55,8 @@ projectIcon: /images/theshell.png
                 div.innerFeaturePanel {
                     padding-left: 100px;
                     padding-right: 100px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
                 }
                 
                 #stablePanel {
@@ -168,6 +170,23 @@ projectIcon: /images/theshell.png
                     display: inline;
                 }
                 
+                div.info {
+                    display: block;
+                    background: rgb(0, 100, 200);
+                    border: 1px solid white;
+                    padding: 9px;
+                }
+                
+                div.warning {
+                    display: block;
+                    background: rgb(200, 100, 0);
+                    border: 1px solid white;
+                    padding: 9px;
+                }
+                
+                li div.info {
+                    margin-top: 9px;
+                }
                 
                 @media (max-width: 500px) {
                     div.landing {
@@ -233,16 +252,19 @@ projectIcon: /images/theshell.png
                     
                     <ul>
                         <li><a href="#stable-arch">Arch Linux</a></li>
+                        <li><a href="#stable-ubuntu1804">Ubuntu 18.04</a></li>
                         <li><a href="#stable-build">Build from source</a></li>
                     </ul>
-                    
+                </div>
+                <hr />
+                <div class="innerFeaturePanel">
                     <h3 id="stable-arch">Arch Linux</h3>
                     <p>Binary packages can be retrieved from the theSuite repository. This also has the advantage of easier updating with <code>pacman</code>.</p>
                     <ol>
                         <li>
                             Add the theSuite repository to your system.<br />
                             Edit <code>/etc/pacman.conf</code> and add the following at the bottom:<br />
-                            <code>
+                            <code style="padding: 9px; border: 1px solid var(--fg-color); display: block;">
                                 [theapps]<br />
                                 SigLevel = Optional TrustAll<br />
                                 Server = https://vicr123.github.io/repo/arch/$arch/<br />
@@ -263,7 +285,58 @@ projectIcon: /images/theshell.png
                     </ol>
                     <p>If you'd like to use the AUR instead, install the <a href="https://aur.archlinux.org/packages/theshell"><code>theshell</code></a> package from the Arch User Repository.<br />
                     Use of an AUR helper is recommended as there are a lot of dependencies to install.</p>
-                    
+                </div>
+                <hr />
+                <div class="innerFeaturePanel">
+                    <h3 id="stable-ubuntu1804">Ubuntu 18.04</h3>
+                    <p>Binary packages can be retrieved from the theSuite repository. This also has the advantage of easier updating with <code>apt</code>.</p>
+                    <div class="warning">
+                        theShell on Ubuntu is currently beta quality, and some things may not work properly. Please report a bug if you have any issues using theShell on Ubuntu.
+                    </div>
+                    <div class="info">
+                        You'll need to have a 64-bit installation of Ubuntu to install theShell using the repository.
+                    </div>
+                    <ol>
+                        <li>
+                            Add signing keys to your system
+                            <code class="hash">
+                                wget -O - https://vicr123.com/repo/apt/ubuntu/vicr12345.gpg.key | apt-key add -
+                            </code>
+                            <div class="info">
+                                You'll need to run a root shell before this step. Using <code>sudo</code> will not work.
+                            </div>
+                        </li>
+                        <li>
+                            Add the theSuite repository to your system.<br />
+                            <code class="hash">
+                                add-apt-repository 'deb https://vicr123.com/repo/apt/ubuntu bionic main'
+                            </code>
+                        </li>
+                        <li>
+                            Force an update of system repositories
+                            <code class="hash">
+                                apt update
+                            </code>
+                        </li>
+                        <li>
+                            Install KWin without installing its recommended dependencies
+                            <code class="hash">
+                                apt install --no-install-recommends kwin-x11
+                            </code>
+                            <div class="info">
+                                If you don't perform this step before you install theShell, <code>apt</code> may try to install KDE Plasma as well as theShell.
+                            </div>
+                        </li>
+                        <li>
+                            Install theShell
+                            <code class="hash">
+                                apt install theshell
+                            </code>
+                        </li>
+                    </ol>
+                </div>
+                <hr />
+                <div class="innerFeaturePanel">
                     <h3 id="stable-build">Build from source</h3>
                     <p>If theShell is not packaged for your distribution, you can build theShell from source yourself.</p>
                     <ol>
@@ -294,6 +367,9 @@ projectIcon: /images/theshell.png
                             <code class="hash">
                                 make install 
                             </code>
+                        <div class="info">
+                            If you're installing theShell to a different root directory, you can use the <code>INSTALL_ROOT</code> environment variable to set the path for theShell.
+                        </div>
                         </li>
                     </ol>
                 </div>
@@ -305,9 +381,15 @@ projectIcon: /images/theshell.png
                 </div>
                 <div class="innerFeaturePanel">
                     <p>theShell Blueprint is the branch of theShell where breaking changes may happen at any time. However, you get to test the newest features of theShell. <b>It's recommended that you do not use theShell Blueprint as your daily driver.</b></p>
+                </div>
+                <hr />
+                <div class="innerFeaturePanel">
                     <h3>Arch Linux</h3>
                     <p>Install the <a href="https://aur.archlinux.org/packages/theshell-blueprint"><code>theshell-blueprint</code></a> package from the Arch User Repository.<br />
                     Use of an AUR helper is recommended as there are a lot of dependencies to install.</p>
+                </div>
+                <hr />
+                <div class="innerFeaturePanel">
                     <h3>Build from source</h3>
                     <p>If theShell is not packaged for your distribution, you can build theShell from source yourself.</p>
                     <ol>
@@ -338,6 +420,9 @@ projectIcon: /images/theshell.png
                             <code class="hash">
                                 make install
                             </code>
+                            <div class="info">
+                                If you're installing theShell to a different root directory, you can use the <code>INSTALL_ROOT</code> environment variable to set the path for theShell.
+                            </div>
                         </li>
                     </ol>
                 </div>

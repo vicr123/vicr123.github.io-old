@@ -4,35 +4,35 @@ Hash: SHA512
 Origin: theapps
 Label: theapps
 Codename: bionic
-Date: Fri, 01 Jun 2018 02:40:00 UTC
+Date: Fri, 01 Jun 2018 02:52:22 UTC
 Architectures: amd64
 Components: main
 Description: apt repository for the* apps
 MD5Sum:
- 445fff8dff619974c09e4dd35209d589 5073 main/binary-amd64/Packages
- 310d529379aee91afbd36c5ee36080bd 1827 main/binary-amd64/Packages.gz
+ 2f5be838cce9292e2ab002eedb9953ec 5073 main/binary-amd64/Packages
+ 32a146345fdc244175b82e4d9c14f379 1830 main/binary-amd64/Packages.gz
  441211756048c74ec10517ecc91f146a 109 main/binary-amd64/Release
 SHA1:
- bd8484a865ff1ae473547b50146e16935f402601 5073 main/binary-amd64/Packages
- 142b44b8d43312a6d1823c50f31b0f8b0acf3675 1827 main/binary-amd64/Packages.gz
+ f9101426c4f1c33b774c10e61b57b2262a9f3d7a 5073 main/binary-amd64/Packages
+ 87c52e6543bbf2a3ef8a48bda8af616cdac5e008 1830 main/binary-amd64/Packages.gz
  0e489e220a416660779fd878e8281a04643ef193 109 main/binary-amd64/Release
 SHA256:
- dbab985cd4beeeb09fb6c2004c87f38d82bf85cebc8c2ac46c45ff9f2d468fe2 5073 main/binary-amd64/Packages
- 7c22ce97525b82913657a05fed0bc3448d571fc1901b4ec87ce2579c74695192 1827 main/binary-amd64/Packages.gz
+ 90d922f5922d61f087abaa568a528c69c4e258ee49247e4a74e677a2de0e2d95 5073 main/binary-amd64/Packages
+ 7000eac0490962a8a932858f3b0bbd0dd9c4f28fa3f31ae12b722ae81099eff0 1830 main/binary-amd64/Packages.gz
  f4b9bb70631e4ef2e8444e03fb0e1e319d8aa7eb923138a7b5eb8481ed9dbd96 109 main/binary-amd64/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEnOMKkDJAY0Y6IW26+6ELItYCusEFAlsQsgAACgkQ+6ELItYC
-usFc+A/+Mq29OYFBU1vkRtanfHQv8NRgwkJDQhlQDNnG6jklLcboWkWU6dQX6XiH
-DngpDdkM1HCV/eX98OcD9PLazYBNN4Kh1gggl3duwOD7K+8u3Y9uRTX9dvTFLhm7
-RX81y+y1Q54gcpS+xF64yPzqD+K0mGQKxiEeLrWPghU+tLKf9pKtDoUdLVk1jagz
-1KaD8THdGNN/dz+VkJ+cC5IeHPx0qZvmyFiuYOL3qbHLB+QK3H6mSPUgwllXsT6G
-m8kg9jLxKe7cmnSyV732LZ14V6dL1kgoHEfJhsnVRSQIzOemD6iZOizvKAQWn7to
-lkwDcwYgyQTfqSlwwLtKXXPHFWgblC4RpNOfFOT71GVl6YjfMb/6SE/TbmAWIEke
-/jUevGzgeKVu2C3SdOUApykV0ISXe1MWnOCY0Xa3GW/Nu+jktZTg/aYrl+aN/M2Y
-usZkgd2DzmkqQoD045Bwh98EPy62IxApCWx9ButqfpMwYjU8AV+igJpWW8adTczw
-RV5fORieFOJD+H56dM1+ECwo8gK3qEjOgrQnDo6ji+bduh4Xbzu/jYLc1CuaphC5
-1CaA97bey8+aBGOkoe95FzZrDgF3b7ZUODQ3ALHfupkDjR9UxWBdp37x2/SyU1gn
-GMvmnQVV6M2WxEWOLZnhpygypOMokkV7Vh+n7xN+kfbhr23p4lg=
-=vknM
+iQIzBAEBCgAdFiEEnOMKkDJAY0Y6IW26+6ELItYCusEFAlsQtOYACgkQ+6ELItYC
+usGoHhAAsii1PJofKZnKgUHior2pyVdWMLdW+1y8AlsDvPn3JatwzGYwt2yqleHq
+99mEifYoLwzyP/CqoBwYm2R4eajROPaeUx07fQlWInh0hjpmW9W7W311iNdzlxig
+BWc9RXcWb3wDgNfqlUuvDD70jyC+TKI42EQLy1YsU2fPvDAd29QeCWj9xdWSlBZf
+lPiFjbJqF9mxvXbx1uFJLdZbPTxbliMRrvzzFzfO9WE2pmEntiLuvNUBEYmdhxuA
+Jc9GjSdJUYF6WpQK4XbmdcIco3KPKn2VQb28RySeQHxpsia+0Ioapg2U4/MX7uKm
+zivdtlr2DTlFh7NZuefsWVMXciVAhfrcDf10oCABtiq1hCeK58Qp4/UjHtNefOK5
+xF2uAOK+z3Uxz+XUJQIJS4eAbxHfvPG6ye14k645o+2SEblp97OlUntOyfEGbIcO
+XBGmKCAMVSK2yfgst3tbuNjCAMsKjJv6sXBTjf/zaQm7c6xvFhMiW0+VC+wqX13X
+QKSksihioaurU81HIaMk4MRVChjEgBpP5j93yQt5LTKZGZopPxVP5yAe9uN7ciAz
+v43Cy6adqiewdVgI6xl/URAuUtS/7VcyTx7++c5tG4wO6APV0ZUPlCeZoWzag4+n
+TfDvU+vdlnzPuEA0Ib5MnyjMFo5BPo9O50T4EGJLZOpUsKGcAEU=
+=SssE
 -----END PGP SIGNATURE-----
