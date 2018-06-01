@@ -94,6 +94,20 @@ Description: Desktop Environment
 Depends: the-libs,libqt5positioning5,libqt5charts5,wmctrl,redshift,kscreen,network-manager,tsscreenlock,ts-qtplatform,libxcb-keysyms1
 Recommends: contemporary-widgets,ts-polkitagent,ts-bt,kwin-x11,contemporary-ttf
 
+Package: theslate
+Version: 0.3
+Maintainer: Victor Tran <vicr12345@gmail.com>
+Architecture: amd64
+Priority: optional
+Section: main
+Filename: pool/main/t/theslate/theslate_0.3_amd64.deb
+Size: 66448
+SHA256: 71b8e463e42380703ddfce9c698886d62846c4da3a1272d86a288df8c303f31a
+SHA1: bd4d48336002d7ed41cb47e4bd488756b75c09c2
+MD5sum: 0c29f98d9e41bd0beb132a85a2269e82
+Description: Text Editor
+Depends: the-libs,libqt5websockets5
+
 Package: theterminal
 Version: 2.1
 Maintainer: Victor Tran <vicr12345@gmail.com>

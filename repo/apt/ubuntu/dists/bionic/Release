@@ -1,19 +1,19 @@
 Origin: theapps
 Label: theapps
 Codename: bionic
-Date: Fri, 01 Jun 2018 02:52:22 UTC
+Date: Fri, 01 Jun 2018 07:53:45 UTC
 Architectures: amd64
 Components: main
 Description: apt repository for the* apps
 MD5Sum:
- 2f5be838cce9292e2ab002eedb9953ec 5073 main/binary-amd64/Packages
- 32a146345fdc244175b82e4d9c14f379 1830 main/binary-amd64/Packages.gz
+ 50724498bbb1979385425a4bcea74390 5492 main/binary-amd64/Packages
+ 33d645245ad1c99fbca9bf0a5a320c75 1960 main/binary-amd64/Packages.gz
  441211756048c74ec10517ecc91f146a 109 main/binary-amd64/Release
 SHA1:
- f9101426c4f1c33b774c10e61b57b2262a9f3d7a 5073 main/binary-amd64/Packages
- 87c52e6543bbf2a3ef8a48bda8af616cdac5e008 1830 main/binary-amd64/Packages.gz
+ bb27197f2a926ad23ae6b80dae7b6afec7b4b530 5492 main/binary-amd64/Packages
+ 96d2c7c7068d8ca5014193992ea83bba47bb27c2 1960 main/binary-amd64/Packages.gz
  0e489e220a416660779fd878e8281a04643ef193 109 main/binary-amd64/Release
 SHA256:
- 90d922f5922d61f087abaa568a528c69c4e258ee49247e4a74e677a2de0e2d95 5073 main/binary-amd64/Packages
- 7000eac0490962a8a932858f3b0bbd0dd9c4f28fa3f31ae12b722ae81099eff0 1830 main/binary-amd64/Packages.gz
+ a95e76b9ce92b3df04976c90dd4922b39b5d4cae48ee4d937ec738a3e7e95ebd 5492 main/binary-amd64/Packages
+ da1fa20890ce6f3b9ec99fccfd57adbd087a71088129d0e596777ab8be3e4fd7 1960 main/binary-amd64/Packages.gz
  f4b9bb70631e4ef2e8444e03fb0e1e319d8aa7eb923138a7b5eb8481ed9dbd96 109 main/binary-amd64/Release
