@@ -94,6 +94,20 @@ Description: Desktop Environment
 Depends: the-libs,libqt5positioning5,libqt5charts5,wmctrl,redshift,kscreen,network-manager,tsscreenlock,ts-qtplatform,libxcb-keysyms1
 Recommends: contemporary-widgets,ts-polkitagent,ts-bt,kwin-x11,contemporary-ttf
 
+Package: theterminal
+Version: 2.1
+Maintainer: Victor Tran <vicr12345@gmail.com>
+Architecture: amd64
+Priority: optional
+Section: main
+Filename: pool/main/t/theterminal/theterminal_2.1_amd64.deb
+Size: 41944
+SHA256: 783875e13164566d3209ae22ea09d8e5058450ec2e9f97016e3b16a8a40415a9
+SHA1: e6760e0080425c66560b3df69b08e263ec3545dd
+MD5sum: 293b5fc9f058ab0003e207c6368d1ff7
+Description: Terminal Emulator
+Depends: the-libs,libqtermwidget5-0
+
 Package: ts-qtplatform
 Version: 1.7
 Maintainer: Victor Tran <vicr12345@gmail.com>
