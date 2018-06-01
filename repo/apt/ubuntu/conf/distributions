@@ -1,0 +1,8 @@
+Origin: theapps
+Label: theapps
+Codename: bionic
+Architectures: amd64
+Components: main
+Description: apt repository for the* apps
+SignWith: FBA10B22D602BAC1
+

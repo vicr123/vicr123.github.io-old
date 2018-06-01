@@ -1,0 +1,28 @@
+Package: the-libs
+Version: 1.5
+Maintainer: Victor Tran <vicr12345@gmail.com>
+Architecture: amd64
+Priority: optional
+Section: main
+Filename: pool/main/t/the-libs/the-libs_1.5_amd64.deb
+Size: 36152
+SHA256: c0fbea48bcac478fb8ca1612a6aca2f3d356991863f7e9637b4ee064f9f37a73
+SHA1: 5f273bc8a29e7863c8edd6c3136b12bba96df0de
+MD5sum: f62334f2cdcfe483516ed93b58c75841
+Description: Libraries for the* apps
+Depends: libqt5core5a,libqt5dbus5,libqt5gui5,libqt5x11extras5
+
+Package: thebeat
+Version: 1.0
+Maintainer: Victor Tran <vicr12345@gmail.com>
+Architecture: amd64
+Priority: optional
+Section: main
+Filename: pool/main/t/thebeat/thebeat_1.0_amd64.deb
+Size: 78912
+SHA256: b3d3f8738c58b5bc3d5e68c88cfec7e70f667f71a8e1c072f5bab8295702f2e1
+SHA1: 1117dcc630435e7f34aea34135c1e10abc4a93d9
+MD5sum: 4aa4140bfd228f438efae8a671fb0d83
+Description: Audio Player
+Depends: the-libs,phonon4qt5,libtag1v5
+

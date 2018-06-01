@@ -1,0 +1,38 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Origin: theapps
+Label: theapps
+Codename: bionic
+Date: Fri, 01 Jun 2018 00:03:27 UTC
+Architectures: amd64
+Components: main
+Description: apt repository for the* apps
+MD5Sum:
+ 5799826f8fa937fe23ae1a6bdfea27a5 877 main/binary-amd64/Packages
+ 8d5311c9a45abacdc4c48ee2ca65e79d 499 main/binary-amd64/Packages.gz
+ 441211756048c74ec10517ecc91f146a 109 main/binary-amd64/Release
+SHA1:
+ 5ec4b3562ba586ee91a80ae682bf2c560ee8ea93 877 main/binary-amd64/Packages
+ 6bc8e6d083e44ebe7671b0400179af5e4dfcc2b0 499 main/binary-amd64/Packages.gz
+ 0e489e220a416660779fd878e8281a04643ef193 109 main/binary-amd64/Release
+SHA256:
+ 222f7839859245754fcbb14a96d743e0a7bb2d3588ac6b42f244c7ef7fda4ff5 877 main/binary-amd64/Packages
+ 1060231d7007b85cf8dadea10f51f10c7235272e2f1d2d69b4529092cbdd289d 499 main/binary-amd64/Packages.gz
+ f4b9bb70631e4ef2e8444e03fb0e1e319d8aa7eb923138a7b5eb8481ed9dbd96 109 main/binary-amd64/Release
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEEnOMKkDJAY0Y6IW26+6ELItYCusEFAlsQjU8ACgkQ+6ELItYC
+usELKxAAu2NzZxhRj3hrrey53WnyqHnwF5L9ctEfmeH7+994Gm1WDE1/gLvkKuOd
+N7Qf4DJUYAfgPPuUCLDbQKqcUtyPAPVy6q/zAWQ3Dff4WrArVPDNu7COTf3m0VvO
+c4u4cmJPBXewZzTLav5Bp6ahnR6OLU8euH/g8Hz9tWWmxSrdQdb10LIRy//yaRRH
+qD94VPfBWpkjXVHDnRNcKmC0rppsl4ykBlbVIORKpmbdl2zzwAMnnbwHo2g43YiU
+5Dp9WznL2nxzgiY4RTdt1E7Xs0N5cSAHB9TYoNyCRWoqSWPx0aOx1+wgZOt13yf/
+5u2McWTMYvMn5hBVaqJrFjMR6j1xWcdCwrt0DtDFEkyrpetlSfOFkk9PlWXEr4Li
+gMkxNlzqrdyud90fEw5OxFWk2sQHvmHca6YJMjOY1+zQQkMJZpd2VEG1PgbliE8d
+mnm36tnS36xCMs6VdB0981lfdB0jWRQuD33xLOw2dWqG3a5CNtm6Nd9J9V9I3AI7
+D0DJ5Rh4WITJek4Wqh8FlZzV2KHB/+7X9psjlnNZanGkxNWz93pLMvD8nQpIP3zB
+2h1TKWL1Ags53ip25VVh80Es3oqCY8Als/nXFA6ER2Uaw6NxXqznOiF2T3QCVFAk
+YcPuAMRUdSL73KB2TCqraIO4mo6aNuZv2k47b2C826v0I/Gn69I=
+=Gzyq
+-----END PGP SIGNATURE-----
