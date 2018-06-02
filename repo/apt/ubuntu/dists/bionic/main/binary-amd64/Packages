@@ -38,16 +38,16 @@ MD5sum: 1f119db51b257c36da5091458e428c4f
 Description: Contemporary Typeface
 
 Package: contemporary-widgets
-Version: 1.6
+Version: 1.6.1
 Maintainer: Victor Tran <vicr12345@gmail.com>
 Architecture: amd64
 Priority: optional
 Section: main
-Filename: pool/main/c/contemporary-widgets/contemporary-widgets_1.6_amd64.deb
-Size: 36276
-SHA256: ad90c580775cb82f12cd3b4a35f30fc40d307a5eda63879593d3c0bf24f4f0bf
-SHA1: 68ab8d1b05c3a8fea1883e8732b7232e54cc3c50
-MD5sum: e325d1fa363877e7c8447e50f9fe7879
+Filename: pool/main/c/contemporary-widgets/contemporary-widgets_1.6.1_amd64.deb
+Size: 41412
+SHA256: ec0e9e4ccd90b06722e878928ee40ab3bd9fb738b8f475c6698e039f1f68528f
+SHA1: cbd3546cd61ed91a42f88b9c4bad418ebf30ea37
+MD5sum: c595c866281bf72bbb56b9527ceb4a78
 Description: Contemporary Widget Style for Qt
 Depends: libqt5gui5,the-libs
 
@@ -123,16 +123,16 @@ Description: Terminal Emulator
 Depends: the-libs,libqtermwidget5-0
 
 Package: ts-qtplatform
-Version: 1.7
+Version: 1.8
 Maintainer: Victor Tran <vicr12345@gmail.com>
 Architecture: amd64
 Priority: optional
 Section: main
-Filename: pool/main/t/ts-qtplatform/ts-qtplatform_1.7_amd64.deb
-Size: 415212
-SHA256: 918399713ffc8082d65c6f1b660d54b413de9b06d7e99d45a1e0cb47c7793627
-SHA1: 7d047f69d4c3f446d6dc50457f571f1b1b0a80cc
-MD5sum: 07b67fb444d9c86ae48cf24a2c127b40
+Filename: pool/main/t/ts-qtplatform/ts-qtplatform_1.8_amd64.deb
+Size: 418592
+SHA256: 4ee8be729e2f2d84780b9eb5f5e159b937c9d20827cbf081dce41bad5842cfa3
+SHA1: 4bc85445593476e22e7d8811835bc9d9043b9252
+MD5sum: bcda438037e950983c400fc12bc0e2e2
 Description: Platform Abstraction for theShell
 Depends: the-libs,libqt5multimedia5,libqt5svg5,libxcursor1
 Recommends: contemporary-widgets,contemporary-cursors,contemporary-icons
