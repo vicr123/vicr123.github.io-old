@@ -152,16 +152,16 @@ Description: theShell Session Starter
 Depends: the-libs
 
 Package: tsscreenlock
-Version: 2.2
+Version: 2.3
 Maintainer: Victor Tran <vicr12345@gmail.com>
 Architecture: amd64
 Priority: optional
 Section: main
-Filename: pool/main/t/tsscreenlock/tsscreenlock_2.2_amd64.deb
-Size: 286516
-SHA256: 1000fb31a66757be9b5e715a99def669baa798b8df61eb92ebd55ff4d7e1bbc2
-SHA1: a8eac33c2e5b76dcdee373455dd5402462f129fb
-MD5sum: 3db2839e12d8b20e6e97b2b97788fb17
+Filename: pool/main/t/tsscreenlock/tsscreenlock_2.3_amd64.deb
+Size: 310540
+SHA256: ce2892704da6df4f9fe36942b09f0b5844f953c9b61a3652b824da1ae84983f5
+SHA1: 26ad93e96920b38c8ad631db35651302c79584ce
+MD5sum: cfe1bcda1c729f617cd762c7225dad18
 Description: theShell Screen Locker
-Depends: the-libs
+Depends: the-libs,libxi6
 
