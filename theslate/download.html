@@ -1,0 +1,310 @@
+---
+project: theSlate
+projectIcon: /images/theslateIcon.svg
+---
+
+<html>
+    <head>
+        <title>theSlate</title>
+        {% include heading.html %}
+    </head>
+    <body>
+        {% include loader.html %}
+        <div id="smoothstate">
+            <style>
+                div.landing {
+                    padding-top: 100px;
+                    padding-bottom: 100px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/theslate.svg) no-repeat center center/cover;
+                    border-bottom: 1px solid var(--fg-color);
+                }
+                
+                div.buffer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    background-color: #c800c8;
+                }
+                
+                p:last-child {
+                    margin-bottom: 0px;
+                }
+                
+                div.featurePanel {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    border-bottom: 1px solid var(--fg-color);
+                    transition: height 0.5s ease-out, padding-top 0.5s ease-out, padding-bottom 0.5s ease-out, left 0.25s ease-out;
+                    overflow-y: hidden;
+                }
+                
+                div.outerFeaturePanel {
+                    transition: height 0.5s ease-out, padding-top 0.5s ease-out, padding-bottom 0.5s ease-out, left 0.25s ease-out;
+                    overflow-y: auto;
+                }
+                
+                div.innerFeaturePanel {
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+                
+                #stablePanel {
+                    height: 0px;
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                    
+                    position: fixed;
+                    height: 100vh;
+                    width: 100vw;
+                    left: 100vw;
+                    top: 0px;
+                    background: var(--bg-color);
+                    z-index: 9999;
+                }
+                
+                #bpPanel {
+                    height: 0px;
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                    
+                    position: fixed;
+                    height: 100vh;
+                    width: 100vw;
+                    left: 100vw;
+                    top: 0px;
+                    background: var(--bg-color);
+                    z-index: 9999;
+                }
+                
+                #depsPanel {
+                    height: 0px;
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                    
+                    position: fixed;
+                    height: 100vh;
+                    width: 100vw;
+                    left: 100vw;
+                    top: 0px;
+                    background: var(--bg-color);
+                    z-index: 9999;
+                }
+                
+                div.branches {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+                
+                div.branch {
+                    padding: 9px;
+                    flex-grow: 1;
+                    
+                    text-align: center;
+                    cursor: pointer;
+                }
+                
+                div.branch:hover {
+                    background-color: var(--bg-hover);
+                }
+                
+                div.branch:active {
+                    background-color: var(--bg-active);
+                }
+                
+                code.dollar, code.hash {
+                    display: block;
+                }
+                
+                code.dollar:before {
+                    content: "$ ";
+                }
+                
+                code.hash:before {
+                    content: "# ";
+                }
+                
+                div.tsos {
+                    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/ribbon.svg) no-repeat center center/cover;
+                }
+                
+                div.backButton {
+                    background: url(/images/go-previous.svg) no-repeat center;
+                    width: 42px;
+                    height: 42px;
+                    margin-right: 9px;
+                }
+                
+                div.backButton:hover {
+                    background-color: var(--bg-hover);
+                }
+                
+                div.backButton:active {
+                    background-color: var(--bg-active);
+                }
+                
+                div.pageHeading {
+                    margin: 0px;
+                    
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    border-bottom: 1px solid var(--fg-color);
+                    display: flex;
+                }
+                
+                div.pageHeading h2 {
+                    margin: 0px;
+                    margin-bottom: 9px;
+                    margin-top: 9px;
+                    display: inline;
+                }
+                
+                div.info {
+                    display: block;
+                    background: rgb(0, 100, 200);
+                    border: 1px solid white;
+                    padding: 9px;
+                }
+                
+                div.warning {
+                    display: block;
+                    background: rgb(200, 100, 0);
+                    border: 1px solid white;
+                    padding: 9px;
+                }
+                
+                li div.info {
+                    margin-top: 9px;
+                }
+                
+                @media (max-width: 500px) {
+                    div.landing {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                    
+                    div.featurePanel {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                    
+                    div.innerFeaturePanel {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                    
+                    div.pageHeading {
+                        padding-left: 0px;
+                        padding-right: 0px;
+                    }
+                }
+            </style>
+            {% include header.html %}
+            
+            <div class="landing">
+                <h1>theSlate</h1>
+                <h2>More than just a slate.</h2>
+                <p>And that starts with the installation experience.</p>
+            </div>
+            <div class="featurePanel">
+                <h2>But first,</h2>
+                <p>Here are some things you might need to know.</p>
+                <ul>
+                    <li>theSlate is currently in a public preview stage. Things may break at any time.</li>
+                </ul>
+            </div>
+            <div class="featurePanel" id="landingPanel">
+                <h2>Let's do it!</h2>
+                <p>We think you're running on<span id="osdetection"></span>.</p>
+                <div class="branches" id="unknownBranch">
+                    <p>Unfortunately we can't find your system configuration. </p>
+                </div>
+                <div class="branches" id="unsupportedBranch">
+                    <p>Unfortunately this platform is unsupported. However, you may be able to get theSlate working by building it from source.</p>
+                </div>
+                <div class="branches" id="linuxBranch">
+                    <div class="branch" onclick="window.location = 'https://github.com/vicr123/theSlate/releases/download/continuous/theSlate-x86_64.AppImage'">
+                        <img src="https://appimage.org/images/logo3.svg" width="128"/>
+                        <p>AppImage</p>
+                        <p>Recommended for most users</p>
+                    </div>
+                </div>
+                <div class="branches" id="macBranch">
+                    <div class="branch" onclick="window.location = 'https://github.com/vicr123/theSlate/releases/download/continuous/theSlate-macOS.dmg'">
+                        <img src="/images/theslateIcon.svg" width="128"/>
+                        <p>Disk Image</p>
+                        <p>Recommended for most users</p>
+                    </div>
+                </div>
+                <div class="branches" id="winBranch">
+                    <div class="branch" onclick="window.location = 'https://github.com/vicr123/theInstaller/releases/download/installers/theslate.exe'">
+                        <img src="/images/theslateIcon.svg" width="128"/>
+                        <p>theSlate Installer</p>
+                        <p>Recommended for most users</p>
+                    </div>
+                </div>
+            </div>
+            <div class="featurePanel">
+                <h2>Any issues?</h2>
+                <p>If you think you've found a bug, I'd appreciate it if you'd report it on the GitHub Issues page. Thanks!</p>
+                <a href="https://github.com/vicr123/theslate/issues" class="button" target="_blank">GitHub Issues</a>
+            </div>
+            
+            {% include footer.html %}
+            <script>
+                function chooseBranch(branch) {
+                    $(".branches").css("display", "none");
+                    $("#" + branch).css("display", "block");
+                }
+
+                if (navigator.platform == "Linux x86_64") {
+                    $("#osdetection").text(" Linux");
+                    chooseBranch("linuxBranch");
+                } else if (navigator.platform == "Linux x86_64 X11") {
+                    $("#osdetection").text(" Linux");
+                    chooseBranch("linuxBranch");
+                } else if (navigator.platform == "Linux i686 on x86_64") {
+                    $("#osdetection").text(" Linux");
+                    chooseBranch("linuxBranch");
+                } else if (navigator.platform == "Win32") {
+                    $("#osdetection").text(" Windows");
+                    chooseBranch("winBranch");
+                } else if (navigator.platform == "MacIntel") {
+                    $("#osdetection").text(" macOS");
+                    chooseBranch("macBranch");
+                } else if (navigator.platform == "Linux armv8l" ||
+                           navigator.platform == "Linux armv7l") {
+                    $("#osdetection").text(" Linux (ARM)");
+                    chooseBranch("unsupportedBranch");
+                } else if (navigator.platform == "Linux i686") {
+                    $("#osdetection").text(" Linux (32-bit)");
+                    chooseBranch("unsupportedBranch");
+                } else if (navigator.platform == "Linux i686 X11") {
+                    $("#osdetection").text(" Linux (32-bit)");
+                    chooseBranch("unsupportedBranch");
+                } else if (navigator.platform == "Android") {
+                    $("#osdetection").text(" Android");
+                    chooseBranch("unsupportedBranch");
+                } else if (navigator.platform == "iPhone") {
+                    $("#osdetection").text(" iOS");
+                    chooseBranch("unsupportedBranch");
+                } else {
+                    $("#osdetection").text("... actually, we're not quite sure.");
+                    chooseBranch("unknownBranch");
+                }
+            </script>
+        </div>
+        {% include footing.html %}
+    </body>
+</html>
