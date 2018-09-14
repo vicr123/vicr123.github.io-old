@@ -88,7 +88,7 @@ projectIcon: /images/smile.png
                     height: 100px;
                     width: 40px;
                     padding: 0px;
-                    top: 350px;
+                    top: 450px;
                     
                     background-position: center;
                     background-repeat: no-repeat;
@@ -192,6 +192,15 @@ projectIcon: /images/smile.png
                     display: inline-block;
                 }
                 
+                div.translate {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/translatesplash.svg) no-repeat center center/cover;
+                }
+                
                 @media (max-width: 600px) {
                     div.releaseAdvertisment {
                         padding-left: 10px;
@@ -210,10 +219,25 @@ projectIcon: /images/smile.png
             </style>
             {% include header.html %}
             
+            <div class="content translate">
+                <h1>Calling all polylinguists!</h1>
+                <p>Help make my apps available to the world. Join in the translation efforts!</p>
+                <a href="https://translate.vicr123.com/" class="button">Translate &gt;</a>
+            </div>
             <div class="carouselBack" onclick="decrementCarousel();"></div>
             <div class="carouselForward" onclick="incrementCarousel();"></div>
             <div class="carousel">
-                <div class="theslate carouselElement active">
+                <div class="theshell carouselElement active">
+                    <div><h1>theShell 8.0</h1><p>Desktop Environment</p></div>
+                    <div class="carouselLower">
+                        <p>Down at its core, it's up for anything.</p>
+                        <div class="carouselButtons">
+                            <a href="./theshell/" class="button">Learn More</a>
+                            <a href="https://www.github.com/vicr123/theshell" class="button">See the code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="theslate carouselElement">
                     <div><h1>theSlate Public Preview</h1><p>Text Editor</p></div>
                     <div class="carouselLower">
                         <p>More than just a slate.</p>
@@ -221,16 +245,6 @@ projectIcon: /images/smile.png
                         <div class="carouselButtons">
                             <a href="./theslate/" class="button">Learn More</a>
                             <a href="https://www.github.com/vicr123/theslate" class="button">See the code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="theshell carouselElement">
-                    <div><h1>theShell 8.0</h1><p>Desktop Environment</p></div>
-                    <div class="carouselLower">
-                        <p>Down at its core, it's up for anything.</p>
-                        <div class="carouselButtons">
-                            <a href="./theshell/" class="button">Learn More</a>
-                            <a href="https://www.github.com/vicr123/theshell" class="button">See the code</a>
                         </div>
                     </div>
                 </div>
