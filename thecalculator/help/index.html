@@ -1,0 +1,102 @@
+---
+project: theCalculator
+projectIcon: /images/thecalculator.svg
+layout: none
+---
+
+<html>
+    <head>
+        <title>theCalculator Help</title>
+        {% include heading.html %}
+    </head>
+    <body>
+        {% include loader.html %}
+        <div id="smoothstate">
+            <style>
+                div.landing {
+                    padding-top: 100px;
+                    padding-bottom: 100px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/calcsplash.svg) no-repeat center center/cover;
+                    border-bottom: 1px solid var(--fg-color);
+                }
+                
+                p:last-child {
+                    margin-bottom: 0px;
+                }
+                
+                div.helpSection {
+                    padding-top: 20px;
+                    padding-bottom: 0px;
+                    padding-left: 0px;
+                    padding-right: 0px;
+                    
+                    border-bottom: 1px solid var(--fg-color);
+                }
+                
+                div.helpSection h2 {
+                    padding-left: 100px;
+                    padding-right: 100px;
+                }
+                
+                a.helpIndex {
+                    display: block;
+                    
+                    width: calc(100% - 200px);
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    color: var(--fg-color);
+                    text-decoration: none;
+                    
+                    background-color: var(--bg-color);
+                }
+                
+                a.helpIndex:before {
+                    content: url(/images/go-next.svg);
+                    float: left;
+                    padding-right: 4px;
+                }
+                
+                a.helpIndex:hover {
+                    background-color: var(--bg-hover);
+                }
+                
+                a.helpIndex:active {
+                    background-color: var(--bg-active);
+                }
+                
+                @media (max-width: 500px) {
+                    div.landing {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                }
+            </style>
+            {% include header.html %}
+            
+            <div class="landing">
+                <h1>theCalculator Help</h1>
+                <h2>Powerfully Simple</h2>
+                <p>And it's simple to get help too.</p>
+                <!--<a href="/theshell/" class="button">theShell Home</a>-->
+            </div>
+            <div class="helpSection">
+                <h2>Places to Start</h2>
+                <a href="using" class="helpIndex">Using theCalculator</a>
+            </div>
+            <div class="helpSection">
+                <h2>Functions</h2>
+                <a href="os/createUSB" class="helpIndex">Creating a Live USB</a>
+                <a href="os/checkUpdates" class="helpIndex">Checking for updates</a>
+            </div>
+            
+            {% include footer.html %}
+        </div>
+        {% include footing.html %}
+    </body>
+</html>

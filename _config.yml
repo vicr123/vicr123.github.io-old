@@ -86,6 +86,17 @@ defaults:
       helpHeader: "rgb(0, 100, 0)"
   -
     scope:
+      path: "thecalculator/help"
+      exclude: "thecalculator/help/index.html"
+    values:
+      layout: "helpPage"
+      helpIndex: "/thecalculator/help/"
+      searchFile: "/thecalculator/help/search.json"
+      project: "theCalculator"
+      projectIcon: "/images/thecalculator.svg"
+      helpHeader: "rgb(0, 150, 255)"
+  -
+    scope:
       path: ""
       type: "posts"
     values:
