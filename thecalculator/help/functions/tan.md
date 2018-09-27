@@ -11,7 +11,6 @@ Calculates the tangent of a number
 This function takes only one argument, which is the number to take the tangent of.
 
 # Restrictions
-
 - In degrees mode, the argument must not be $$90 + 180n, n \in \mathbb{Z}$$
 - In radians mode, the argument must not be $${ {\pi} \over {2} } + \pi n, n \in \mathbb{Z}$$
 

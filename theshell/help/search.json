@@ -4,7 +4,7 @@ layout: none
 
 [
     {% for page in site.pages %}
-        {% if page.layout == 'helpPage' %}
+        {% if page.layout == 'helpPage' and page.project == 'theShell' %}
             {
                 "title": "{{ page.title }}",
                 "contents": {{ page.content | jsonify | strip_html }},
