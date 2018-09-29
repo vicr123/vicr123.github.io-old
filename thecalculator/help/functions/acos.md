@@ -1,18 +1,18 @@
 ---
-title: asin
+title: acos
 ---
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 
 # Function Description
-Calculates the arc sine (inverse sine) of a number
+Calculates the arc cosine (inverse cosine) of a number
 
 # Arguments
-This function takes only one argument, which is the number to take the arc sine of.
+This function takes only one argument, which is the number to take the arc cosine of.
 
 # Restrictions
 The argument must be in the range $$-1 \leq x \leq 1$$
 
 # Examples
-- $$asin(0.5)$$: ssin(0.5)
-- $$sin^{-1}({\sqrt{3} \over 2})$$: asin(√3÷2)
+- $$acos(0.5)$$: acos(0.5)
+- $$cos^{-1}({\sqrt{3} \over 2})$$: acos(√3÷2)
