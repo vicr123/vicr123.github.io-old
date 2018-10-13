@@ -13,5 +13,10 @@
     "blueprint": {
         "packageUrl": "https://github.com/vicr123/theSlate/releases/download/continuous/theSlate-Windows.zip",
         "executableName": "theSlate.exe"
-    }
+    },
+    "license": [
+        {
+            "type": "GPL3+"
+        }
+    ]
 }
