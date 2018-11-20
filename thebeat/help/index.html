@@ -1,0 +1,124 @@
+---
+project: theBeat
+projectIcon: /images/thebeatIcon.svg
+layout: none
+---
+
+<html>
+    <head>
+        <title>theBeat Help</title>
+        {% include heading.html %}
+    </head>
+    <body>
+        {% include loader.html %}
+        <div id="smoothstate">
+            <style>
+                div.landing {
+                    padding-top: 100px;
+                    padding-bottom: 100px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/thebeat.png) no-repeat center center/cover;
+                    border-bottom: 1px solid var(--fg-color);
+                }
+                
+                p:last-child {
+                    margin-bottom: 0px;
+                }
+                
+                div.helpSection {
+                    padding-top: 20px;
+                    padding-bottom: 0px;
+                    padding-left: 0px;
+                    padding-right: 0px;
+                    
+                    border-bottom: 1px solid var(--fg-color);
+                }
+                
+                div.helpSection h2 {
+                    padding-left: 100px;
+                    padding-right: 100px;
+                }
+                
+                div.helpSection h3 {
+                    padding-top: 10px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                }
+                
+                a.helpIndex {
+                    display: block;
+                    
+                    width: calc(100% - 200px);
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    color: var(--fg-color);
+                    text-decoration: none;
+                    
+                    background-color: var(--bg-color);
+                }
+                
+                a.helpIndex:before {
+                    content: url(/images/go-next.svg);
+                    float: left;
+                    padding-right: 4px;
+                }
+                
+                a.helpIndex:hover {
+                    background-color: var(--bg-hover);
+                }
+                
+                a.helpIndex:active {
+                    background-color: var(--bg-active);
+                }
+                
+                @media (max-width: 500px) {
+                    div.landing {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                }
+                
+                
+                div.featurePanel {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    border-bottom: 1px solid var(--fg-color);
+                }
+                
+                @media (max-width: 500px) {
+                    div.featurePanel {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                }
+            </style>
+            {% include header.html %}
+            
+            <div class="landing">
+                <h1>theBeat Help</h1>
+                <h2>Keeps your computer beating.</h2>
+                <p>And it gives you help when you need it.</p>
+                <a href="/thebeat/" class="button">theBeat Home</a>
+            </div>
+            
+            <div class="featurePanel">
+                Actually, we're still writing the help for theBeat. Come back once we've finished writing the help topics.
+            </div>
+            <div class="helpSection">
+                <h2>Still need help?</h2>
+                <a href="https://github.com/vicr123/thebeat/issues" class="helpIndex">File a bug</a>
+                <a href="https://twitter.com/vicr12345" class="helpIndex">Tweet at me</a>
+            </div>
+            {% include footer.html %}
+        </div>
+        {% include footing.html %}
+    </body>
+</html>

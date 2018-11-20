@@ -97,6 +97,17 @@ defaults:
       helpHeader: "rgb(0, 150, 255)"
   -
     scope:
+      path: "thebeat/help"
+      exclude: "thebeat/help/index.html"
+    values:
+      layout: "helpPage"
+      helpIndex: "/thebeat/help/"
+      searchFile: "/thebeat/help/search.json"
+      project: "theCalculator"
+      projectIcon: "/images/thebeat.svg"
+      helpHeader: "rgb(0, 150, 255)"
+  -
+    scope:
       path: ""
       type: "posts"
     values:
