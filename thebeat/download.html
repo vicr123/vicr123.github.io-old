@@ -52,6 +52,71 @@ projectIcon: /images/thebeatIcon.svg
                     flex-wrap: wrap;
                 }
                 
+                div.info {
+                    display: block;
+                    background: rgb(0, 100, 200);
+                    border: 1px solid white;
+                    padding: 9px;
+                }
+                
+                div.outerFeaturePanel {
+                    transition: height 0.5s ease-out, padding-top 0.5s ease-out, padding-bottom 0.5s ease-out, left 0.25s ease-out;
+                    overflow-y: auto;
+                }
+                
+                div.innerFeaturePanel {
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+                
+                #depsPanel {
+                    height: 0px;
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                    
+                    position: fixed;
+                    height: 100vh;
+                    width: 100vw;
+                    left: 100vw;
+                    top: 0px;
+                    background: var(--bg-color);
+                    z-index: 9999;
+                }
+                
+                div.backButton {
+                    background: url(/images/go-previous.svg) no-repeat center;
+                    width: 42px;
+                    height: 42px;
+                    margin-right: 9px;
+                }
+                
+                div.backButton:hover {
+                    background-color: var(--bg-hover);
+                }
+                
+                div.backButton:active {
+                    background-color: var(--bg-active);
+                }
+                
+                div.pageHeading {
+                    margin: 0px;
+                    
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    border-bottom: 1px solid var(--fg-color);
+                    display: flex;
+                }
+                
+                div.pageHeading h2 {
+                    margin: 0px;
+                    margin-bottom: 9px;
+                    margin-top: 9px;
+                    display: inline;
+                }
+                
                 code.dollar, code.hash {
                     display: block;
                 }
@@ -95,11 +160,37 @@ projectIcon: /images/thebeatIcon.svg
                 <h2>Let's do it!</h2>
                 <p>Here's how you install theBeat</p>
                 <h3>Arch Linux</h3>
-                <p>Install the <a href="https://aur.archlinux.org/packages/thebeat"><code>thebeat</code></a> package from the Arch User Repository.</p>
-                <h3>Build from source</h3>
-                <p>If theBeat is not packaged for your distribution, you can build theShell from source yourself.</p>
+                <p>Binary packages can be retrieved from the theSuite repository. This also has the advantage of easier updating with <code>pacman</code>.</p>
                 <ol>
-                    <li>Install dependencies of theBeat.</li>
+                    <li>
+                        Add the theSuite repository to your system.<br />
+                        Edit <code>/etc/pacman.conf</code> and add the following at the bottom:<br />
+                        <code style="padding: 9px; border: 1px solid var(--fg-color); display: block;">
+                            [theapps]<br />
+                            SigLevel = Optional TrustAll<br />
+                            Server = https://packages.vicr123.com/arch/$arch/<br />
+                        </code>
+                    </li>
+                    <li>
+                        Force an update of the system and all repositores
+                        <code class="hash">
+                            pacman -Syyu
+                        </code>
+                    </li>
+                    <li>
+                        Install theBeat
+                        <code class="hash">
+                            pacman -S thebeat
+                        </code>
+                    </li>
+                </ol>
+                <p>If you'd like to use the AUR instead, install the <a href="https://aur.archlinux.org/packages/thebeat"><code>thebeat</code></a> package from the Arch User Repository.<br />
+                Use of an AUR helper is recommended as there are a lot of dependencies to install.</p>
+                <h3>Build from source</h3>
+                <p>If theBeat is not packaged for your distribution, you can build theBeat from source yourself.</p>
+                <ol>
+                    <li>Install dependencies of theBeat.<br />
+                        <a class="button" onclick="showDepsPanel()" href="#">Dependency Information</a></li>
                     <li>
                         Download the sources of theBeat.
                         <code class="dollar">
@@ -123,57 +214,56 @@ projectIcon: /images/thebeatIcon.svg
                         <code class="hash">
                             make install
                         </code>
-                        <p><b>IMPORTANT:</b> If you're trying to install theBeat into a directory that is not / use the INSTALL_ROOT argument.</p>
+                        <div class="info">
+                            If you're installing theBeat to a different root directory, you can use the <code>INSTALL_ROOT</code> environment variable to set the path for theBeat.
+                        </div>
                         
                     </li>
                 </ol>
             </div>
+            <div class="outerFeaturePanel" id="depsPanel">
+                <div class="pageHeading">
+                    <div onclick="closeDepsPanel()" class="backButton"></div>
+                    <h2>Dependency Information</h2>
+                </div>
+                <div class="innerFeaturePanel">
+                    <p>theBeat relies on some dependencies to work properly. Here is a list of dependencies you'll need to install to build and run theBeat.</p>
+                    <p>As package names can vary between distributions, package names are not provided here. You'll need to do some research to find the correct package for your distribution.</p>
+                    <ul>
+                        <li>
+                            Qt 5, including
+                            <ul>
+                                <li>SVG module</li>
+                                <li>phonon4qt5</li>
+                            </ul>
+                        </li>
+                        <li><a href="https://github.com/vicr123/the-libs" target="_blank">the-libs</a></li>
+                        <li>taglib</li>
+                    </ul>
+                    <p>Optionally, you can also install</p>
+                    <ul>
+                        <li><a href="https://github.com/discordapp/discord-rpc" target="_blank">discord-rpc-api</a> for Discord Rich Presence Integration</li>
+                    </ul>
+                </div>
+            </div>
             {% include footer.html %}
             <script>
-                function openStable() {
-                    $("#landingPanel").css("height", "0px");
-                    $("#landingPanel").css("padding-top", "0px");
-                    $("#landingPanel").css("padding-bottom", "0px");
-                    $("#stablePanel").css("height", "calc(100vh - 40px)");
-                    $("#stablePanel").css("padding-top", "20px");
-                    $("#stablePanel").css("padding-bottom", "20px");
-                    $('html, body').css("overflow-y", "hidden");
-                    $('#stablePanel').css("overflow-y", "auto");
-                    
-                    $('html, body').animate({
-                        scrollTop: $("#landingPanel").offset().top
-                    }, 500);
-                    
-                    history.pushState("stable", "Download theShell Stable", "#stable");
+                function showDepsPanel() {
+                    $("#depsPanel").css("left", "0px");
+                    $("#mainHeader").animate({top: -48}, {
+                        complete: function() {
+                            $("#mainHeader").css("visibility", "hidden");
+                        }
+                    });
+                    $("html").css("overflow-y", "hidden");
+                    scrollTop = $(window).scrollTop();
                 }
                 
-                function openBP() {
-                    $("#landingPanel").css("height", "0px");
-                    $("#landingPanel").css("padding-top", "0px");
-                    $("#landingPanel").css("padding-bottom", "0px");
-                    $("#bpPanel").css("height", "calc(100vh - 40px)");
-                    $("#bpPanel").css("padding-top", "20px");
-                    $("#bpPanel").css("padding-bottom", "20px");
-                    $('html, body').css("overflow-y", "hidden");
-                    $('#bpPanel').css("overflow-y", "auto");
-                    
-                    $('html, body').animate({
-                        scrollTop: $("#landingPanel").offset().top
-                    }, 500);
-                }
-                
-                function closePanels() {
-                    $("#stablePanel").css("height", "0px");
-                    $("#stablePanel").css("padding-top", "0px");
-                    $("#stablePanel").css("padding-bottom", "0px");
-                    $("#bpPanel").css("height", "0px");
-                    $("#bpPanel").css("padding-top", "0px");
-                    $("#bpPanel").css("padding-bottom", "0px");
-                    $("#landingPanel").css("height", "330px");
-                    $("#landingPanel").css("padding-top", "20px");
-                    $("#landingPanel").css("padding-bottom", "20px");
-                    
-                    $('html, body').css("overflow-y", "auto");
+                function closeDepsPanel() {
+                    $("#mainHeader").css("visibility", "visible");
+                    $("#mainHeader").animate({top: 0});
+                    $("#depsPanel").css("left", "100vw");
+                    $("html").css("overflow-y", "auto");
                 }
             </script>
         </div>
