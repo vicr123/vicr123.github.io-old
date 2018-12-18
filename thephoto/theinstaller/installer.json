@@ -1,0 +1,22 @@
+{
+    "version": {
+        "major": 1,
+        "minor": 0,
+        "bugfix": 0
+    },
+    "name": "thePhoto",
+    "vendor": "thePhoto",
+    "stable": {
+        "packageUrl": "https://github.com/vicr123/thePhoto/releases/download/continuous/thePhoto-Windows.zip",
+        "executableName": "thePhoto.exe"
+    },
+    "blueprint": {
+        "packageUrl": "https://github.com/vicr123/thePhoto/releases/download/continuous/thePhoto-Windows.zip",
+        "executableName": "thePhoto.exe"
+    },
+    "license": [
+        {
+            "type": "GPL3+"
+        }
+    ]
+}
