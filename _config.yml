@@ -27,6 +27,7 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-redirect-from
 exclude:
   - Gemfile
   - Gemfile.lock

@@ -1,0 +1,109 @@
+---
+project: thePhoto
+projectIcon: /images/thephoto.svg
+---
+
+<html>
+    <head>
+        <title>thePhoto</title>
+        {% include heading.html %}
+    </head>
+    <body>
+        {% include loader.html %}
+        <div id="smoothstate">
+            <style>
+                div.landing {
+                    padding-top: 100px;
+                    padding-bottom: 100px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/thephotoBackground.svg) no-repeat center center/cover;
+                    border-bottom: 1px solid var(--fg-color);
+                }
+                
+                p:last-child {
+                    margin-bottom: 0px;
+                }
+                
+                div.featurePanel {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    border-bottom: 1px solid var(--fg-color);
+                }
+                
+                @media (max-width: 500px) {
+                    div.landing {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                    
+                    div.featurePanel {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                }
+                
+                #featureOrganisedSmallBackground {
+                    display: none;
+                }
+                    
+                @media (max-width: 899px) {
+                    #featureOrganisedSmallBackground {
+                        display: block;
+                        background: url(images/organised.svg);
+                        background-position: center center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        height: 300px;
+                    }
+                }
+                
+                @media (min-width: 900px) {
+                    #featureOrganised {
+                        background: url(images/organised.svg);
+                        background-position: right center;
+                        background-size: auto 100%;
+                        background-repeat: no-repeat;
+                        padding-right: 50%;
+                    }
+                }
+                
+                @media (min-width: 1300px) {
+                    #featureOrganised {
+                        min-height: 200px;
+                        padding-right: 830px;
+                    }
+                }
+            </style>
+            {% include header.html %}
+            
+            <div class="landing">
+                <h1>thePhoto</h1>
+                <h2>Everyone's the cameraman!</h2>
+                <p>And everyone's waiting for you to join in as well! <a href="download.html" class="button">Go get it!</a></p>
+                <div class="buttonBox">
+                    <a href="http://www.github.com/vicr123/thephoto" class="button">See the code</a>
+                </div>
+            </div>
+            <div class="featurePanel">
+                <h2>Everyone's the cameraman</h2>
+                <p>With Event Mode, everyone with an Android&trade; device can use thePhoto and send photos to the big screen!</p>
+            </div>
+            <div class="featurePanel">
+                <h2>For Everyone</h2>
+                <p>thePhoto is available on Windows, macOS and Linux. It's also available for Android. How's that for operating system support?</p>
+            </div>
+            <div class="featurePanel">
+                <h2>Collates your images</h2>
+                <p>When using Event Mode, all the photos taken during a session are saved on the host's computer. That way, pictures don't need to be sent between everyone; they're all collated on the host's computer on the fly.</p>
+            </div>
+            
+            {% include footer.html %}
+        </div>
+        {% include footing.html %}
+    </body>
+</html>

@@ -65,6 +65,7 @@
             <a class="footerGroupLink" href="/contemporary/">Contemporary</a>
             <a class="footerGroupLink" href="/thebeat/">theBeat</a>
             <a class="footerGroupLink" href="/theslate/">theSlate</a>
+            <a class="footerGroupLink" href="/thephoto/">thePhoto</a>
         </div>
         <div class="footerGroup">
             <p class="footerGroupTitle">Git Repositories</p>
@@ -95,8 +96,11 @@
     </div>
     <div class="footerText">
         <p>Copyright &copy; Victor Tran 2018.</p>
-        <p>Landing button design by astro.</p>
         <p>Text available under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA, v4.0 or later.</a></p>
         <p>We bake cookies in your browser to enhance your experience (specifically to save theme data).</p>
+        <p>Landing button design by astro.</p>
+        {% for footerItem in page.footerAttributions %}
+            <p>{{ footerItem.text }}</p>
+        {% endfor %}
     </div>
 </footer>
