@@ -85,31 +85,32 @@ projectIcon: /images/smile.png
                 
                 .carouselBack {
                     background-image: url("images/go-previous.svg");
-                    left: 25px;
+                    left: 0px;
                 }
                 
                 .carouselForward {
                     background-image: url("images/go-next.svg");
-                    right: 25px;
+                    right: 0px;
                 }
                 
                 .carouselNavWrapper {
                     position: relative;
-                    width: 100%;
+                    width: calc(100% - 100px);
                     height: 0px;
                     top: 330px;
+                    left: 50px;
 
                     z-index: 500;
                     overflow: visible;
                 }
-                
+                /*
                 .carouselNavForward {
                     right: 25px;
                 }
                 
                 .carouselNavBack {
                     left: 25px;
-                }
+                }*/
                 
                 .carouselNav {
                     position: absolute;
