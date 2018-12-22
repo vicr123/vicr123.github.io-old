@@ -66,7 +66,11 @@ if (document.cookie.includes("theme")) {
 
 var scrollTop = 0;
 $(window).scroll(function() { 
-    var delta = $(window).scrollTop() - scrollTop;
+    var windowTop = $(window).scrollTop();
+    
+    if (windowTop < 0) windowTop = 0;
+    
+    var delta = windowTop - scrollTop;
     var top = $("#mainHeader").position().top - delta;
     
     if (top < -48) {
@@ -76,7 +80,7 @@ $(window).scroll(function() {
     }
     
     $("#mainHeader").css("top", top + "px");
-    scrollTop = $(window).scrollTop();
+    scrollTop = windowTop;
 })
 
 var searchData = null;
