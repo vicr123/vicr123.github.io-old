@@ -53,6 +53,9 @@
     
     --link-color: rgb(0, 200, 255);
     --link-active-color: rgb(255, 100, 100);
+    
+    --sel-color: rgb(0, 80, 170);
+    --sel-hover: rgb(20, 60, 105);
 }
 
 html.light {
@@ -64,6 +67,9 @@ html.light {
     
     --link-color: rgb(0, 100, 255);
     --link-active-color: red;
+    
+    --sel-color: rgb(0, 200, 255);
+    --sel-hover: rgb(20, 220, 255);
 }
 
 html.light .tint {
