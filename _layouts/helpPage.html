@@ -9,7 +9,7 @@
         </script>
         {% include heading.html %}
     </head>
-    <body>
+    <body{% if page.contents == nil %} class="noTOC"{% endif %}>
         {% include loader.html %}
         <div id="smoothstate">
             <style media="all">
@@ -21,9 +21,13 @@
                     background-color: {{ page.helpHeader }};
                     color: white;
                     
-                    padding-left: calc(50vw - 380px);
+                    padding-left: calc(50vw - 270px);
                     padding-top: 30px;
                     padding-bottom: 60px;
+                }
+                
+                .noTOC div.helpHeader {
+                    padding-left: calc(50vw - 380px);
                 }
                 
                 div.helpContent {
@@ -35,7 +39,64 @@
                     position: relative;
                     top: -30px;
                     width: 800px;
+                    left: calc(50vw - 300px);
+                }
+                
+                .noTOC div.helpContent {
                     left: calc(50vw - 420px);
+                }
+                
+                div.tocContainer {                    
+                    position: relative;
+                    
+                    top: -30px;
+                    height: 0px;
+                }
+                
+                h2.tocHeader {
+                    padding: 9px;
+                    margin: 0px;
+                }
+                
+                div.helpTOC {
+                    display: block;
+                    position: relative;
+                    background-color: var(--bg-color);
+                    border: 1px solid var(--fg-color);
+                    padding: 0px;
+                    
+                    width: 300px;
+                    left: calc(50vw - 310px - 340px);
+                }
+                
+                div.helpTOC.lower {
+                    display: none;
+                    
+                    top: -30px;
+                    width: 818px;
+                    left: calc(50vw - 420px);
+                    margin-top: 30px;
+                }
+                
+                div.helpTOC div {
+                    display: block;
+                    cursor: default;
+                    
+                    padding: 9px;
+                    margin: 0px;
+                    color: var(--fg-color);
+                }
+                
+                div.helpTOC div:hover {
+                    background-color: var(--sel-hover);
+                }
+                
+                div.helpTOC div:active {
+                    /* background-color: var(--sel-color); */
+                }
+                
+                div.helpTOC div.selected {
+                    background-color: var(--sel-color);
                 }
                 
                 span.key {
@@ -49,18 +110,40 @@
                     margin-right: 2px;
                 }
                 
+                @media (max-width: 1300px) {
+                    div.helpHeader {
+                        padding-left: calc(50vw - 380px);
+                    }
+                    
+                    div.helpContent {
+                        left: calc(50vw - 420px);
+                    }
+                    
+                    div.helpTOC {
+                        display: none;
+                    }
+                    
+                    div.helpTOC.lower {
+                        display: block;
+                    }
+                }
+                
                 @media (max-width: 830px) {
                     div.helpHeader {
                         padding-left: 35px;
                     }
                     
-                    div.helpContent {
+                    div.helpContent,div.helpTOC.lower {
                         position: static;
                         top: 0px;
                         width: initial;
                         border: none;
                         
                         border-top: 1px solid var(--fg-color);
+                    }
+                    
+                    div.helpTOC.lower {
+                        margin-top: 0px;
                     }
                 }
                 
@@ -111,9 +194,35 @@
                         <a href="{{ page.helpIndex }}" class="button">{{ page.project }} Help Home</a>
                     </div>
                 </div>
+                
+                {% capture tocDiv %}
+                    {% for item in page.contents %}
+                        {% if item.type == "divider" %}
+                            <hr />
+                        {% elsif item.type == "title" %}
+                            <h2 class="tocHeader">{{ item.name }}</h2>
+                        {% else %}
+                            {% capture pageURL %}{{ page.helpIndex }}{{ item.link }}{% endcapture %}
+                            <a href="{{ pageURL }}"><div{% if page.url == pageURL %} class="selected"{% endif %}>{{ item.name }}</div></a>
+                        {% endif %}
+                    {% endfor %}
+                {% endcapture %}
+                
+                {% if page.contents %}
+                <div class="tocContainer">
+                    <div class="helpTOC">
+                        {{ tocDiv }}
+                    </div>
+                </div>
+                {% endif %}
                 <div class="helpContent">
                     {{ content }}
                 </div>
+                {% if page.contents %}
+                    <div class="helpTOC lower">
+                        {{ tocDiv }}
+                    </div>
+                {% endif %}
                 {% include footer.html %}
             </div>
             <div class="printDiv">
