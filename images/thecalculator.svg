@@ -50,8 +50,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="7.9195959"
-     inkscape:cx="12.043429"
-     inkscape:cy="13.034079"
+     inkscape:cx="4.1516122"
+     inkscape:cy="2.4274772"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -108,20 +108,15 @@
        inkscape:export-filename="/home/victor/newcontemporary.png"
        inkscape:export-xdpi="2165.5593"
        inkscape:export-ydpi="2165.5593" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.06419373px;line-height:1.25;font-family:Contemporary;-inkscape-font-specification:Contemporary;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.10160486"
-       x="79.873123"
-       y="284.31561"
-       id="text881-6-8"
+    <g
+       aria-label="÷"
        transform="rotate(15)"
-       inkscape:export-filename="/home/victor/newcontemporary.png"
-       inkscape:export-xdpi="2165.5593"
-       inkscape:export-ydpi="2165.5593"><tspan
-         sodipodi:role="line"
-         id="tspan879-2-7"
-         x="79.873123"
-         y="284.31561"
-         style="stroke-width:0.10160486">÷</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.06419373px;line-height:1.25;font-family:Contemporary;-inkscape-font-specification:Contemporary;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.10160486"
+       id="text881-6-8">
+      <path
+         d="m 81.096445,282.1372 q 0.04471,0 0.07722,0.0325 0.03251,0.0325 0.03251,0.0772 v 0.2723 q 0,0.0447 -0.03251,0.0772 -0.03251,0.0325 -0.07722,0.0325 h -0.2723 q -0.04471,0 -0.07722,-0.0325 -0.03251,-0.0325 -0.03251,-0.0772 v -0.2723 q 0,-0.0447 0.03251,-0.0772 0.03251,-0.0325 0.07722,-0.0325 z m -0.898186,1.13392 q -0.04471,0 -0.07722,-0.0325 -0.03251,-0.0325 -0.03251,-0.0772 v -0.13005 q 0,-0.0447 0.03251,-0.0772 0.03251,-0.0325 0.07722,-0.0325 h 1.524072 q 0.04471,0 0.07722,0.0325 0.03251,0.0325 0.03251,0.0772 v 0.13005 q 0,0.0447 -0.03251,0.0772 -0.03251,0.0325 -0.07722,0.0325 z m 0.898186,0.28855 q 0.04471,0 0.07722,0.0325 0.03251,0.0325 0.03251,0.0772 v 0.2723 q 0,0.0447 -0.03251,0.0772 -0.03251,0.0325 -0.07722,0.0325 h -0.2723 q -0.04471,0 -0.07722,-0.0325 -0.03251,-0.0325 -0.03251,-0.0772 v -0.2723 q 0,-0.0447 0.03251,-0.0772 0.03251,-0.0325 0.07722,-0.0325 z"
+         style="stroke-width:0.10160486"
+         id="path825" />
+    </g>
   </g>
 </svg>

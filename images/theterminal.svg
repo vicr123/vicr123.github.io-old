@@ -50,8 +50,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="11.2"
-     inkscape:cx="14.523486"
-     inkscape:cy="22.258888"
+     inkscape:cx="12.514557"
+     inkscape:cy="21.901745"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -108,20 +108,15 @@
        inkscape:export-filename="/home/victor/newcontemporary.png"
        inkscape:export-xdpi="2165.5593"
        inkscape:export-ydpi="2165.5593" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.06419373px;line-height:1.25;font-family:Contemporary;-inkscape-font-specification:Contemporary;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.10160486"
-       x="79.674599"
-       y="284.65964"
-       id="text881-3"
+    <g
+       aria-label="$"
        transform="rotate(15)"
-       inkscape:export-filename="/home/victor/newcontemporary.png"
-       inkscape:export-xdpi="2165.5593"
-       inkscape:export-ydpi="2165.5593"><tspan
-         sodipodi:role="line"
-         id="tspan879-7"
-         x="79.674599"
-         y="284.65964"
-         style="stroke-width:0.10160486">$</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.06419373px;line-height:1.25;font-family:Contemporary;-inkscape-font-specification:Contemporary;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.10160486"
+       id="text881-3">
+      <path
+         d="m 81.084874,281.79032 q 0.247916,0.0366 0.434869,0.1585 0.191017,0.12193 0.292622,0.27637 0.101604,0.15443 0.109733,0.28449 0.0041,0.0366 -0.02439,0.065 -0.02845,0.0244 -0.06503,0.0244 h -0.166632 q -0.04877,0 -0.07316,-0.0163 -0.02439,-0.0203 -0.05283,-0.0731 -0.06503,-0.12599 -0.227595,-0.24792 -0.158504,-0.12192 -0.422676,-0.12192 -0.243852,0 -0.414548,0.10973 -0.166632,0.10973 -0.166632,0.31294 0,0.13819 0.08128,0.2276 0.08535,0.0853 0.25198,0.15037 0.170696,0.061 0.512088,0.15038 0.463318,0.12192 0.654335,0.30075 0.195082,0.17476 0.195082,0.47957 0,0.33327 -0.25198,0.5568 -0.247916,0.22353 -0.666528,0.26417 v 0.26417 q 0,0.0447 -0.03251,0.0772 -0.03251,0.0325 -0.07722,0.0325 h -0.166632 q -0.04471,0 -0.07722,-0.0325 -0.03251,-0.0325 -0.03251,-0.0772 v -0.2723 q -0.247916,-0.0366 -0.447062,-0.15444 -0.199145,-0.11786 -0.312943,-0.2723 -0.113797,-0.1585 -0.117861,-0.31294 0,-0.0366 0.02438,-0.061 0.02845,-0.0284 0.06503,-0.0284 h 0.166632 q 0.04471,0 0.07315,0.0203 0.02845,0.0163 0.05284,0.0691 0.06503,0.14631 0.235723,0.26824 0.17476,0.12192 0.471447,0.12192 0.296686,0 0.499895,-0.12599 0.207274,-0.13005 0.207274,-0.33733 0,-0.13411 -0.109733,-0.22353 -0.105669,-0.0935 -0.292622,-0.15444 -0.186953,-0.065 -0.548666,-0.1585 -0.394227,-0.1016 -0.568987,-0.29262 -0.17476,-0.19508 -0.17476,-0.47958 0,-0.18695 0.08535,-0.34952 0.08941,-0.16663 0.264172,-0.28043 0.174761,-0.11379 0.426741,-0.14631 v -0.26823 q 0,-0.0447 0.03251,-0.0772 0.03251,-0.0325 0.07722,-0.0325 h 0.166632 q 0.04471,0 0.07722,0.0325 0.03251,0.0325 0.03251,0.0772 z"
+         style="stroke-width:0.10160486"
+         id="path825" />
+    </g>
   </g>
 </svg>
