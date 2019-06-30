@@ -83,7 +83,7 @@ defaults:
       helpIndex: "/theshell/help/"
       searchFile: "/theshell/help/search.json"
       project: "theShell"
-      projectIcon: "/images/theshell.png"
+      projectIcon: "/images/theshell.svg"
       helpHeader: "rgb(0, 100, 0)"
       contents:
         - type: "title"

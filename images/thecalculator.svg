@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -8,14 +10,71 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   height="16"
-   width="16"
-   id="svg2"
+   width="32"
+   height="32"
+   viewBox="0 0 8.4666665 8.4666669"
    version="1.1"
-   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
-   sodipodi:docname="accessories-calculator.svg">
+   id="svg8"
+   inkscape:version="0.92.4 5da689c313, 2019-01-14"
+   sodipodi:docname="thecalculator.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9209"
+       id="linearGradient822-63-9"
+       x1="4.6862917"
+       y1="35.595917"
+       x2="27.313709"
+       y2="-3.5959179"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.26458333,0,0,0.26458333,75.629393,277.46162)" />
+    <linearGradient
+       id="linearGradient9209"
+       inkscape:collect="always">
+      <stop
+         id="stop9205"
+         offset="0"
+         style="stop-color:#0064d9;stop-opacity:1" />
+      <stop
+         id="stop9207"
+         offset="1"
+         style="stop-color:#22c8ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="7.9195959"
+     inkscape:cx="12.043429"
+     inkscape:cy="13.034079"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     units="px"
+     inkscape:window-width="1280"
+     inkscape:window-height="742"
+     inkscape:window-x="1920"
+     inkscape:window-y="304"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid815"
+       empspacing="4" />
+    <inkscape:grid
+       type="xygrid"
+       id="grid817"
+       empspacing="1"
+       originy="0.13229167"
+       originx="0.13229167"
+       dotted="true" />
+  </sodipodi:namedview>
   <metadata
-     id="metadata9">
+     id="metadata5">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -26,62 +85,43 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <defs
-     id="defs7">
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient826">
-      <stop
-         style="stop-color:#0064ff;stop-opacity:1"
-         offset="0"
-         id="stop822" />
-      <stop
-         style="stop-color:#00c8ff;stop-opacity:1"
-         offset="1"
-         id="stop824" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient826"
-       id="linearGradient828"
-       x1="0"
-       y1="16"
-       x2="16"
-       y2="0"
-       gradientUnits="userSpaceOnUse" />
-  </defs>
-  <sodipodi:namedview
-     id="namedview1"
-     showgrid="true"
-     inkscape:zoom="29.5"
-     inkscape:cx="7.7815626"
-     inkscape:cy="8.5191502"
-     inkscape:window-width="1280"
-     inkscape:window-height="742"
-     inkscape:window-x="0"
-     inkscape:window-y="24"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg2">
-    <inkscape:grid
-       type="xygrid"
-       id="grid1px"
-       empspacing="4" />
-    <inkscape:grid
-       type="xygrid"
-       id="grid1pxdot"
-       empspacing="1"
-       dotted="true"
-       originy="0.5"
-       originx="0.5" />
-  </sodipodi:namedview>
-  <circle
-     style="opacity:0.98999999;fill:url(#linearGradient828);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.00157475;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-     id="path820"
-     cx="8"
-     cy="8"
-     r="8" />
-  <path
-     style="opacity:0.98999999;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.00157475;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-     d="M 8 2 C 7.446 2 7 2.446 7 3 L 7 7 L 3 7 C 2.446 7 2 7.446 2 8 C 2 8.554 2.446 9 3 9 L 7 9 L 7 13 C 7 13.554 7.446 14 8 14 C 8.554 14 9 13.554 9 13 L 9 9 L 13 9 C 13.554 9 14 8.554 14 8 C 14 7.446 13.554 7 13 7 L 9 7 L 9 3 C 9 2.446 8.554 2 8 2 z "
-     id="rect830" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-288.53332)">
+    <circle
+       style="opacity:1;fill:url(#linearGradient822-63-9);fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="path814-5-7"
+       cx="79.862671"
+       cy="281.69482"
+       r="4.2333331"
+       transform="rotate(15)"
+       inkscape:export-filename="/home/victor/newcontemporary.png"
+       inkscape:export-xdpi="2165.5593"
+       inkscape:export-ydpi="2165.5593" />
+    <path
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.36035824;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       d="m 4.5072664,291.7443 c -0.5663399,-0.15175 -1.1444399,0.18202 -1.2961901,0.74834 l -1.0594298,3.95383 a 4.2333333,4.2333333 0 0 0 0.9860299,0.40916 4.2333333,4.2333333 0 0 0 5.18478,-2.99339 4.2333333,4.2333333 0 0 0 0.1406502,-1.05798 z"
+       id="rect824-9-5"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/victor/newcontemporary.png"
+       inkscape:export-xdpi="2165.5593"
+       inkscape:export-ydpi="2165.5593" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.06419373px;line-height:1.25;font-family:Contemporary;-inkscape-font-specification:Contemporary;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.10160486"
+       x="79.873123"
+       y="284.31561"
+       id="text881-6-8"
+       transform="rotate(15)"
+       inkscape:export-filename="/home/victor/newcontemporary.png"
+       inkscape:export-xdpi="2165.5593"
+       inkscape:export-ydpi="2165.5593"><tspan
+         sodipodi:role="line"
+         id="tspan879-2-7"
+         x="79.873123"
+         y="284.31561"
+         style="stroke-width:0.10160486">÷</tspan></text>
+  </g>
 </svg>
