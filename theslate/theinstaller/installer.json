@@ -7,7 +7,7 @@
     "name": "theSlate",
     "vendor": "theSuite",
     "stable": {
-        "packageUrl": "https://github.com/vicr123/theSlate/releases/download/continuous/theSlate-Windows.zip",
+        "packageUrl": "https://github.com/vicr123/theSlate/releases/download/v1.0/theSlate-Windows.zip",
         "executableName": "theSlate.exe"
     },
     "blueprint": {
