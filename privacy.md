@@ -8,7 +8,7 @@ author: Victor Tran
 icon: /icon.png
 ---
 
-This Privacy Policy was last modified on 04 DEC. 2019, AEDT.
+This Privacy Policy was last modified on 20 FEB. 2020, AEDT.
 
 ## Using Applications
 
@@ -33,9 +33,12 @@ When accessing Victor Tran services, and where applicable, signing up for an acc
 - Bug Tracker ([https://bugs.vicr123.com/](https://bugs.vicr123.com/))
 - Entertaining Games ([https://entertaining.games/](https://entertaining.games/))
   - This includes all games that connect to the Entertaining Games servers
+- Quad ([https://quad.vicr123.com/](https://quad.vicr123.com/))
 - AstralMod
 
 Your data is stored on servers in the US, owned by [DigitalOcean](https://digitalocean.com/). We use [CloudFlare](https://cloudflare.com/) as a proxy to our servers as protection against malicious attacks. Other than storing your information there, we don't disclose any of it to anyone else.
+
+For Quad and AstralMod, we'll also send information to [Discord](https://discordapp.com/) so your requests can be fulfilled. You can stop your data being sent to Discord by removing the bot from your server.
 
 ## Questions or concerns?
 
