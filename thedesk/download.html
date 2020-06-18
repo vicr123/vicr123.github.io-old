@@ -1,0 +1,386 @@
+---
+project: theDesk
+projectIcon: /images/thedesk.svg
+---
+
+<html>
+    <head>
+        <title>theDesk</title>
+        {% include heading.html %}
+    </head>
+    <body>
+        {% include loader.html %}
+        <div id="smoothstate">
+            <style>
+                div.landing {
+                    padding-top: 100px;
+                    padding-bottom: 100px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/triangles.png) no-repeat center center/cover;
+                    border-bottom: 1px solid var(--fg-color);
+                }
+                
+                div.buffer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    background-color: #c800c8;
+                }
+                
+                p:last-child {
+                    margin-bottom: 0px;
+                }
+                
+                div.featurePanel {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    border-bottom: 1px solid var(--fg-color);
+                    transition: height 0.5s ease-out, padding-top 0.5s ease-out, padding-bottom 0.5s ease-out, left 0.25s ease-out;
+                    overflow-y: hidden;
+                }
+                
+                div.outerFeaturePanel {
+                    transition: height 0.5s ease-out, padding-top 0.5s ease-out, padding-bottom 0.5s ease-out, left 0.25s ease-out;
+                    overflow-y: auto;
+                }
+                
+                div.innerFeaturePanel {
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+                
+                #archPanel {
+                    height: 0px;
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                    
+                    position: fixed;
+                    height: 100vh;
+                    width: 100vw;
+                    left: 100vw;
+                    top: 0px;
+                    background: var(--bg-color);
+                    z-index: 9999;
+                }
+                
+                #fedoraPanel {
+                    height: 0px;
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                    
+                    position: fixed;
+                    height: 100vh;
+                    width: 100vw;
+                    left: 100vw;
+                    top: 0px;
+                    background: var(--bg-color);
+                    z-index: 9999;
+                }
+                
+                #depsPanel {
+                    height: 0px;
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                    
+                    position: fixed;
+                    height: 100vh;
+                    width: 100vw;
+                    left: 100vw;
+                    top: 0px;
+                    background: var(--bg-color);
+                    z-index: 9999;
+                }
+                
+                div.tsBranches {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+                
+                div.tsBranch {
+                    padding: 9px;
+                    flex-grow: 1;
+                    
+                    text-align: center;
+                    cursor: pointer;
+                }
+                
+                div.tsBranch:hover {
+                    background-color: var(--bg-hover);
+                }
+                
+                div.tsBranch:active {
+                    background-color: var(--bg-active);
+                }
+                
+                code.dollar, code.hash {
+                    display: block;
+                }
+                
+                code.dollar:before {
+                    content: "$ ";
+                }
+                
+                code.hash:before {
+                    content: "# ";
+                }
+                
+                div.tsos {
+                    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/ribbon.svg) no-repeat center center/cover;
+                }
+                
+                div.backButton {
+                    background: url(/images/go-previous.svg) no-repeat center;
+                    width: 42px;
+                    height: 42px;
+                    margin-right: 9px;
+                }
+                
+                div.backButton:hover {
+                    background-color: var(--bg-hover);
+                }
+                
+                div.backButton:active {
+                    background-color: var(--bg-active);
+                }
+                
+                div.pageHeading {
+                    margin: 0px;
+                    
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    border-bottom: 1px solid var(--fg-color);
+                    display: flex;
+                }
+                
+                div.pageHeading h2 {
+                    margin: 0px;
+                    margin-bottom: 9px;
+                    margin-top: 9px;
+                    display: inline;
+                }
+                
+                div.info {
+                    display: block;
+                    background: rgb(0, 100, 200);
+                    border: 1px solid white;
+                    padding: 9px;
+                }
+                
+                div.warning {
+                    display: block;
+                    background: rgb(200, 100, 0);
+                    border: 1px solid white;
+                    padding: 9px;
+                }
+                
+                li div.info {
+                    margin-top: 9px;
+                }
+                
+                @media (max-width: 500px) {
+                    div.landing {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                    
+                    div.featurePanel {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                    
+                    div.innerFeaturePanel {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                    
+                    div.pageHeading {
+                        padding-left: 0px;
+                        padding-right: 0px;
+                    }
+                }
+            </style>
+            {% include header.html %}
+            
+            <div class="landing">
+                <h1>theDesk</h1>
+                <h2>Beta 1 is available now!</h2>
+            </div>
+            <div class="featurePanel">
+                <h2>But first,</h2>
+                <p>Here are some things you might need to know.</p>
+                <ul>
+                    <li>theDesk has been tested on Arch Linux and Fedora. Your mileage may vary on other distributions.</li>
+                </ul>
+            </div>
+            <div class="featurePanel" id="landingPanel">
+                <h2>Let's do it!</h2>
+                <p>Which distribution are you installing theDesk on?</p>
+                <div class="tsBranches">
+                    <div class="tsBranch" onclick="openArch()">
+                        <img src="/images/thedesk.png" width="128"/>
+                        <p>Arch Linux</p>
+                    </div>
+                    <div class="tsBranch" onclick="openFedora()">
+                        <img src="/images/thedesk.png" width="128"/>
+                        <p>Fedora</p>
+                    </div>
+                </div>
+                <p>You can install both next to each other!</p>
+            </div>
+            <div class="outerFeaturePanel" id="archPanel">
+                <div class="pageHeading">
+                    <div onclick="closePanels()" class="backButton"></div>
+                    <h2>Get theDesk for Arch Linux</h2>
+                </div>
+                <div class="innerFeaturePanel">
+                    <h3 id="stable-arch">Binary Packages</h3>
+                    <p>Binary packages can be retrieved from the theSuite repository. This also has the advantage of easier updating with <code>pacman</code>.</p>
+                    <ol>
+                        <li>
+                            Add the theSuite repository to your system.<br />
+                            Edit <code>/etc/pacman.conf</code> and add the following at the bottom:<br />
+                            <code style="padding: 9px; border: 1px solid var(--fg-color); display: block;">
+                                [theapps]<br />
+                                SigLevel = Optional TrustAll<br />
+                                Server = https://packages.vicr123.com/arch/$arch/<br />
+                            </code>
+                        </li>
+                        <li>
+                            Force an update of the system and all repositores
+                            <code class="hash">
+                                pacman -Syyu
+                            </code>
+                        </li>
+                        <li>
+                            Install theDesk (and associated utilities)
+                            <code class="hash">
+                                pacman -S thedesk contemporary-icons ttf-contemporary tsscreenlock
+                            </code>
+                        </li>
+                    </ol>
+                    <p>If you'd like to use the AUR instead, install the <a href="https://aur.archlinux.org/packages/thedesk"><code>thedesk</code></a> package from the Arch User Repository.<br />
+                    Use of an AUR helper is recommended as there are a lot of dependencies to install.</p>
+                </div>
+            </div>
+            <div class="outerFeaturePanel" id="fedoraPanel">
+                <div class="pageHeading">
+                    <div onclick="closePanels()" class="backButton"></div>
+                    <h2>Get theDesk on Fedora</h2>
+                </div>
+                <div class="innerFeaturePanel">
+                    <h3 id="stable-arch">Binary Packages</h3>
+                    <p>Binary packages can be retrieved from the theSuite repository. This also has the advantage of easier updating with <code>dnf</code>.</p>
+                    <ol>
+                        <li>
+                            Add the theSuite repository to your system.<br />
+                            Create <code>/etc/yum.repos.d/vicr123.repo</code> with the following contents:<br />
+                            <code style="padding: 9px; border: 1px solid var(--fg-color); display: block;">
+                                [vicr123repo]<br />
+                                name=vicr123 Repository<br />
+                                baseurl=https://packages.vicr123.com/fedora/32/$basearch<br />
+                                enabled=1<br />
+                                gpgcheck=0<br />
+                            </code>
+                        </li>
+                        <li>
+                            Force an update of the system and all repositores
+                            <code class="hash">
+                                dnf update
+                            </code>
+                        </li>
+                        <li>
+                            Install theDesk (and associated utilities)
+                            <code class="hash">
+                                dnf install thedesk
+                            </code>
+                        </li>
+                    </ol>
+            </div>
+            <div class="outerFeaturePanel" id="depsPanel">
+                <div class="pageHeading">
+                    <div onclick="closeDepsPanel()" class="backButton"></div>
+                    <h2>Dependency Information</h2>
+                </div>
+                <div class="innerFeaturePanel">
+                    <p>theDesk relies on some dependencies to work properly. Here is a list of dependencies you'll need to install to build and run theDesk.</p>
+                    <p>As package names can vary between distributions, package names are not provided here. You'll need to do some research to find the correct package for your distribution.</p>
+                    <ul>
+                        <li>
+                            Qt 5, including
+                            <ul>
+                                <li>Networking module</li>
+                                <li>SVG module</li>
+                            </ul>
+                        </li>
+                        <li>KWin</li>
+                        <li>Xlib</li>
+                        <li>XInput</li>
+                        <li>NetworkManager Qt</li>
+                        <li>AccountsService</li>
+                        <li>polkit-qt5</li>
+                        <li><a href="https://github.com/vicr123/the-libs" target="_blank">the-libs</a></li>
+                        <li><a href="https://github.com/vicr123/libtdesktopenvironment" target="_blank">libtdesktopenvironment</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="featurePanel">
+                <h2>Any issues?</h2>
+                <p>If you think you've found a bug, I'd appreciate it if you'd report it on the GitHub Issues page. Thanks!</p>
+                <a href="https://github.com/vicr123/thedesk/issues" class="button" target="_blank">GitHub Issues</a>
+            </div>
+            
+            {% include footer.html %}
+            <script>
+                function openArch() {
+                    $("#archPanel").css("left", "0px");
+                    $("#mainHeader").animate({top: -48}, {
+                        complete: function() {
+                            $("#mainHeader").css("visibility", "hidden");
+                        }
+                    });
+                    $("html").css("overflow-y", "hidden");
+                    scrollTop = $(window).scrollTop();
+                }
+                
+                function openFedora() {
+                    $("#fedoraPanel").css("left", "0px");
+                    $("#mainHeader").animate({top: -48}, {
+                        complete: function() {
+                            $("#mainHeader").css("visibility", "hidden");
+                        }
+                    });
+                    $("html").css("overflow-y", "hidden");
+                    scrollTop = $(window).scrollTop();
+                }
+                
+                function closePanels() {
+                    $("#mainHeader").css("visibility", "visible");
+                    $("#fedoraPanel").css("left", "100vw");
+                    $("#archPanel").css("left", "100vw");
+                    $("#mainHeader").animate({top: 0});
+                    $("html").css("overflow-y", "auto");
+                }
+                
+                function showDepsPanel() {
+                    $("#depsPanel").css("left", "0px");
+                }
+                
+                function closeDepsPanel() {
+                    $("#depsPanel").css("left", "100vw");
+                }
+            </script>
+        </div>
+        {% include footing.html %}
+    </body>
+</html>

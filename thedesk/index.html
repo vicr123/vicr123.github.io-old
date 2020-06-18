@@ -1,0 +1,87 @@
+---
+project: theDesk
+projectIcon: /images/thedesk.svg
+---
+
+<html>
+    <head>
+        <title>theDesk</title>
+        {% include heading.html %}
+    </head>
+    <body>
+        {% include loader.html %}
+        <div id="smoothstate">
+            <style>
+                div.landing {
+                    padding-top: 100px;
+                    padding-bottom: 100px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/triangles.png) no-repeat center center/cover;
+                    border-bottom: 1px solid var(--fg-color);
+                }
+                
+                div.buffer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    background-color: #c800c8;
+                }
+                
+                p:last-child {
+                    margin-bottom: 0px;
+                }
+                
+                div.featurePanel {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                    border-bottom: 1px solid var(--fg-color);
+                }
+                
+                div.translate {
+                    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/translatesplash.svg) no-repeat center center/cover;
+                }
+                
+                @media (max-width: 500px) {
+                    div.landing {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                    
+                    div.featurePanel {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                }
+            </style>
+            {% include header.html %}
+            
+            <div class="landing">
+                <h1>theDesk</h1>
+                <p>theDesk Beta 1 is now available! <a href="download.html" class="button">Go get it!</a></p>
+                <div class="buttonBox">
+                    <a href="http://www.github.com/vicr123/thedesk" class="button">See the code</a>
+                </div>
+            </div>
+            <div class="featurePanel translate">
+                <h2>Calling all polylinguists!</h2>
+                <p>Help make my apps available to the world. Join in the translation efforts!</p>
+                <a href="https://translate.vicr123.com/" class="button">Translate &gt;</a>
+            </div>
+            <div class="featurePanel">
+                <h2>theShell users: feel right at home!</h2>
+                <p>theDesk contains many of the same interface elements as theShell, so theShell users will have no trouble migrating to theDesk.</p>
+            </div>
+            
+            {% include footer.html %}
+        </div>
+        {% include footing.html %}
+    </body>
+</html>
