@@ -1,0 +1,22 @@
+{
+    "version": {
+        "major": 3,
+        "minor": 0,
+        "bugfix": 0
+    },
+    "name": "theBeat",
+    "vendor": "theBeat",
+    "stable": {
+        "packageUrl": "https://github.com/vicr123/theBeat/releases/download/continuous/theBeat-Windows.zip",
+        "executableName": "theBeat.exe"
+    },
+    "blueprint": {
+        "packageUrl": "https://github.com/vicr123/theBeat/releases/download/continuous/theBeat-Windows.zip",
+        "executableName": "theBeat.exe"
+    },
+    "license": [
+        {
+            "type": "GPL3+"
+        }
+    ]
+}
