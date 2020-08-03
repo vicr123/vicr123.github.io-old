@@ -2,7 +2,14 @@
     "version": {
         "major": 1,
         "minor": 0,
-        "bugfix": 0
+        "bugfix": 0,
+        "bp": 0,
+    },
+    "bpVersion": {
+        "major": 1,
+        "minor": 0,
+        "bugfix": 0,
+        "bp": 0
     },
     "name": "theSlate",
     "vendor": "theSuite",
