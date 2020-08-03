@@ -2,7 +2,8 @@
     "version": {
         "major": 3,
         "minor": 0,
-        "bugfix": 0
+        "bugfix": 0,
+        "bp": 1
     },
     "name": "theBeat",
     "vendor": "theSuite",
