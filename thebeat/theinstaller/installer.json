@@ -5,7 +5,7 @@
         "bugfix": 0
     },
     "name": "theBeat",
-    "vendor": "theBeat",
+    "vendor": "theSuite",
     "stable": {
         "packageUrl": "https://github.com/vicr123/theBeat/releases/download/continuous/theBeat-Windows.zip",
         "executableName": "theBeat.exe"
