@@ -73,8 +73,8 @@ $(window).scroll(function() {
     var delta = windowTop - scrollTop;
     var top = $("#mainHeader").position().top - delta;
     
-    if (top < -48) {
-        top = -48;
+    if (top < -78) {
+        top = -78;
     } else if (top > 0) {
         top = 0;
     }

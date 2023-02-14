@@ -1,17 +1,22 @@
 <div class="mainHeader" id="mainHeader">
-    <div class="headerItem" onclick="toggleMenu('#projectsMenu')">
-        <p class="title" id="projectsButton">Projects</p>
-        <img class="title" id="projectsImageButton" />
+    <div class="headerWarning">
+        <b>You're on the old website.</b>
+        <span>Information here is likely to be outdated. Visit the <a href="https://vicr123.com/">new website</a> for up to date information.</span>
     </div>
-    <div class="headerProject">
-        <img class="smileIcon" src="{{ page.projectIcon }}"> 
-        <div class="headerTitle">{{ page.project }}</div>
-    </div>
-    <div style="display: flex">
-        <div class="headerItem" onclick="toggleTheme()">
-            <img src="/images/theme.svg"></p>
+    <div class="mainHeaderInner">
+        <div class="headerItem" onclick="toggleMenu('#projectsMenu')">
+            <p class="title" id="projectsButton">Projects</p>
+            <img class="title" id="projectsImageButton" />
         </div>
-        {% if page.layout == 'helpPage' %}
+        <div class="headerProject">
+            <img class="smileIcon" src="{{ page.projectIcon }}">
+            <div class="headerTitle">{{ page.project }}</div>
+        </div>
+        <div style="display: flex">
+            <div class="headerItem" onclick="toggleTheme()">
+                <img src="/images/theme.svg"></p>
+            </div>
+            {% if page.layout == 'helpPage' %}
             <div class="headerItem" onclick="toggleMenu('#searchMenu'); prepareSearch()">
                 <div></div>
                 <img class="title" id="searchImageButton" />
@@ -22,102 +27,104 @@
                     <input type="text" class="searchBox" id="siteSearch" oninput="performSearch($('#siteSearch').val());" placeholder="Search {{ page.project }} Help"/>
                 </div>
                 <div class="searchResults" id="searchResults">
-                    
+
                 </div>
             </div>
             <script>
                 var searchFile = "{{ page.searchFile }}";
             </script>
-        {% endif %}
-    </div>
-    <div class="headerMenu" id="projectsMenu">
-        <a class="headerItem" onclick="toggleMenu('#projectsMenu')" href="/index.html">
-            <img class="appIcon" src="/images/smile.png">
-            <p class="title">Victor Tran</p>
-            <p>Hello!</p>
-        </a>
-        <a class="headerItem" onclick="toggleMenu('#projectsMenu')" href="/posts/">
-            <img class="appIcon" src="/images/posts.svg">
-            <p class="title">Posts</p>
-            <p>Thoughts and news</p>
-        </a>
-        <hr />
-        <p>
-            Flagship:
-        </p>
-        <a class="headerItem" onclick="toggleMenu('#projectsMenu')" href="/theshell/">
-            <img class="appIcon" src="/images/theshell.svg">
-            <p class="title">theShell</p>
-            <p>Desktop Environment</p>
-        </a>
-        <a class="headerItem" onclick="toggleMenu('#projectsMenu')" href="/thedesk/">
-            <img class="appIcon" src="/images/thedesk.svg">
-            <p class="title">theDesk</p>
-            <p>Desktop Environment</p>
-        </a>
-        <a class="headerItem" onclick="$('#projectsMenu').toggleClass('open');" href="/contemporary/">
-            <img class="appIcon" src="/images/contemporaryIcon.svg">
-            <p class="title">Contemporary</p>
-            <p>Design Language</p>
-        </a>
-        <hr />
-        <p>
-            Apps:
-        </p>
-        <a class="headerItem" onclick="$('#projectsMenu').toggleClass('open');" href="/thebeat/">
-            <img class="appIcon" src="/images/thebeatIcon.svg">
-            <p class="title">theBeat</p>
-            <p>Audio Player</p>
-        </a>
-        <a class="headerItem" onclick="$('#projectsMenu').toggleClass('open');"  href="/theslate/">
-            <img class="appIcon" src="/images/theslateIcon.svg">
-            <p class="title">theSlate</p>
-            <p>Text Editor</p>
-        </a>
-        <a class="headerItem" onclick="$('#projectsMenu').toggleClass('open');" href="/thephoto/">
-            <img class="appIcon" src="/images/thephoto.svg">
-            <p class="title">thePhoto</p>
-            <p>Photo Manager</p>
-        </a>
-        <hr />
-        <p>
-            Smaller projects:
-        </p>
-        <a class="headerItem" onclick="$('#projectsMenu').toggleClass('open');" href="https://github.com/vicr123/theterminal">
-            <img class="appIcon tint" src="/images/theterminal.svg">
-            <p class="title">theTerminal</p>
-            <p>Terminal Emulator</p>
-        </a>
-        <a class="headerItem" onclick="$('#projectsMenu').toggleClass('open');" href="https://github.com/vicr123/thecalculator">
-            <img class="appIcon" src="/images/thecalculator.svg">
-            <p class="title">theCalculator</p>
-            <p>Calculator</p>
-        </a>
-        <a class="headerItem" onclick="$('#projectsMenu').toggleClass('open');" href="https://github.com/vicr123/thefile">
-            <img class="appIcon" src="/images/thefile.svg">
-            <p class="title">theFile</p>
-            <p>File Manager</p>
-        </a>
-        <a class="headerItem" onclick="$('#projectsMenu').toggleClass('open');" href="https://github.com/vicr123/themedia">
-            <img class="appIcon" src="/images/themedia.svg">
-            <p class="title">theMedia</p>
-            <p>Media Player</p>
-        </a>
-        <a class="headerItem" onclick="$('#projectsMenu').toggleClass('open');" href="https://github.com/vicr123/thesafe">
-            <img class="appIcon" src="/images/thesafe.svg">
-            <p class="title">theSafe</p>
-            <p>Backup Tool</p>
-        </a>
-        <hr />
-        <a class="headerItem" onclick="$('#projectsMenu').toggleClass('open');" href="https://bugs.vicr123.com/">
-            <img class="appIcon tint" src="/images/bugreporter.svg">
-            <p class="title">Bug Reporter</p>
-            <p>Report a bug in an app</p>
-        </a>
-        <a class="headerItem" onclick="$('#projectsMenu').toggleClass('open');" href="https://github.com/vicr123/">
-            <img class="appIcon" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png">
-            <p class="title">GitHub</p>
-            <p>Code Repositories</p>
-        </a>
+            {% endif %}
+        </div>
+        <div class="headerMenu" id="projectsMenu">
+            <a class="headerItem" onclick="toggleMenu('#projectsMenu')" href="/index.html">
+                <img class="appIcon" src="/images/smile.png">
+                <p class="title">Victor Tran</p>
+                <p>Hello!</p>
+            </a>
+            <a class="headerItem" onclick="toggleMenu('#projectsMenu')" href="/posts/">
+                <img class="appIcon" src="/images/posts.svg">
+                <p class="title">Posts</p>
+                <p>Thoughts and news</p>
+            </a>
+            <hr />
+            <p>
+                Flagship:
+            </p>
+            <a class="headerItem" onclick="toggleMenu('#projectsMenu')" href="/theshell/">
+                <img class="appIcon" src="/images/theshell.svg">
+                <p class="title">theShell</p>
+                <p>Desktop Environment</p>
+            </a>
+            <a class="headerItem" onclick="toggleMenu('#projectsMenu')" href="/thedesk/">
+                <img class="appIcon" src="/images/thedesk.svg">
+                <p class="title">theDesk</p>
+                <p>Desktop Environment</p>
+            </a>
+            <a class="headerItem" onclick="$('#projectsMenu').toggleClass('open');" href="/contemporary/">
+                <img class="appIcon" src="/images/contemporaryIcon.svg">
+                <p class="title">Contemporary</p>
+                <p>Design Language</p>
+            </a>
+            <hr />
+            <p>
+                Apps:
+            </p>
+            <a class="headerItem" onclick="$('#projectsMenu').toggleClass('open');" href="/thebeat/">
+                <img class="appIcon" src="/images/thebeatIcon.svg">
+                <p class="title">theBeat</p>
+                <p>Audio Player</p>
+            </a>
+            <a class="headerItem" onclick="$('#projectsMenu').toggleClass('open');"  href="/theslate/">
+                <img class="appIcon" src="/images/theslateIcon.svg">
+                <p class="title">theSlate</p>
+                <p>Text Editor</p>
+            </a>
+            <a class="headerItem" onclick="$('#projectsMenu').toggleClass('open');" href="/thephoto/">
+                <img class="appIcon" src="/images/thephoto.svg">
+                <p class="title">thePhoto</p>
+                <p>Photo Manager</p>
+            </a>
+            <hr />
+            <p>
+                Smaller projects:
+            </p>
+            <a class="headerItem" onclick="$('#projectsMenu').toggleClass('open');" href="https://github.com/vicr123/theterminal">
+                <img class="appIcon tint" src="/images/theterminal.svg">
+                <p class="title">theTerminal</p>
+                <p>Terminal Emulator</p>
+            </a>
+            <a class="headerItem" onclick="$('#projectsMenu').toggleClass('open');" href="https://github.com/vicr123/thecalculator">
+                <img class="appIcon" src="/images/thecalculator.svg">
+                <p class="title">theCalculator</p>
+                <p>Calculator</p>
+            </a>
+            <a class="headerItem" onclick="$('#projectsMenu').toggleClass('open');" href="https://github.com/vicr123/thefile">
+                <img class="appIcon" src="/images/thefile.svg">
+                <p class="title">theFile</p>
+                <p>File Manager</p>
+            </a>
+            <a class="headerItem" onclick="$('#projectsMenu').toggleClass('open');" href="https://github.com/vicr123/themedia">
+                <img class="appIcon" src="/images/themedia.svg">
+                <p class="title">theMedia</p>
+                <p>Media Player</p>
+            </a>
+            <a class="headerItem" onclick="$('#projectsMenu').toggleClass('open');" href="https://github.com/vicr123/thesafe">
+                <img class="appIcon" src="/images/thesafe.svg">
+                <p class="title">theSafe</p>
+                <p>Backup Tool</p>
+            </a>
+            <hr />
+            <a class="headerItem" onclick="$('#projectsMenu').toggleClass('open');" href="https://bugs.vicr123.com/">
+                <img class="appIcon tint" src="/images/bugreporter.svg">
+                <p class="title">Bug Reporter</p>
+                <p>Report a bug in an app</p>
+            </a>
+            <a class="headerItem" onclick="$('#projectsMenu').toggleClass('open');" href="https://github.com/vicr123/">
+                <img class="appIcon" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png">
+                <p class="title">GitHub</p>
+                <p>Code Repositories</p>
+            </a>
+        </div>
+
     </div>
 </div>

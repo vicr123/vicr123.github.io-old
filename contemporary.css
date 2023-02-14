@@ -95,7 +95,7 @@ body {
     color: var(--fg-color);
     
     margin-left: 0px;
-    margin-top: 48px;
+    margin-top: 78px;
     margin-right: 0px;
     
     font-family: Contemporary, sans-serif;
@@ -132,13 +132,11 @@ div.mainHeader {
     top: 0px;
     left: 0px;
     right: 0px;
-    height: 47px;
+
+    display: flex;
+    flex-direction: column;
     
     border-bottom: 1px solid var(--fg-color);
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     
     background-color: var(--bg-color);
     color: var(--fg-color);
@@ -146,6 +144,27 @@ div.mainHeader {
     animation: moveInFromTop 0.25s ease-out;
     
     z-index: 10000;
+}
+
+div.mainHeaderInner {
+    height: 47px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.headerWarning {
+    display: flex;
+    align-items: center;
+
+    height: 30px;
+    background: rgb(255, 150, 0);
+    color: black;
+}
+
+div.headerWarning a {
+    color: rgb(50, 100, 255);
 }
 
 div.mainHeader * {
